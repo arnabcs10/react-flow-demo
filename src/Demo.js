@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import ReactFlow, { removeElements, addEdge, ReactFlowProvider, Background } from 'react-flow-renderer';
+import InputNode from './InputNode';
 
 const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
 
+const nodeTypes = {
+  newNode: InputNode,
+};
 
-const DemoApp = ({elements,setElements,onSetSidebarOpen, setCurrentElement}) => {
+const Demo = ({elements,setElements}) => {
 //   const [elements, setElements] = useState(initialElements);
   const onElementsRemove = (elementsToRemove) =>
     setElements((els) => removeElements(elementsToRemove, els));
@@ -13,8 +17,7 @@ const DemoApp = ({elements,setElements,onSetSidebarOpen, setCurrentElement}) => 
   const onElementClick = (event, element) => {
       console.log(event);
       console.log(element);
-      setCurrentElement(element)
-      onSetSidebarOpen(true);
+      
   }
 
   return (
@@ -28,17 +31,20 @@ const DemoApp = ({elements,setElements,onSetSidebarOpen, setCurrentElement}) => 
             onLoad={onLoad}
             onElementClick={onElementClick}
             paneMoveable={false}
+            zoomOnScroll={false}
+            nodeTypes={nodeTypes}
         >
           <Background
       variant="dots"
       gap={12}
       size={1}
     />
+    
       </ReactFlow>
       </ReactFlowProvider>
     </div>
   );
 };
 
-export default DemoApp;
+export default Demo;
 
