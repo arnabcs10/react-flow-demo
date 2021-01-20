@@ -2,12 +2,12 @@ import React, { memo , useState} from 'react';
 import { Handle } from 'react-flow-renderer';
 // import '../style.css'
 
-export default memo(({data}) => {
+export default memo(({data,id}) => {
   const [interactionName, setInteractionName ] = useState("");
   const submitHandler = (e) =>{
       e.preventDefault();
       //
-      data.updateNewNode(data.nodeId,interactionName)
+      data.updateNewNode(id,interactionName)
       // console.log(data.nodeId);
       // console.log(interactionName);
   }
@@ -28,7 +28,7 @@ export default memo(({data}) => {
           onChange={(e) => setInteractionName(e.target.value)}
         />
       </form> */}
-      <div class="node" >
+      <div className="node" >
       <form onSubmit={submitHandler}>
         <input type="text"  placeholder="Node Name" id="" 
          value={interactionName}

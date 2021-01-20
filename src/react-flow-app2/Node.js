@@ -19,7 +19,7 @@ export default memo(({id,data}) => {
         onConnect={(params) => console.log('handle onConnect', params)}
       />
      
-      <div class="node" >
+      <div className="node" >
       
         <strong>{data.label}</strong>
         <br /><br />
