@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactFlowApp from './ReactFlowApp';
+// import ReactFlowApp from './react-flow-app/ReactFlowApp';
+import ReactFlowApp2 from './react-flow-app2/ReactFlowApp';
 import './App.css';
 
 
@@ -8,7 +9,8 @@ function App () {
    
     return (
       <div className='App'>      
-        <ReactFlowApp/>
+        {/* <ReactFlowApp/> */}
+        <ReactFlowApp2/>
       </div>
     );
   
