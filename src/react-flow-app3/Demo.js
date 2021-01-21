@@ -12,7 +12,13 @@ const nodeTypes = {
   addIconNode:AddIconNode
 };
 
-const Demo = ({elements,setElements,addNewNode}) => {
+const openModal = () => {
+  console.log("clicked");
+  document.getElementById("grey-screen").style = "width:100%";
+  document.getElementById("sidebar").classList.add("side-bar-open");
+};
+
+const Demo = ({elements,setElements,addNewNode,setClickedNode}) => {
 //   const [elements, setElements] = useState(initialElements);
   const onElementsRemove = (elementsToRemove) =>
     setElements((els) => removeElements(elementsToRemove, els));
@@ -23,6 +29,12 @@ const Demo = ({elements,setElements,addNewNode}) => {
       console.log(element);
       addNewNode(getIncomers(element,elements)[0].id);
     }
+    if(element.type === 'node'){
+      setClickedNode(element);
+      openModal();
+      
+    }
+
       console.log(event);
       console.log(element);
       

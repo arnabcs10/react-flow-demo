@@ -1,13 +1,16 @@
 import React ,{useEffect, useState} from 'react';
 import  {  getIncomers } from 'react-flow-renderer';
+import SideBar from './Sidebar';
 import Demo from './Demo';
-
+import "./Sidebar.css";
 
 let i = 1;
 function ReactFlowApp2 () {
     
     const [elements, setElements] = useState();
-     
+    
+    const [clickedNode, setClickedNode] = useState();
+
     const updateNewNode = (nodeId,name) => {
       setElements(eles => eles.map(els => {
         if(els.id === nodeId){
@@ -125,7 +128,8 @@ function ReactFlowApp2 () {
           <button onClick={addNewNode}>
               Add New Node
           </button>      
-        <Demo elements={elements} setElements={setElements} addNewNode={addNewNode}/>
+        <Demo elements={elements} setElements={setElements} addNewNode={addNewNode} setClickedNode={setClickedNode}/>
+        <SideBar updateNewNode={updateNewNode} clickedNode={clickedNode}/>
       </div>
     );
   
