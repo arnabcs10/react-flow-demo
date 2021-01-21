@@ -1,16 +1,15 @@
 import React, { memo , useState} from 'react';
 import { Handle } from 'react-flow-renderer';
-// import '../style1.css'
-
-export default memo(({data,id}) => {
+import './style1.css'
+export default memo(({id,data}) => {
   const [interactionName, setInteractionName ] = useState("");
-  const submitHandler = (e) =>{
-      e.preventDefault();
-      //
-      data.updateNewNode(id,interactionName)
-      // console.log(data.nodeId);
-      // console.log(interactionName);
-  }
+  // const submitHandler = (e) =>{
+  //     e.preventDefault();
+  //     //
+  //     data.updateNewNode(data.nodeId,interactionName)
+  //     // console.log(data.nodeId);
+  //     // console.log(interactionName);
+  // }
   return (
     <>
       <Handle
@@ -19,32 +18,20 @@ export default memo(({data,id}) => {
         // style={{ background: '#555' }}
         onConnect={(params) => console.log('handle onConnect', params)}
       />
-      {/* <form onSubmit={submitHandler}>
-        <input
-          className="nodrag"
-          type="text"
-          placeholder="New node"
-          value={interactionName}
-          onChange={(e) => setInteractionName(e.target.value)}
-        />
-      </form> */}
-      <div  >
-      <form onSubmit={submitHandler}>
-        <input type="text"  placeholder="Node Name" id="" 
-         value={interactionName}
-         onChange={(e) => setInteractionName(e.target.value)}
-        />
+     
+      {/* <div className="node" >
+      
+        <strong>{data.label}</strong>
         <br /><br />
         <input type="button" value="Response 1" />
         <input type="button" value="Response 2" />
         <input type="button" value="Response 3" />
         <br /><br />
-      </form>
-    </div>
-    {/* <div class="node">
+    </div> */}
+    <div class="node">
       <div class="node-header">
         <div class="dot"></div>
-        <form class="node-name" onSubmit={submitHandler}>
+        <div class="node-name" >
           <i class="far fa-envelope-open"></i>
           &ensp;<input
             type="text"
@@ -54,15 +41,16 @@ export default memo(({data,id}) => {
             id=""
           />&ensp;&ensp;
           <p>(send message)</p>
-        </form>
+        </div>
         <div class="cross">
           <button><i class="fas fa-times-circle"></i></button>
         </div>
       </div>
+      <div class="message"><strong>{data.label}</strong>.</div>
       <div class="message">Hi name, Welcome to brand_name.</div>
-    </div> */}
+    </div>
       <Handle
-    
+       onClick={() => console.log(id)}
         type="source"
         position="bottom"
         

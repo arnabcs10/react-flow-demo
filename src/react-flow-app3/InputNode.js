@@ -1,6 +1,6 @@
 import React, { memo , useState} from 'react';
 import { Handle } from 'react-flow-renderer';
-// import '../style1.css'
+import './style1.css'
 
 export default memo(({data,id}) => {
   const [interactionName, setInteractionName ] = useState("");
@@ -28,7 +28,7 @@ export default memo(({data,id}) => {
           onChange={(e) => setInteractionName(e.target.value)}
         />
       </form> */}
-      <div  >
+      {/* <div className="node" >
       <form onSubmit={submitHandler}>
         <input type="text"  placeholder="Node Name" id="" 
          value={interactionName}
@@ -40,8 +40,8 @@ export default memo(({data,id}) => {
         <input type="button" value="Response 3" />
         <br /><br />
       </form>
-    </div>
-    {/* <div class="node">
+    </div> */}
+    <div class="node">
       <div class="node-header">
         <div class="dot"></div>
         <form class="node-name" onSubmit={submitHandler}>
@@ -60,7 +60,7 @@ export default memo(({data,id}) => {
         </div>
       </div>
       <div class="message">Hi name, Welcome to brand_name.</div>
-    </div> */}
+    </div>
       <Handle
     
         type="source"
