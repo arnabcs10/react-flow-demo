@@ -3,6 +3,7 @@ import Sidebar from "react-sidebar";
 import "./sidebar.css";
 
 const sideBar = () => {
+  const greyBg = document.getElementById("grey-screen");
   const sideStyle = {
     height: "100vh",
     position: "absolute",
@@ -20,17 +21,20 @@ const sideBar = () => {
     position: "absolute",
     top: "0",
     left: "600px",
-    zIndex: "100000000",
+    zIndex: "10000",
   };
 
   const openModal = () => {
     console.log("clicked");
-    document.getElementById("modal").style = "width:100%";
+    document.getElementById("grey-screen").style = "width:100%";
     document.getElementById("sidebar").classList.add("side-bar-open");
   };
 
   const closeModal = () => {
     document.getElementById("sidebar").classList.remove("side-bar-open");
+    setTimeout(() => {
+      document.getElementById("grey-screen").style = "width:0";
+    }, 400);
   };
 
   return (
@@ -39,13 +43,15 @@ const sideBar = () => {
         Open Modal
       </button>
       <br />
-      <div className="side-bar" id="sidebar" style={sideStyle}>
-        <form action="">
-          <label htmlFor="name">Enter</label>
-          <input type="text" name="name" id="name" />
-        </form>
-        <br />
-        <button onClick={closeModal}>Close</button>
+      <div className="grey-screen" id="grey-screen">
+        <div className="side-bar" id="sidebar" style={sideStyle}>
+          <form action="">
+            <label htmlFor="name">Enter</label>
+            <input type="text" name="name" id="name" />
+          </form>
+          <br />
+          <button onClick={closeModal}>Close</button>
+        </div>
       </div>
     </div>
   );

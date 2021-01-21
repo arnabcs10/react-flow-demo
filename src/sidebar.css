@@ -5,8 +5,19 @@
   width: 100%;
   height: 100vh;
 }
+.grey-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 100000;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
 .side-bar {
-  transform: translateX(400px);
+  transform: translateX(450px);
 }
 .side-bar-open {
   transform: translateX(0px);
