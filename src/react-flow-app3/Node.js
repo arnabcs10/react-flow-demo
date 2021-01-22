@@ -1,5 +1,5 @@
 import React, { memo , useState} from 'react';
-import { Handle } from 'react-flow-renderer';
+import { Handle, removeElements } from 'react-flow-renderer';
 import './style1.css'
 export default memo(({id,data}) => {
   const [interactionName, setInteractionName ] = useState("");
@@ -10,6 +10,9 @@ export default memo(({id,data}) => {
   //     // console.log(data.nodeId);
   //     // console.log(interactionName);
   // }
+  const deleteNode = () =>{
+    data.setElements((els) => removeElements([els.find( e => e.id === id)], els));
+  }
   return (
     <>
       <Handle
@@ -43,7 +46,9 @@ export default memo(({id,data}) => {
           <p>(send message)</p>
         </div>
         <div class="cross">
-          <button><i class="fas fa-times-circle"></i></button>
+          <button onClick={deleteNode}>
+            <i class="fas fa-times-circle"></i>
+          </button>
         </div>
       </div>
       <div class="message"><strong>{data.label}</strong>.</div>

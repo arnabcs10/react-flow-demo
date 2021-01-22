@@ -14,7 +14,7 @@ function ReactFlowApp2 () {
     const updateNewNode = (nodeId,name) => {
       setElements(eles => eles.map(els => {
         if(els.id === nodeId){
-            return {...els, type:"node",data: { label: name }}
+            return {...els, type:"node",data: { label: name, elements:elements,setElements:setElements }}
             
         }
           return els;
@@ -28,7 +28,7 @@ function ReactFlowApp2 () {
         const newNode = {
             id:`horizontal-${i}`,
             type:"newNode",
-            data: { updateNewNode:updateNewNode, nodeId:`horizontal-${i}` },
+            data: { updateNewNode:updateNewNode, nodeId:`horizontal-${i}`,setElements:setElements   },
             position: { x: 350, y: 150 },
             style: { border: '1px solid #777', padding:"5px",
             borderRadius:"15px",
