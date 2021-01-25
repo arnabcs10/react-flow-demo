@@ -18,7 +18,7 @@ const openModal = () => {
   document.getElementById("sidebar").classList.add("side-bar-open");
 };
 
-const Demo = ({elements,setElements,addNewNode,setClickedNode}) => {
+const BotFlow = ({elements,setElements,addNewNode,setClickedNode}) => {
 //   const [elements, setElements] = useState(initialElements);
   const onElementsRemove = (elementsToRemove) =>
     setElements((els) => removeElements(elementsToRemove, els));
@@ -67,5 +67,5 @@ const Demo = ({elements,setElements,addNewNode,setClickedNode}) => {
   );
 };
 
-export default Demo;
+export default BotFlow;
 

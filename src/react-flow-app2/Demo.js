@@ -16,8 +16,12 @@ const Demo = ({elements,setElements,addNewNode}) => {
 //   const [elements, setElements] = useState(initialElements);
   const onElementsRemove = (elementsToRemove) =>
     setElements((els) => removeElements(elementsToRemove, els));
-  const onConnect = (params) => setElements((els) => addEdge(params, els));
+  const onConnect = (params) => {
+    console.log(params);
+    setElements((els) => addEdge(params, els));
 
+  }
+  
   const onElementClick = (event, element) => {
     if(element.type === 'addIconNode'){
       console.log(element);

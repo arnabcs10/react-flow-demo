@@ -22,6 +22,7 @@ function ReactFlowApp2 () {
 
     const addNewNode = (parentNodeId) =>{
         i=i+1;
+        console.log(parentNodeId);
         const newNode = {
             id:`horizontal-${i}`,
             type:"newNode",
@@ -29,11 +30,14 @@ function ReactFlowApp2 () {
             position: { x: 350, y: 150 },
             style: { border: '1px solid #777', padding:"5px",
             borderRadius:"15px",
-            
+            background: typeof parentNodeId === 'string' ? "#ffffff" : "#D6D5E6",
             width:"auto" }
            
         }
-        const newEdge = {id:`${parentNodeId}-horizontal-${i}`, source:parentNodeId, target:`horizontal-${i}`};
+        // if(parentNodeId){
+          const newEdge = {id:`${parentNodeId}-horizontal-${i}`, source:parentNodeId, target:`horizontal-${i}`};
+        // }
+        
         const newAddIcon = {
           id: `add-${i}`,
           type:"addIconNode",
@@ -84,7 +88,7 @@ function ReactFlowApp2 () {
         
         style: { border: '1px solid #777', padding:"5px",
                 borderRadius:"15px",
-                
+                background: "#ffffff",
                 width:"auto" }
       },
       {
