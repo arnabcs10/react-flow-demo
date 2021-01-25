@@ -6,7 +6,7 @@ const openModal = () => {
     document.getElementById("sidebar").classList.add("side-bar-open");
   };
 
-export default memo(() => {
+export default memo(({id,data}) => {
   
   return (
     <>
@@ -24,7 +24,12 @@ export default memo(() => {
       <Handle
         type="source"
         position="bottom"
-        onClick={openModal}
+        onClick={() => {
+            console.log("clicked");
+            document.getElementById("grey-screen").style = "width:100%";
+            document.getElementById("sidebar").classList.add("side-bar-open");
+            data.setPrevNode(id);
+          }}
         style={{ cursor:"pointer" }}
       />
      

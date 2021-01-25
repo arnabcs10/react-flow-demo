@@ -9,6 +9,7 @@ function BotBuilder () {
     const [elements, setElements] = useState();
     
     const [clickedNode, setClickedNode] = useState();
+    const [prevNode, setPrevNode] = useState();
 
     const updateNewNode = (nodeId,name) => {
       setElements(eles => eles.map(els => {
@@ -22,41 +23,29 @@ function BotBuilder () {
 
     }
 
-    const addNewNode = (parentNodeId) =>{
+    const addNewNode = (parentNodeId,payload) =>{
         i=i+1;
         const newNode = {
-            id:`horizontal-${i}`,
-            type:"newNode",
-            data: { updateNewNode:updateNewNode, nodeId:`horizontal-${i}`,setElements:setElements   },
+            id:`${i}`,
+            type:"node",
+            data: {  label: payload  },
+            payload:payload,
             position: { x: 350, y: 150 },
             style: { border: '1px solid #777', padding:"5px",
             borderRadius:"15px",
-            
             width:"auto" }
            
         }
-        const newEdge = {id:`${parentNodeId}-horizontal-${i}`, source:parentNodeId, target:`horizontal-${i}`};
-        const newAddIcon = {
-          id: `add-${i}`,
-          type:"addIconNode",
-          data: { label: <i className="fas fa-plus-circle"></i> },
-          position: { x:newNode.position.x+100 , y: newNode.position.y+200 },
-          
-          style: {
-              padding: 0,
-              width: "1rem",
-              border:"none",
-            },
-        };
-        const newAddIconEdge = {id:`horizontal-${i}-${newAddIcon.id}`, source:`horizontal-${i}`, target:newAddIcon.id};
-        setElements([...elements,newNode,newEdge,newAddIcon,newAddIconEdge]);
+        const newEdge = {id:`e${parentNodeId}-${i}`, source:parentNodeId, target:`${i}`};
+        
+        setElements([...elements,newNode,newEdge]);
     }
     const initialElements = [
       
       {
         id: '1',
         type:'startNode',
-        // data: { label: 'Start' },
+        data: { setPrevNode: setPrevNode },
         position: { x: 700, y: 50 },
         style: { border: '1px solid #777', padding:"15px",
                 borderRadius:"20px",
@@ -88,7 +77,7 @@ function BotBuilder () {
     return (
       <div className='ReactFlowApp'>      
         <BotFlow elements={elements} setElements={setElements} addNewNode={addNewNode} setClickedNode={setClickedNode}/>
-        <SideBar updateNewNode={updateNewNode} clickedNode={clickedNode}/>
+        <SideBar addNewNode={addNewNode} updateNewNode={updateNewNode} clickedNode={clickedNode} prevNode={prevNode} setPrevNode={setPrevNode}/>
       </div>
     );
   

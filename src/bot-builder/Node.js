@@ -31,11 +31,11 @@ export default memo(({id,data}) => {
         <input type="button" value="Response 3" />
         <br /><br />
     </div> */}
-    <div class="node">
-      <div class="node-header">
-        <div class="dot"></div>
-        <div class="node-name" >
-          <i class="far fa-envelope-open"></i>
+    <div className="node">
+      <div className="node-header">
+        <div className="dot"></div>
+        <div className="node-name" >
+          <i className="far fa-envelope-open"></i>
           &ensp;<input
             type="text"
             value={interactionName}
@@ -45,14 +45,14 @@ export default memo(({id,data}) => {
           />&ensp;&ensp;
           <p>(send message)</p>
         </div>
-        <div class="cross">
+        <div className="cross">
           <button onClick={deleteNode}>
-            <i class="fas fa-times-circle"></i>
+            <i className="fas fa-times-circle"></i>
           </button>
         </div>
       </div>
-      <div class="message"><strong>{data.label}</strong>.</div>
-      <div class="message">Hi name, Welcome to brand_name.</div>
+      <div className="message"><strong>{data.label}</strong>.</div>
+      <div className="message">Hi name, Welcome to brand_name.</div>
     </div>
       <Handle
        onClick={() => console.log(id)}

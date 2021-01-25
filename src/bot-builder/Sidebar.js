@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import Sidebar from "react-sidebar";
 import "./Sidebar.css";
 
-const SideBar = ({clickedNode,updateNewNode}) => {
+const SideBar = ({addNewNode,clickedNode,updateNewNode,prevNode, setPrevNode}) => {
   const greyBg = document.getElementById("grey-screen");
   const sideStyle = {
     height: "100vh",
@@ -33,13 +33,20 @@ const SideBar = ({clickedNode,updateNewNode}) => {
   const [interactionName, setInteractionName ] = useState("");
   const submitHandler = (e) =>{
       e.preventDefault();
-      //
-      updateNewNode(clickedNode.id,interactionName);
+      // if prevNode then addnewnode(payload,prevnode)
+      if(prevNode){
+        addNewNode(prevNode,interactionName);
+      }
+      // if clickedNode then updatenode(payload, clickedNode)
+      // updateNewNode(clickedNode.id,interactionName);
       closeModal();
+      setPrevNode(null);
+      //setClickedNode(null);
+      //setPayLoad(null);
       // console.log(data.nodeId);
       // console.log(interactionName);
   }
-
+  
   return (
     <div className="modal" id="modal">
       <br />
