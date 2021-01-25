@@ -36,7 +36,7 @@ function BotBuilder () {
             width:"auto" }
            
         }
-        const newEdge = {id:`e${parentNodeId}-${i}`, source:parentNodeId, target:`${i}`};
+        const newEdge = {id:`e${parentNodeId}-${i}`, source:parentNodeId, target:`${i}`,type: 'smoothstep'};
         
         setElements([...elements,newNode,newEdge]);
     }
