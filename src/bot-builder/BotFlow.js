@@ -3,10 +3,12 @@ import ReactFlow, { removeElements, addEdge, ReactFlowProvider, Background, getI
 import InputNode from './InputNode';
 import Node from './Node';
 import AddIconNode from './AddIconNode';
+import StartNode from './StartNode';
 
 const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
 
 const nodeTypes = {
+  startNode: StartNode,
   newNode: InputNode,
   node: Node,
   addIconNode:AddIconNode

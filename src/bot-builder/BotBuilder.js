@@ -53,18 +53,17 @@ function BotBuilder () {
     }
     const initialElements = [
       
-      // {
-      //   id: '1',
-      //   type:'newNode',
-        
-      //   data: { updateNewNode:updateNewNode },
-      //   position: { x: 100, y: 10 },
-        
-      //   style: { border: '1px solid #777', padding:"5px",
-      //           borderRadius:"15px",
-                
-      //           width:"auto" }
-      // },
+      {
+        id: '1',
+        type:'startNode',
+        // data: { label: 'Start' },
+        position: { x: 700, y: 50 },
+        style: { border: '1px solid #777', padding:"15px",
+                borderRadius:"20px",
+                background:"#445B75",
+                color:"#ffffff",
+                width:"auto" }
+      },
       // {
       //   id: 'add-1',
       //   type:"addIconNode",
