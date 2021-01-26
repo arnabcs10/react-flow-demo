@@ -17,9 +17,9 @@ export default memo(({id,data}) => {
      
     <div className="node">
       <div className="node-header">
-        <div className="dot"></div>
+      <i className="far fa-envelope-open"></i>
         <div className="node-name" >
-          <i className="far fa-envelope-open"></i>
+          {/* <i className="far fa-envelope-open"></i> */}
          
         </div>
         <div className="cross">

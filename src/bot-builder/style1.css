@@ -1,7 +1,7 @@
 .node {
   /* border: 2px solid #1a1a1a; */
-  width: 400px;
-  height: 150px;
+  width: 200px;
+  height: 90px;
   border-radius: 4px;
   padding: 10px;
   text-align: center;
@@ -19,9 +19,9 @@
 }
 .node-name {
   width: 400px;
-  height: fit-content;
-  text-align: center;
-  font-size: 1.3rem;
+  /* height: fit-content; */
+  /* text-align: center;
+  font-size: 1.3rem; */
 }
 .node-name input {
   border: none;
@@ -58,6 +58,6 @@
 
 .message {
   margin-top: 10px;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #1a1a1a;
 }
