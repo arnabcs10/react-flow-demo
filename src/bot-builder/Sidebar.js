@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import Sidebar from "react-sidebar";
 import "./Sidebar.css";
+import SideBarOptions from './SideBarOptions';
 
 const SideBar = ({addNewNode,clickedNode,updateNewNode,prevNode, setPrevNode}) => {
   const greyBg = document.getElementById("grey-screen");
@@ -52,18 +53,20 @@ const SideBar = ({addNewNode,clickedNode,updateNewNode,prevNode, setPrevNode}) =
       <br />
       <div className="grey-screen" id="grey-screen">
         <div className="side-bar" id="sidebar" style={sideStyle}>
-          <form onSubmit={submitHandler}>
+          {/* <form onSubmit={submitHandler}>
             <label htmlFor="name">Enter</label>
             <input type="text" name="name" id="name" value={interactionName}
             onChange={(e) => setInteractionName(e.target.value)}/>
             <br />
           <button onClick={submitHandler}>Save</button>
-          </form>
+          </form> */}
+          <SideBarOptions/>
           <br />
           <button onClick={closeModal}>Close</button>
         </div>
       </div>
     </div>
+    
   );
 };
 
