@@ -23,13 +23,13 @@ function BotBuilder () {
 
     }
 
-    const addNewNode = (parentNodeId,payload) =>{
+    const addNewNode = (parentNodeId,nodeType) =>{
         i=i+1;
         const newNode = {
             id:`${i}`,
-            type:"node",
-            data: {  label: payload, setPrevNode: setPrevNode  },
-            payload:payload,
+            type:`${nodeType}`,
+            data: {   setPrevNode: setPrevNode  },
+            // payload:payload,
             position: { x: 350, y: 150 },
             style: { border: '1px solid #777', padding:"5px",
             borderRadius:"15px",

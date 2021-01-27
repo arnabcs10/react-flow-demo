@@ -1,15 +1,16 @@
 import React from "react";
 import "./main.css";
 import "./style.css";
-const SideBarOptions = () => {
+const SideBarOptions = ({submitHandler}) => {
   return (
     <div>
       <div className="tr-setting f5">Messages</div>
-      <a
+      <button
         className="td-cta-box td-cta-docs message"
-        href="https://ghost.org/docs/api/handlebars-themes/"
+        // href="#"
         target="_blank"
         rel="noopener"
+        onClick={()=> submitHandler("textNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -31,13 +32,14 @@ const SideBarOptions = () => {
             <h3 className="fw6 f6">Text</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs message"
         // className="td-cta-box td-cta-docs"
-        href="https://ghost.org/docs/api/handlebars-themes/"
+        // href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
+        onClick={()=> submitHandler("quickreplyNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -98,7 +100,7 @@ const SideBarOptions = () => {
             <h3 className="fw6 f6">Quick Reply</h3>
           </div>
         </div>
-      </a>
+      </button>
       <a
         className="td-cta-box td-cta-docs message"
         // className="td-cta-box td-cta-docs"
