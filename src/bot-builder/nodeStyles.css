@@ -1,0 +1,28 @@
+.Node{
+    display: flex;
+    align-items: center;
+}
+.cross {
+    height: fit-content;
+    padding-left: 10px;
+    /* display: none; */
+  }
+
+  .cross button {
+    border: none;
+    background: none;
+    font-size: 1.2em;
+  }
+  
+  .cross button:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+  
+  .cross button:active {
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+  

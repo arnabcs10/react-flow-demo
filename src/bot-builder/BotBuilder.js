@@ -31,8 +31,7 @@ function BotBuilder () {
             data: {   setPrevNode: setPrevNode  },
             // payload:payload,
             position: { x: 350, y: 150 },
-            style: { border: '1px solid #777', padding:"5px",
-            borderRadius:"15px",
+            style: {  padding:"5px",
             width:"auto" }
            
         }

@@ -19,7 +19,7 @@ export default memo(({id,data}) => {
             document.getElementById("sidebar").classList.add("side-bar-open");
             data.setPrevNode(id);
           }}
-        style={{ cursor:"pointer" }}
+        style={{ cursor:"pointer",height:"1rem", width:"1rem" }}
       />
      
     </>
