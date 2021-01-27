@@ -6,7 +6,7 @@ import SideBarOptions from './SideBarOptions';
 const SideBar = ({addNewNode,clickedNode,updateNewNode,prevNode, setPrevNode}) => {
   const greyBg = document.getElementById("grey-screen");
   const sideStyle = {
-    height: "100vh",
+   
     position: "absolute",
     top: "0",
     left: "auto",
@@ -49,7 +49,7 @@ const SideBar = ({addNewNode,clickedNode,updateNewNode,prevNode, setPrevNode}) =
   }
   
   return (
-    <div className="modal" id="modal">
+    <div className="custom-modal" id="modal">
       <br />
       <div className="grey-screen" id="grey-screen">
         <div className="side-bar" id="sidebar" style={sideStyle}>
@@ -60,9 +60,10 @@ const SideBar = ({addNewNode,clickedNode,updateNewNode,prevNode, setPrevNode}) =
             <br />
           <button onClick={submitHandler}>Save</button>
           </form> */}
+          <button onClick={closeModal}>Close</button>
           <SideBarOptions/>
           <br />
-          <button onClick={closeModal}>Close</button>
+          
         </div>
       </div>
     </div>

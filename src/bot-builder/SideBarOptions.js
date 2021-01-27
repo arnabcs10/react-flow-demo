@@ -4,17 +4,17 @@ import "./style.css";
 const SideBarOptions = () => {
   return (
     <div>
-      <div class="tr-setting f5">Messages</div>
+      <div className="tr-setting f5">Messages</div>
       <a
-        class="td-cta-box td-cta-docs message"
+        className="td-cta-box td-cta-docs message"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             id="Capa_1"
-            enable-background="new 0 0 467.765 467.765"
+            enableBackground="new 0 0 467.765 467.765"
             height="5"
             viewBox="0 0 467.765 467.765"
             width="5"
@@ -26,20 +26,20 @@ const SideBarOptions = () => {
             />
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Text</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Text</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs message"
-        class="td-cta-box td-cta-docs"
+        className="td-cta-box td-cta-docs message"
+        // className="td-cta-box td-cta-docs"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             version="1.1"
             height="20"
@@ -49,26 +49,26 @@ const SideBarOptions = () => {
             x="0px"
             y="0px"
             viewBox="0 0 398.414 398.414"
-            style="enable-background: new 0 0 398.414 398.414"
+            style={{enableBackground: "new 0 0 398.414 398.414"}}
           >
             <g>
               <g>
                 <path
-                  style="fill: #ffffff"
+                  style={{fill: "#ffffff"}}
                   d="M58.274,140.937C26.142,140.937,0,167.079,0,199.211c0,32.124,26.141,58.266,58.274,58.266
 			s58.274-26.141,58.274-58.266C116.548,167.079,90.406,140.937,58.274,140.937z M58.274,233.099
 			c-18.688,0-33.888-15.2-33.888-33.88c0-18.688,15.2-33.888,33.888-33.888s33.888,15.209,33.888,33.888
 			C92.162,217.891,76.961,233.099,58.274,233.099z"
                 />
                 <path
-                  style="fill: #ffffff"
+                  style={{fill: "#ffffff"}}
                   d="M197.85,140.937c-32.132,0-58.274,26.141-58.274,58.274c0,32.124,26.141,58.266,58.274,58.266
 			s58.274-26.141,58.274-58.266C256.123,167.079,229.982,140.937,197.85,140.937z M197.85,233.099
 			c-18.688,0-33.888-15.2-33.888-33.88c0-18.688,15.2-33.888,33.888-33.888s33.888,15.209,33.888,33.888
 			C231.738,217.891,216.537,233.099,197.85,233.099z"
                 />
                 <path
-                  style="fill: #ffffff"
+                  style={{fill: "#ffffff"}}
                   d="M340.14,140.937c-32.132,0-58.274,26.141-58.274,58.274c0,32.124,26.142,58.266,58.274,58.266
 			s58.274-26.141,58.274-58.266C398.414,167.079,372.272,140.937,340.14,140.937z M340.14,233.099
 			c-18.688,0-33.888-15.2-33.888-33.88c0-18.688,15.2-33.888,33.888-33.888s33.888,15.209,33.888,33.888
@@ -93,20 +93,20 @@ const SideBarOptions = () => {
             <g></g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Quick Reply</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Quick Reply</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs message"
-        class="td-cta-box td-cta-docs"
+        className="td-cta-box td-cta-docs message"
+        // className="td-cta-box td-cta-docs"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             id="Guide"
             height="20"
@@ -120,23 +120,23 @@ const SideBarOptions = () => {
             />
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Card</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Card</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs message"
-        class="td-cta-box td-cta-docs"
+        className="td-cta-box td-cta-docs message"
+        // className="td-cta-box td-cta-docs"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             id="_x31_"
-            enable-background="new 0 0 24 24"
+            enableBackground="new 0 0 24 24"
             height="20"
             viewBox="0 0 24 24"
             width="20"
@@ -168,23 +168,23 @@ const SideBarOptions = () => {
             </g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Image/GIF</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Image/GIF</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs message"
-        class="td-cta-box td-cta-docs"
+        className="td-cta-box td-cta-docs message"
+        // className="td-cta-box td-cta-docs"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             id="Capa_1"
-            enable-background="new 0 0 512 512"
+            enableBackground="new 0 0 512 512"
             height="20"
             viewBox="0 0 512 512"
             width="20"
@@ -202,20 +202,20 @@ const SideBarOptions = () => {
             </g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Video</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Video</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs message"
-        class="td-cta-box td-cta-docs"
+        className="td-cta-box td-cta-docs message"
+        // className="td-cta-box td-cta-docs"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             version="1.1"
             id="Layer_1"
@@ -225,7 +225,7 @@ const SideBarOptions = () => {
             viewBox="0 0 512 512"
             width="20"
             height="20"
-            style="enable-background: new 0 0 512 512"
+            style={{enableBackground: "new 0 0 512 512"}}
           >
             <g>
               <g>
@@ -258,23 +258,23 @@ const SideBarOptions = () => {
             <g></g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Attachment</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Attachment</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs message"
-        class="td-cta-box td-cta-docs"
+        className="td-cta-box td-cta-docs message"
+        // className="td-cta-box td-cta-docs"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             id="Capa_1"
-            enable-background="new 0 0 512.07 512.07"
+            enableBackground="new 0 0 512.07 512.07"
             height="20"
             viewBox="0 0 512.07 512.07"
             width="20"
@@ -288,23 +288,23 @@ const SideBarOptions = () => {
             </g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Ratings</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Ratings</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs message"
-        class="td-cta-box td-cta-docs"
+        className="td-cta-box td-cta-docs message"
+        // className="td-cta-box td-cta-docs"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             id="Capa_1"
-            enable-background="new 0 0 512 512"
+            enableBackground="new 0 0 512 512"
             height="20"
             viewBox="0 0 512 512"
             width="20"
@@ -333,20 +333,20 @@ const SideBarOptions = () => {
             </g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Forms</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Forms</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs message"
-        class="td-cta-box td-cta-docs"
+        className="td-cta-box td-cta-docs message"
+        // className="td-cta-box td-cta-docs"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             version="1.1"
             id="Capa_1"
@@ -354,7 +354,7 @@ const SideBarOptions = () => {
             x="0px"
             y="0px"
             viewBox="0 0 343.5 343.5"
-            style="enable-background: new 0 0 343.5 343.5"
+            style={{enableBackground: "new 0 0 343.5 343.5"}}
             height="20"
             width="20"
           >
@@ -429,20 +429,20 @@ const SideBarOptions = () => {
             <g></g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Search from list</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Search from list</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs message"
-        class="td-cta-box td-cta-docs"
+        className="td-cta-box td-cta-docs message"
+        // className="td-cta-box td-cta-docs"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             height="20"
             viewBox="0 0 512 512"
@@ -455,23 +455,23 @@ const SideBarOptions = () => {
             />
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Multi-Select</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Multi-Select</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs message"
-        class="td-cta-box td-cta-docs"
+        className="td-cta-box td-cta-docs message"
+        // className="td-cta-box td-cta-docs"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             id="Capa_1"
-            enable-background="new 0 0 512 512"
+            enableBackground="new 0 0 512 512"
             height="20"
             viewBox="0 0 512 512"
             width="20"
@@ -485,20 +485,20 @@ const SideBarOptions = () => {
             </g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Range</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Range</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs message"
-        class="td-cta-box td-cta-docs"
+        className="td-cta-box td-cta-docs message"
+        // className="td-cta-box td-cta-docs"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -529,20 +529,20 @@ const SideBarOptions = () => {
             </g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Bit Message(Web-Only)</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Bit Message(Web-Only)</h3>
           </div>
         </div>
       </a>
-      <div class="tr-setting f5">User Details</div>
+      <div className="tr-setting f5">User Details</div>
       <a
-        class="td-cta-box td-cta-docs user-details"
+        className="td-cta-box td-cta-docs user-details"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             height="20"
             viewBox="0 -43 512 512"
@@ -579,19 +579,19 @@ const SideBarOptions = () => {
             />
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Name Field</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Name Field</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs user-details"
+        className="td-cta-box td-cta-docs user-details"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             version="1.1"
             id="Capa_1"
@@ -599,7 +599,7 @@ const SideBarOptions = () => {
             x="0px"
             y="0px"
             viewBox="0 0 512 512"
-            style="enable-background: new 0 0 512 512"
+            style={{enableBackground: "new 0 0 512 512"}}
             height="20"
             width="20"
           >
@@ -637,22 +637,22 @@ const SideBarOptions = () => {
             <g></g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Email Field</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Email Field</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs user-details"
+        className="td-cta-box td-cta-docs user-details"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             id="Layer_1"
-            enable-background="new 0 0 512.021 512.021"
+            enableBackground="new 0 0 512.021 512.021"
             height="20"
             viewBox="0 0 512.021 512.021"
             width="20"
@@ -666,19 +666,19 @@ const SideBarOptions = () => {
             </g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Phone Number Field</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Phone Number Field</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs user-details"
+        className="td-cta-box td-cta-docs user-details"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             version="1.1"
             id="Capa_1"
@@ -686,7 +686,7 @@ const SideBarOptions = () => {
             x="0px"
             y="0px"
             viewBox="0 0 512 512"
-            style="enable-background: new 0 0 512 512"
+            style={{enableBackground: "new 0 0 512 512"}}
             width="20"
             height="20"
           >
@@ -729,19 +729,19 @@ const SideBarOptions = () => {
             <g></g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Location Field</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Location Field</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs user-details"
+        className="td-cta-box td-cta-docs user-details"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 64 64"
@@ -800,22 +800,22 @@ const SideBarOptions = () => {
             </g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Date Field</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Date Field</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs user-details"
+        className="td-cta-box td-cta-docs user-details"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             id="Capa_1"
-            enable-background="new 0 0 443.294 443.294"
+            enableBackground="new 0 0 443.294 443.294"
             height="20"
             viewBox="0 0 443.294 443.294"
             width="20"
@@ -831,22 +831,22 @@ const SideBarOptions = () => {
             />
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Time Field</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Time Field</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs user-details"
+        className="td-cta-box td-cta-docs user-details"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             id="Capa_1"
-            enable-background="new 0 0 512 512"
+            enableBackground="new 0 0 512 512"
             height="20"
             viewBox="0 0 512 512"
             width="20"
@@ -865,25 +865,25 @@ const SideBarOptions = () => {
             </g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Custom Field</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Custom Field</h3>
           </div>
         </div>
       </a>
-      <div class="tr-setting f5">Bot Properties</div>
+      <div className="tr-setting f5">Bot Properties</div>
       <a
-        class="td-cta-box td-cta-docs bot-properties"
+        className="td-cta-box td-cta-docs bot-properties"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
-            enable-background="new 0 0 512 512"
+            enableBackground="new 0 0 512 512"
             height="20"
             width="20"
           >
@@ -895,22 +895,22 @@ const SideBarOptions = () => {
             </g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Jump to story</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Jump to story</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs bot-properties"
+        className="td-cta-box td-cta-docs bot-properties"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             id="Layer_5"
-            enable-background="new 0 0 64 64"
+            enableBackground="new 0 0 64 64"
             height="20"
             viewBox="0 0 64 64"
             width="20"
@@ -945,22 +945,22 @@ const SideBarOptions = () => {
             </g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">If/Then Branch</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">If/Then Branch</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs bot-properties"
+        className="td-cta-box td-cta-docs bot-properties"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             id="_x31__x2C_5"
-            enable-background="new 0 0 24 24"
+            enableBackground="new 0 0 24 24"
             height="20"
             viewBox="0 0 24 24"
             width="20"
@@ -984,19 +984,19 @@ const SideBarOptions = () => {
             />
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Connect Function</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Connect Function</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs bot-properties"
+        className="td-cta-box td-cta-docs bot-properties"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             version="1.1"
             id="Capa_1"
@@ -1004,7 +1004,7 @@ const SideBarOptions = () => {
             x="0px"
             y="0px"
             viewBox="0 0 512 512"
-            style="enable-background: new 0 0 512 512"
+            style={{enableBackground: "new 0 0 512 512"}}
             height="20"
             width="20"
           >
@@ -1069,22 +1069,22 @@ const SideBarOptions = () => {
             <g></g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Delay Message</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Delay Message</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs bot-properties"
+        className="td-cta-box td-cta-docs bot-properties"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             id="Capa_1"
-            enable-background="new 0 0 510 510"
+            enableBackground="new 0 0 510 510"
             height="20"
             viewBox="0 0 510 510"
             width="20"
@@ -1098,19 +1098,19 @@ const SideBarOptions = () => {
             </g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Agent Handover</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Agent Handover</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs bot-properties"
+        className="td-cta-box td-cta-docs bot-properties"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             fill="#ffffff"
             xmlns="http://www.w3.org/2000/svg"
@@ -1121,54 +1121,54 @@ const SideBarOptions = () => {
             <path
               fill="none"
               stroke="#ffffff"
-              stroke-miterlimit="10"
-              stroke-width="2"
+              strokeMiterlimit="10"
+              strokeWidth="2"
               d="M25 11A3 3 0 1 0 25 17 3 3 0 1 0 25 11zM36 31A3 3 0 1 0 36 37 3 3 0 1 0 36 31z"
             />
             <path
               fill="none"
               stroke="#ffffff"
-              stroke-miterlimit="10"
-              stroke-width="2"
+              strokeMiterlimit="10"
+              strokeWidth="2"
               d="M10.818,25.266C6.902,26.241,4,29.782,4,34c0,4.971,4.029,9,9,9s9-4.029,9-9h11"
             />
             <path
               fill="none"
               stroke="#ffffff"
-              stroke-miterlimit="10"
-              stroke-width="2"
+              strokeMiterlimit="10"
+              strokeWidth="2"
               d="M26.414,16.572l5.245,9.542C32.947,25.404,34.426,25,36,25c4.971,0,9,4.029,9,9s-4.029,9-9,9c-2.425,0-4.625-0.959-6.244-2.518"
             />
             <path
               fill="none"
               stroke="#ffffff"
-              stroke-miterlimit="10"
-              stroke-width="2"
+              strokeMiterlimit="10"
+              strokeWidth="2"
               d="M13.001 31A3 3 0 1 0 13.001 37A3 3 0 1 0 13.001 31Z"
               transform="rotate(-30 12.999 34)"
             />
             <path
               fill="none"
               stroke="#ffffff"
-              stroke-miterlimit="10"
-              stroke-width="2"
+              strokeMiterlimit="10"
+              strokeWidth="2"
               d="M14.52,31.489l5.906-9.736C17.777,20.187,16,17.301,16,14c0-4.971,4.029-9,9-9s9,4.029,9,9c0,0.924-0.139,1.815-0.398,2.654"
             />
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Trigger Webhook</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Trigger Webhook</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs bot-properties"
+        className="td-cta-box td-cta-docs bot-properties"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -1187,19 +1187,19 @@ const SideBarOptions = () => {
             </g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Save Attribute</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Save Attribute</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs bot-properties"
+        className="td-cta-box td-cta-docs bot-properties"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             version="1.1"
             id="Capa_1"
@@ -1207,7 +1207,7 @@ const SideBarOptions = () => {
             x="0px"
             y="0px"
             viewBox="0 0 496 496"
-            style="enable-background: new 0 0 496 496"
+            style={{enableBackground: "new 0 0 496 496"}}
             height="20"
             width="20"
             fill="#ffffff"
@@ -1241,22 +1241,22 @@ const SideBarOptions = () => {
             <g></g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Goal Completion</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Goal Completion</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs bot-properties"
+        className="td-cta-box td-cta-docs bot-properties"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             id="Layer_5"
-            enable-background="new 0 0 64 64"
+            enableBackground="new 0 0 64 64"
             height="20"
             viewBox="0 0 64 64"
             width="20"
@@ -1277,19 +1277,19 @@ const SideBarOptions = () => {
             </g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Set Journey</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Set Journey</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs bot-properties"
+        className="td-cta-box td-cta-docs bot-properties"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             version="1.1"
             id="Capa_1"
@@ -1297,7 +1297,7 @@ const SideBarOptions = () => {
             x="0px"
             y="0px"
             viewBox="0 0 56 56"
-            style="enable-background: new 0 0 56 56"
+            style={{enableBackground: "new 0 0 56 56"}}
             height="20"
             width="20"
             fill="#ffffff"
@@ -1340,20 +1340,20 @@ const SideBarOptions = () => {
             <g></g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Standard Integration</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Standard Integration</h3>
           </div>
         </div>
       </a>
-      <div class="tr-setting f5">Communication</div>
+      <div className="tr-setting f5">Communication</div>
       <a
-        class="td-cta-box td-cta-docs communication"
+        className="td-cta-box td-cta-docs communication"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             version="1.1"
             id="Layer_1"
@@ -1361,7 +1361,7 @@ const SideBarOptions = () => {
             x="0px"
             y="0px"
             viewBox="0 0 512 512"
-            style="enable-background: new 0 0 512 512"
+            style={{enableBackground: "new 0 0 512 512"}}
             height="20"
             width="20"
             fill="#ffffff"
@@ -1403,22 +1403,22 @@ const SideBarOptions = () => {
             <g></g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Send Email</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Send Email</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs communication"
+        className="td-cta-box td-cta-docs communication"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             id="Capa_1"
-            enable-background="new 0 0 512 512"
+            enableBackground="new 0 0 512 512"
             height="20"
             viewBox="0 0 512 512"
             width="20"
@@ -1431,19 +1431,19 @@ const SideBarOptions = () => {
             </g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Send SMS</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Send SMS</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs communication"
+        className="td-cta-box td-cta-docs communication"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             version="1.1"
             id="Capa_1"
@@ -1451,7 +1451,7 @@ const SideBarOptions = () => {
             x="0px"
             y="0px"
             viewBox="0 0 52 52"
-            style="enable-background: new 0 0 52 52"
+            style={{enableBackground: "new 0 0 52 52"}}
             height="20"
             width="20"
             fill="#ffffff"
@@ -1496,19 +1496,19 @@ const SideBarOptions = () => {
             <g></g>
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Trigger WhatsApp</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Trigger WhatsApp</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs communication"
+        className="td-cta-box td-cta-docs communication"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             height="20"
             viewBox="-21 0 512 512"
@@ -1521,19 +1521,19 @@ const SideBarOptions = () => {
             <path d="m362.667969 213.332031c-58.816407 0-106.667969-47.847656-106.667969-106.664062 0-58.816407 47.851562-106.667969 106.667969-106.667969 58.816406 0 106.664062 47.851562 106.664062 106.667969 0 58.816406-47.847656 106.664062-106.664062 106.664062zm0-181.332031c-41.175781 0-74.667969 33.492188-74.667969 74.667969 0 41.171875 33.492188 74.664062 74.667969 74.664062 41.171875 0 74.664062-33.492187 74.664062-74.664062 0-41.175781-33.492187-74.667969-74.664062-74.667969zm0 0" />
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Notification (in-app & push notification)</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content" style={{textAlign:"left"}}>
+            <h3 className="fw6 f6">Notification (in-app & push notification)</h3>
           </div>
         </div>
       </a>
       <a
-        class="td-cta-box td-cta-docs communication"
+        className="td-cta-box td-cta-docs communication"
         href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
-        <div class="td-cta-icon">
+        <div className="td-cta-icon">
           <svg
             height="20"
             viewBox="0 0 512 512"
@@ -1548,9 +1548,9 @@ const SideBarOptions = () => {
             <path d="m256 211c-107.523438 0-195 87.476562-195 195 0 8.285156 6.714844 15 15 15h360c8.285156 0 15-6.714844 15-15 0-107.523438-87.476562-195-195-195zm25.980469 180 47.011719-81.421875c4.140624-7.175781 1.683593-16.347656-5.492188-20.492187-7.175781-4.144532-16.347656-1.683594-20.488281 5.492187l-55.671875 96.421875h-155.664063c7.601563-83.980469 78.394531-150 164.324219-150s156.726562 66.019531 164.324219 150zm0 0" />
           </svg>
         </div>
-        <div class="td-cta-content-wrapper">
-          <div class="td-cta-content">
-            <h3 class="fw6 f6">Automation/Schedule Block</h3>
+        <div className="td-cta-content-wrapper">
+          <div className="td-cta-content">
+            <h3 className="fw6 f6">Automation/Schedule Block</h3>
           </div>
         </div>
       </a>
