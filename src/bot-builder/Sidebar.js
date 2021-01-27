@@ -1,18 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 // import Sidebar from "react-sidebar";
 import "./Sidebar.css";
-import SideBarOptions from './SideBarOptions';
+import SideBarOptions from "./SideBarOptions";
 
-const SideBar = ({addNewNode,clickedNode,updateNewNode,prevNode, setPrevNode}) => {
+const SideBar = ({
+  addNewNode,
+  clickedNode,
+  updateNewNode,
+  prevNode,
+  setPrevNode,
+}) => {
   const greyBg = document.getElementById("grey-screen");
   const sideStyle = {
-   
     position: "absolute",
     top: "0",
     left: "auto",
     right: "0",
-    width: "400px",
-    backgroundColor: "white",
+    width: "350px",
+    backgroundColor: "#f2f4f7",
     transition: "0.5s",
     zIndex: "100000000",
     padding: "20px",
@@ -31,26 +36,25 @@ const SideBar = ({addNewNode,clickedNode,updateNewNode,prevNode, setPrevNode}) =
     }, 400);
   };
 
-  const [interactionName, setInteractionName ] = useState("");
-  const submitHandler = (e) =>{
-      e.preventDefault();
-      // if prevNode then addnewnode(payload,prevnode)
-      if(prevNode){
-        addNewNode(prevNode,interactionName);
-      }
-      // if clickedNode then updatenode(payload, clickedNode)
-      // updateNewNode(clickedNode.id,interactionName);
-      closeModal();
-      setPrevNode(null);
-      //setClickedNode(null);
-      //setPayLoad(null);
-      // console.log(data.nodeId);
-      // console.log(interactionName);
-  }
-  
+  const [interactionName, setInteractionName] = useState("");
+  const submitHandler = (e) => {
+    e.preventDefault();
+    // if prevNode then addnewnode(payload,prevnode)
+    if (prevNode) {
+      addNewNode(prevNode, interactionName);
+    }
+    // if clickedNode then updatenode(payload, clickedNode)
+    // updateNewNode(clickedNode.id,interactionName);
+    closeModal();
+    setPrevNode(null);
+    //setClickedNode(null);
+    //setPayLoad(null);
+    // console.log(data.nodeId);
+    // console.log(interactionName);
+  };
+
   return (
     <div className="custom-modal" id="modal">
-      <br />
       <div className="grey-screen" id="grey-screen">
         <div className="side-bar" id="sidebar" style={sideStyle}>
           {/* <form onSubmit={submitHandler}>
@@ -61,13 +65,11 @@ const SideBar = ({addNewNode,clickedNode,updateNewNode,prevNode, setPrevNode}) =
           <button onClick={submitHandler}>Save</button>
           </form> */}
           <button onClick={closeModal}>Close</button>
-          <SideBarOptions/>
+          <SideBarOptions />
           <br />
-          
         </div>
       </div>
     </div>
-    
   );
 };
 
