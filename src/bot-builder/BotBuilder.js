@@ -28,7 +28,7 @@ function BotBuilder () {
         const newNode = {
             id:`${i}`,
             type:`${nodeType}`,
-            data: {   setPrevNode: setPrevNode  },
+            data: {   setPrevNode: setPrevNode, setElements:setElements },
             // payload:payload,
             position: { x: 350, y: 150 },
             style: {  padding:"5px",

@@ -5,15 +5,18 @@
 .cross {
     height: fit-content;
     padding-left: 10px;
-    /* display: none; */
+    
   }
 
   .cross button {
     border: none;
     background: none;
     font-size: 1.2em;
+    display: none;
   }
-  
+  .Node:hover button{
+    display: block;
+  }
   .cross button:focus {
     outline: none;
     box-shadow: none;
