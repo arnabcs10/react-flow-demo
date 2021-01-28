@@ -16,6 +16,13 @@ import SearchListNode from './NodeComponents/SearchListNode';
 import MultiSelectNode from './NodeComponents/MultiSelectNode';
 import RangeNode from './NodeComponents/RangeNode';
 import BitNode from './NodeComponents/BitNode';
+import NameFieldNode from './NodeComponents/NameFieldNode';
+import EmailFieldNode from './NodeComponents/EmailFieldNode';
+import PhoneNumNode from './NodeComponents/PhoneNumNode';
+import LocationNode from './NodeComponents/LocationNode';
+import DataFieldNode from './NodeComponents/DataFieldNode';
+import TimeFieldNode from './NodeComponents/TimeFieldNode';
+import CustomFieldNode from './NodeComponents/CustomFieldNode';
 
 const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
 
@@ -35,7 +42,15 @@ const nodeTypes = {
   searchListNode: SearchListNode,
   multiSelectNode: MultiSelectNode,
   rangeNode: RangeNode,
-  bitNode: BitNode
+  bitNode: BitNode,
+
+  nameFieldNode: NameFieldNode,
+  emailFieldNode: EmailFieldNode,
+  phoneNumNode: PhoneNumNode,
+  locationNode: LocationNode,
+  dataFieldNode: DataFieldNode,
+  timeFieldNode: TimeFieldNode,
+  customFieldNode: CustomFieldNode
 };
 
 const openModal = () => {

@@ -525,10 +525,11 @@ const SideBarOptions = ({clickHandler}) => {
         </div>
       </button>
       <div className="tr-setting f5">User Details</div>
-      <a
+      <button
         className="td-cta-box td-cta-docs user-details"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("nameFieldNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -572,11 +573,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Name Field</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs user-details"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("emailFieldNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -629,11 +631,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Email Field</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs user-details"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("phoneNumNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -657,11 +660,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Phone Number Field</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs user-details"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("locationNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -719,11 +723,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Location Field</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs user-details"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("dataFieldNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -789,11 +794,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Date Field</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs user-details"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("timeFieldNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -819,11 +825,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Time Field</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs user-details"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("customFieldNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -852,7 +859,7 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Custom Field</h3>
           </div>
         </div>
-      </a>
+      </button>
       <div className="tr-setting f5">Bot Properties</div>
       <a
         className="td-cta-box td-cta-docs bot-properties"
