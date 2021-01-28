@@ -1,16 +1,15 @@
 import React from "react";
 import "./main.css";
 import "./style.css";
-const SideBarOptions = ({submitHandler}) => {
+const SideBarOptions = ({clickHandler}) => {
   return (
     <div>
       <div className="tr-setting f5">Messages</div>
       <button
         className="td-cta-box td-cta-docs message"
-        // href="#"
         target="_blank"
         rel="noopener"
-        onClick={()=> submitHandler("textNode")}
+        onClick={()=> clickHandler("textNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -35,11 +34,9 @@ const SideBarOptions = ({submitHandler}) => {
       </button>
       <button
         className="td-cta-box td-cta-docs message"
-        // className="td-cta-box td-cta-docs"
-        // href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
-        onClick={()=> submitHandler("quickreplyNode")}
+        onClick={()=> clickHandler("quickreplyNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -103,10 +100,9 @@ const SideBarOptions = ({submitHandler}) => {
       </button>
       <a
         className="td-cta-box td-cta-docs message"
-        // className="td-cta-box td-cta-docs"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("cardNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -130,8 +126,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs message"
-        // className="td-cta-box td-cta-docs"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -178,8 +172,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs message"
-        // className="td-cta-box td-cta-docs"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -212,8 +204,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs message"
-        // className="td-cta-box td-cta-docs"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -268,8 +258,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs message"
-        // className="td-cta-box td-cta-docs"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -298,8 +286,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs message"
-        // className="td-cta-box td-cta-docs"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -343,8 +329,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs message"
-        // className="td-cta-box td-cta-docs"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -439,8 +423,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs message"
-        // className="td-cta-box td-cta-docs"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -465,8 +447,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs message"
-        // className="td-cta-box td-cta-docs"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -495,8 +475,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs message"
-        // className="td-cta-box td-cta-docs"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -540,7 +518,6 @@ const SideBarOptions = ({submitHandler}) => {
       <div className="tr-setting f5">User Details</div>
       <a
         className="td-cta-box td-cta-docs user-details"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -589,7 +566,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs user-details"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -647,7 +623,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs user-details"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -676,7 +651,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs user-details"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -739,7 +713,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs user-details"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -810,7 +783,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs user-details"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -841,7 +813,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs user-details"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -876,7 +847,6 @@ const SideBarOptions = ({submitHandler}) => {
       <div className="tr-setting f5">Bot Properties</div>
       <a
         className="td-cta-box td-cta-docs bot-properties"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -905,7 +875,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs bot-properties"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -955,7 +924,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs bot-properties"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -994,7 +962,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs bot-properties"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -1079,7 +1046,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs bot-properties"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -1108,7 +1074,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs bot-properties"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -1166,7 +1131,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs bot-properties"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -1197,7 +1161,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs bot-properties"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -1251,7 +1214,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs bot-properties"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -1287,7 +1249,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs bot-properties"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -1351,7 +1312,6 @@ const SideBarOptions = ({submitHandler}) => {
       <div className="tr-setting f5">Communication</div>
       <a
         className="td-cta-box td-cta-docs communication"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -1413,7 +1373,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs communication"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -1441,7 +1400,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs communication"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -1506,7 +1464,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs communication"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >
@@ -1531,7 +1488,6 @@ const SideBarOptions = ({submitHandler}) => {
       </a>
       <a
         className="td-cta-box td-cta-docs communication"
-        href="https://ghost.org/docs/api/handlebars-themes/"
         target="_blank"
         rel="noopener"
       >

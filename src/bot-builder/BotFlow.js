@@ -6,6 +6,7 @@ import AddIconNode from './AddIconNode';
 import StartNode from './StartNode';
 import TextNode from './TextNode';
 import QuickReplyNode from './QuickReplyNode';
+import CardNode from './CardNode';
 
 const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
 
@@ -15,7 +16,8 @@ const nodeTypes = {
   node: Node,
   addIconNode:AddIconNode,
   textNode: TextNode,
-  quickreplyNode:QuickReplyNode
+  quickreplyNode:QuickReplyNode,
+  cardNode: CardNode
 };
 
 const openModal = () => {

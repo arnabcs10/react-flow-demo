@@ -37,7 +37,7 @@ const SideBar = ({
   };
 
   const [interactionName, setInteractionName] = useState("");
-  const submitHandler = (nodeType) => {
+  const clickHandler = (nodeType) => {
     // e.preventDefault();
     // if prevNode then addnewnode(payload,prevnode)
     if (prevNode) {
@@ -65,7 +65,7 @@ const SideBar = ({
           <button onClick={submitHandler}>Save</button>
           </form> */}
           <button onClick={closeModal}>Close</button>
-          <SideBarOptions submitHandler={submitHandler}/>
+          <SideBarOptions clickHandler={clickHandler}/>
           <br />
         </div>
       </div>
