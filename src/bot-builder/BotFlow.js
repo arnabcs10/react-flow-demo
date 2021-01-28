@@ -3,11 +3,12 @@ import ReactFlow, { removeElements, addEdge, ReactFlowProvider, Background, getI
 import InputNode from './InputNode';
 import Node from './Node';
 import AddIconNode from './AddIconNode';
-import StartNode from './StartNode';
-import TextNode from './TextNode';
-import QuickReplyNode from './QuickReplyNode';
-import CardNode from './CardNode';
-import ImageNode from './ImageNode';
+import StartNode from './NodeComponents/StartNode';
+import TextNode from './NodeComponents/TextNode';
+import QuickReplyNode from './NodeComponents/QuickReplyNode';
+import CardNode from './NodeComponents/CardNode';
+import ImageNode from './NodeComponents/ImageNode';
+import VideoNode from './NodeComponents/VideoNode';
 
 const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
 
@@ -19,7 +20,8 @@ const nodeTypes = {
   textNode: TextNode,
   quickreplyNode:QuickReplyNode,
   cardNode: CardNode,
-  imageNode: ImageNode
+  imageNode: ImageNode,
+  videoNode: VideoNode
 };
 
 const openModal = () => {
