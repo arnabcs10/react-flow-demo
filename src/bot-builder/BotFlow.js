@@ -9,6 +9,7 @@ import QuickReplyNode from './NodeComponents/QuickReplyNode';
 import CardNode from './NodeComponents/CardNode';
 import ImageNode from './NodeComponents/ImageNode';
 import VideoNode from './NodeComponents/VideoNode';
+import AttachmentNode from './NodeComponents/AttachmentNode';
 
 const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
 
@@ -21,7 +22,8 @@ const nodeTypes = {
   quickreplyNode:QuickReplyNode,
   cardNode: CardNode,
   imageNode: ImageNode,
-  videoNode: VideoNode
+  videoNode: VideoNode,
+  attachmentNode: AttachmentNode
 };
 
 const openModal = () => {

@@ -204,10 +204,11 @@ const SideBarOptions = ({clickHandler}) => {
           </div>
         </div>
       </button>
-      <a
+      <button
         className="td-cta-box td-cta-docs message"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("attachmentNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -257,7 +258,7 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Attachment</h3>
           </div>
         </div>
-      </a>
+      </button>
       <a
         className="td-cta-box td-cta-docs message"
         target="_blank"
