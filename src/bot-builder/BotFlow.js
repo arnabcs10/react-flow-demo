@@ -10,6 +10,12 @@ import CardNode from './NodeComponents/CardNode';
 import ImageNode from './NodeComponents/ImageNode';
 import VideoNode from './NodeComponents/VideoNode';
 import AttachmentNode from './NodeComponents/AttachmentNode';
+import RatingNode from './NodeComponents/RatingNode';
+import FormNode from './NodeComponents/FormNode';
+import SearchListNode from './NodeComponents/SearchListNode';
+import MultiSelectNode from './NodeComponents/MultiSelectNode';
+import RangeNode from './NodeComponents/RangeNode';
+import BitNode from './NodeComponents/BitNode';
 
 const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
 
@@ -23,7 +29,13 @@ const nodeTypes = {
   cardNode: CardNode,
   imageNode: ImageNode,
   videoNode: VideoNode,
-  attachmentNode: AttachmentNode
+  attachmentNode: AttachmentNode,
+  ratingNode: RatingNode,
+  formNode: FormNode,
+  searchListNode: SearchListNode,
+  multiSelectNode: MultiSelectNode,
+  rangeNode: RangeNode,
+  bitNode: BitNode
 };
 
 const openModal = () => {

@@ -259,10 +259,11 @@ const SideBarOptions = ({clickHandler}) => {
           </div>
         </div>
       </button>
-      <a
+      <button
         className="td-cta-box td-cta-docs message"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("ratingNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -286,11 +287,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Ratings</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs message"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("formNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -329,11 +331,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Forms</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs message"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("searchListNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -423,11 +426,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Search from list</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs message"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("multiSelectNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -447,11 +451,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Multi-Select</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs message"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("rangeNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -475,11 +480,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Range</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs message"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("bitNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -517,7 +523,7 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Bit Message(Web-Only)</h3>
           </div>
         </div>
-      </a>
+      </button>
       <div className="tr-setting f5">User Details</div>
       <a
         className="td-cta-box td-cta-docs user-details"
