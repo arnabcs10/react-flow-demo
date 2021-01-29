@@ -861,10 +861,11 @@ const SideBarOptions = ({clickHandler}) => {
         </div>
       </button>
       <div className="tr-setting f5">Bot Properties</div>
-      <a
+      <button
         className="td-cta-box td-cta-docs bot-properties"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("jumpToStoryNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -888,11 +889,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Jump to story</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs bot-properties"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("ifThenBranchNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -937,11 +939,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">If/Then Branch</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs bot-properties"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("functionNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -975,11 +978,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Connect Function</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs bot-properties"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("delayMessageNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -1059,11 +1063,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Delay Message</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs bot-properties"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("agentHandoverNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -1087,11 +1092,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Agent Handover</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs bot-properties"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("triggerWebHookNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -1144,11 +1150,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Trigger Webhook</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs bot-properties"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("saveAttributeNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -1174,11 +1181,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Save Attribute</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs bot-properties"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("goalCompletionNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -1227,11 +1235,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Goal Completion</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs bot-properties"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("setJourneyNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -1262,11 +1271,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Set Journey</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs bot-properties"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("standeredIntegrationNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -1324,7 +1334,7 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Standard Integration</h3>
           </div>
         </div>
-      </a>
+      </button>
       <div className="tr-setting f5">Communication</div>
       <button
         className="td-cta-box td-cta-docs communication"

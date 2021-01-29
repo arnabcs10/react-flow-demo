@@ -28,6 +28,16 @@ import SendSmsNode from './NodeComponents/SendSmsNode';
 import TriggerWpNode from './NodeComponents/TriggerWpNode';
 import NotificationNode from './NodeComponents/NotificationNode';
 import ScheduleBlockNode from './NodeComponents/ScheduleBlockNode';
+import JumpToStoryNode from './NodeComponents/JumpToStoryNode';
+import IfThenBranchNode from './NodeComponents/IfThenBranchNode';
+import FunctionNode from './NodeComponents/FunctionNode';
+import DelayMessageNode from './NodeComponents/DelayMessageNode';
+import AgentHandoverNode from './NodeComponents/AgentHandoverNode';
+import TriggerWebHookNode from './NodeComponents/TriggerWebHookNode';
+import SaveAttributeNode from './NodeComponents/SaveAttributeNode';
+import GoalCompletionNode from './NodeComponents/GoalCompletionNode';
+import SetJourneyNode from './NodeComponents/SetJourneyNode';
+import StanderedIntegrationNode from './NodeComponents/StanderedIntegrationNode';
 
 const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
 
@@ -56,6 +66,17 @@ const nodeTypes = {
   dataFieldNode: DataFieldNode,
   timeFieldNode: TimeFieldNode,
   customFieldNode: CustomFieldNode,
+
+  jumpToStoryNode: JumpToStoryNode,
+  ifThenBranchNode: IfThenBranchNode,
+  functionNode: FunctionNode,
+  delayMessageNode: DelayMessageNode,
+  agentHandoverNode: AgentHandoverNode,
+  triggerWebHookNode: TriggerWebHookNode,
+  saveAttributeNode: SaveAttributeNode,
+  goalCompletionNode: GoalCompletionNode,
+  setJourneyNode: SetJourneyNode,
+  standeredIntegrationNode: StanderedIntegrationNode,
 
   sendEmailNode: SendEmailNode,
   sendSmsNode: SendSmsNode,
