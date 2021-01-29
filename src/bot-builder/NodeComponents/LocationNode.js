@@ -33,7 +33,7 @@ export default memo(({id,data}) => {
     </div> */}
     {/* style={{margin:0,background:"#f2f5f7"}} */}
     <div className="Node">
-    <button
+    <div
         className="td-cta-box td-cta-docs user-details"
         target="_blank"
         rel="noopener"
@@ -95,7 +95,7 @@ export default memo(({id,data}) => {
             <h3 className="fw6 f6">Location Field</h3>
           </div>
         </div>
-      </button>
+      </div>
       <div className="cross">
           <button onClick={deleteNode}>
             <i className="fas fa-times-circle"></i>
