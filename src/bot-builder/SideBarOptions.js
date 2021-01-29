@@ -1326,10 +1326,11 @@ const SideBarOptions = ({clickHandler}) => {
         </div>
       </a>
       <div className="tr-setting f5">Communication</div>
-      <a
+      <button
         className="td-cta-box td-cta-docs communication"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("sendEmailNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -1386,11 +1387,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Send Email</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs communication"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("sendSmsNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -1413,11 +1415,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Send SMS</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs communication"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("triggerWpNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -1477,11 +1480,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Trigger WhatsApp</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs communication"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("notificationNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -1501,11 +1505,12 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Notification (in-app & push notification)</h3>
           </div>
         </div>
-      </a>
-      <a
+      </button>
+      <button
         className="td-cta-box td-cta-docs communication"
         target="_blank"
         rel="noopener"
+        onClick={()=> clickHandler("scheduleBlockNode")}
       >
         <div className="td-cta-icon">
           <svg
@@ -1527,7 +1532,7 @@ const SideBarOptions = ({clickHandler}) => {
             <h3 className="fw6 f6">Automation/Schedule Block</h3>
           </div>
         </div>
-      </a>
+      </button>
     </div>
   );
 };

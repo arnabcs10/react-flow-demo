@@ -23,6 +23,11 @@ import LocationNode from './NodeComponents/LocationNode';
 import DataFieldNode from './NodeComponents/DataFieldNode';
 import TimeFieldNode from './NodeComponents/TimeFieldNode';
 import CustomFieldNode from './NodeComponents/CustomFieldNode';
+import SendEmailNode from './NodeComponents/SendEmailNode';
+import SendSmsNode from './NodeComponents/SendSmsNode';
+import TriggerWpNode from './NodeComponents/TriggerWpNode';
+import NotificationNode from './NodeComponents/NotificationNode';
+import ScheduleBlockNode from './NodeComponents/ScheduleBlockNode';
 
 const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
 
@@ -50,7 +55,13 @@ const nodeTypes = {
   locationNode: LocationNode,
   dataFieldNode: DataFieldNode,
   timeFieldNode: TimeFieldNode,
-  customFieldNode: CustomFieldNode
+  customFieldNode: CustomFieldNode,
+
+  sendEmailNode: SendEmailNode,
+  sendSmsNode: SendSmsNode,
+  triggerWpNode: TriggerWpNode,
+  notificationNode: NotificationNode,
+  scheduleBlockNode: ScheduleBlockNode
 };
 
 const openModal = () => {
