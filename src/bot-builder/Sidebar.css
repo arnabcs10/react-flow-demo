@@ -19,5 +19,5 @@
 }
 .side-bar-open {
   transform: translateX(0px);
-  /* width: 700px; */
+  width: 700px;
 }

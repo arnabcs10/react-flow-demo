@@ -1,7 +1,13 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./main.css";
 import "./style.css";
 const SideBarOptions = ({clickHandler}) => {
+  document.getElementById("sidebar").classList.add("sidebar");
+  useEffect(()=>{
+      return ()=>{
+        document.getElementById("sidebar").classList.remove("sidebar");
+      }
+    })
   return (
     <div>
       <div className="tr-setting f5">Messages</div>

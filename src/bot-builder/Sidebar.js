@@ -19,7 +19,7 @@ const SideBar = ({
     top: "0",
     left: "auto",
     right: "0",
-    width: "350px",
+    // width: "350px",
     backgroundColor: "#f2f4f7",
     transition: "0.5s",
     zIndex: "100000000",
