@@ -12,7 +12,7 @@ export default memo(({data,id}) => {
       // console.log(interactionName);
   }
   const deleteNode = () =>{
-    if(id != '1')
+    if(id !== '1')
     data.setElements((els) => removeElements([els.find( e => e.id === id)], els));
   }
   return (

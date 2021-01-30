@@ -1,4 +1,4 @@
-import React, { memo , useState} from 'react';
+import React, { memo } from 'react';
 import { Handle, removeElements } from 'react-flow-renderer';
 import './style1.css'
 export default memo(({id,data}) => {

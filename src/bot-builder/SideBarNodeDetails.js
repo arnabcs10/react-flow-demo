@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import "./main.css";
 import "./style_node.css";
 function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {

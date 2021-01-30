@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import ReactFlow, { removeElements, addEdge, ReactFlowProvider, Background, getIncomers } from 'react-flow-renderer';
+import React from 'react';
+import ReactFlow, { removeElements, addEdge, ReactFlowProvider, Background } from 'react-flow-renderer';
 import InputNode from './InputNode';
 import Node from './Node';
 import AddIconNode from './AddIconNode';

@@ -71,6 +71,7 @@ function BotBuilder () {
     ];
     useEffect(() => {
       setElements(initialElements);
+      // eslint-disable-next-line
     },[]);
 
     return (
