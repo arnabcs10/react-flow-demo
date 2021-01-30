@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./main.css";
 import "./style_node.css";
 function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
-  document.getElementById("sidebar").style =
-    "  position: absolute; top: 0; left: auto; right: 0;  background-color: #f2f4f7; transition: 0.5s; zIndex: 100000000; padding: 20px;";
+  // document.getElementById("sidebar").style =
+  //   "  position: absolute; top: 0; left: auto; right: 0;  background-color: #f2f4f7; transition: 0.5s; zIndex: 100000000; padding: 20px;";
 
   const [payload, setPayLoad] = useState(clickedNode.data.payload);
 

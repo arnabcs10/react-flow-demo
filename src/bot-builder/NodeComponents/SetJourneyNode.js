@@ -65,7 +65,7 @@ export default memo(({id,data}) => {
         </div>
         <div className="td-cta-content-wrapper">
           <div className="td-cta-content">
-            <h3 className="fw6 f6">Set Journey</h3>
+            <h3 className="fw6 f6">{data.payload.nodeName === undefined ? "Set Journey" : data.payload.nodeName}</h3>
           </div>
         </div>
       </div>

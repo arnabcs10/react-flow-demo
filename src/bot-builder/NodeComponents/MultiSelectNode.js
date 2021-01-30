@@ -54,7 +54,7 @@ export default memo(({id,data}) => {
         </div>
         <div className="td-cta-content-wrapper">
           <div className="td-cta-content">
-            <h3 className="fw6 f6">Multi-Select</h3>
+            <h3 className="fw6 f6">{data.payload.nodeName === undefined ? "Multi-Select" : data.payload.nodeName}</h3>
           </div>
         </div>
       </div>
