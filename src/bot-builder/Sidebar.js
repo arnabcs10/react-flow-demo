@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 // import Sidebar from "react-sidebar";
 import "./Sidebar.css";
 import SideBarOptions from "./SideBarOptions";
+import SideBarNodeDetails from "./SideBarNodeDetails";
+
 
 const SideBar = ({
   addNewNode,
   clickedNode,
+  setClickedNode,
   updateNewNode,
   prevNode,
   setPrevNode,
@@ -34,6 +37,8 @@ const SideBar = ({
     setTimeout(() => {
       document.getElementById("grey-screen").style = "width:0";
     }, 400);
+    setPrevNode(null);
+    setClickedNode(null);
   };
 
   const [interactionName, setInteractionName] = useState("");
@@ -46,8 +51,24 @@ const SideBar = ({
     // if clickedNode then updatenode(payload, clickedNode)
     // updateNewNode(clickedNode.id,interactionName);
     closeModal();
-    setPrevNode(null);
-    //setClickedNode(null);
+    
+    //setPayLoad(null);
+    // console.log(data.nodeId);
+    // console.log(interactionName);
+  };
+
+  const submitHandler = (payload) => {
+    // e.preventDefault();
+    // if prevNode then addnewnode(payload,prevnode)
+    if (clickedNode) {
+      updateNewNode(clickedNode,payload);
+      console.log(payload);
+      console.log(clickedNode);
+    }
+    // if clickedNode then updatenode(payload, clickedNode)
+    // updateNewNode(clickedNode.id,interactionName);
+    closeModal();
+    
     //setPayLoad(null);
     // console.log(data.nodeId);
     // console.log(interactionName);
@@ -64,9 +85,31 @@ const SideBar = ({
             <br />
           <button onClick={submitHandler}>Save</button>
           </form> */}
-          <button onClick={closeModal}>Close</button>
-          <SideBarOptions clickHandler={clickHandler}/>
-          <br />
+          {/* {
+            prevNode ? (
+              <>
+                <button onClick={closeModal}>Close</button>
+                <SideBarOptions clickHandler={clickHandler}/>
+                <br />
+              </>
+            ) : (clickedNode ? (
+              <button onClick={closeModal}>Close</button>
+            ) : <div style={{height:"100vh"}}></div>
+            )
+          } */}
+          {
+            prevNode ? (
+              <>
+                <button onClick={closeModal}>Close</button>
+                <SideBarOptions clickHandler={clickHandler}/>
+                <br />
+              </>
+            ) : (clickedNode ? (
+              <SideBarNodeDetails closeModal={closeModal} submitHandler={submitHandler} clickedNode={clickedNode}/>
+            ) : <div style={{height:"100vh"}}></div>
+            )
+          }
+          
         </div>
       </div>
     </div>

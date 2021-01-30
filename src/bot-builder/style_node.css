@@ -1,0 +1,161 @@
+.custom-modal-1 {
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+}
+.sidebar-1 {
+  width: 700px;
+  height: 100%;
+  background-color: #f2f4f7;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: 0;
+}
+.row {
+  display: flex;
+}
+.row .col {
+  flex: 1;
+}
+.search {
+  box-shadow: 0 0 1px rgb(0 0 0 / 12%), 0 1px 6px rgb(0 0 0 / 3%),
+    0 6px 10px -8px rgb(0 0 0 / 10%);
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+}
+/* Accordion styles */
+.tabs {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 1px rgb(0 0 0 / 12%), 0 1px 6px rgb(0 0 0 / 3%),
+    0 6px 10px -8px rgb(0 0 0 / 10%);
+  display: block;
+}
+
+.tab {
+  width: 100%;
+  color: #343f44;
+  overflow: hidden;
+}
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  color: #343f44;
+  padding: 1em;
+  background: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 0;
+  border-bottom: 1px solid #f2f4f7;
+  border-top: 1px solid #f2f4f7;
+}
+
+[data-desc] {
+  position: relative;
+  cursor: default;
+  margin-top: -5px;
+  margin-left: 7px;
+}
+[data-desc]::after {
+  content: attr(data-desc);
+  overflow: hidden;
+  font-size: 14px;
+  padding: 10px;
+  background-color: #e7ecf3;
+  border-radius: 4px;
+  margin-left: 11px;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+  opacity: 0;
+}
+[data-desc]::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 2px;
+  top: -5px;
+  z-index: 0;
+  border: 15px solid transparent;
+  border-right: 15px solid #e7ecf3;
+  display: none;
+  border-radius: 0;
+  transition: 0.2s;
+  opacity: 0;
+}
+[data-desc]:hover::after,
+[data-desc]:hover::before {
+  display: inline;
+  opacity: 1;
+}
+#user-says::after {
+  font-size: 12.5px;
+}
+
+.tab-label:hover {
+  background: #ffffff;
+}
+.tab-label::after {
+  content: "❯";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: #2c3e50;
+  background: white;
+  transition: all 0.35s;
+}
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #ffffff;
+  cursor: pointer;
+}
+.tab-close:hover {
+  background: #ffffff;
+}
+
+input:checked + .tab-label {
+  background: #ffffff;
+}
+input:checked + .tab-label::after {
+  transform: rotate(90deg);
+}
+input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+#save {
+  position: absolute;
+  top: auto;
+  bottom: 10px;
+  padding: 5px 10px;
+  left: auto;
+  right: 130px;
+  width: 100px;
+}
+#close {
+  position: absolute;
+  top: auto;
+  bottom: 10px;
+  padding: 5px 10px;
+  left: auto;
+  right: 20px;
+  width: 100px;
+}

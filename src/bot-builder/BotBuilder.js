@@ -11,10 +11,10 @@ function BotBuilder () {
     const [clickedNode, setClickedNode] = useState();
     const [prevNode, setPrevNode] = useState();
 
-    const updateNewNode = (nodeId,name) => {
+    const updateNewNode = (node,payload) => {
       setElements(eles => eles.map(els => {
-        if(els.id === nodeId){
-            return {...els, type:"node",data: { label: name, elements:elements,setElements:setElements }}
+        if(els.id === node.id){
+            return {...els, data:{...els.data, payload:payload}}
             
         }
           return els;
@@ -28,8 +28,8 @@ function BotBuilder () {
         const newNode = {
             id:`${i}`,
             type:`${nodeType}`,
-            data: {   setPrevNode: setPrevNode, setElements:setElements },
-            // payload:payload,
+            data: {   payload:{}, setPrevNode: setPrevNode, setElements:setElements },
+            // payload:{},
             position: { x: 350, y: 150 },
             style: {  padding:"5px",
             width:"auto" }
@@ -76,7 +76,7 @@ function BotBuilder () {
     return (
       <div className='ReactFlowApp'>      
         <BotFlow elements={elements} setElements={setElements} addNewNode={addNewNode} setClickedNode={setClickedNode}/>
-        <SideBar addNewNode={addNewNode} updateNewNode={updateNewNode} clickedNode={clickedNode} prevNode={prevNode} setPrevNode={setPrevNode}/>
+        <SideBar addNewNode={addNewNode} updateNewNode={updateNewNode} clickedNode={clickedNode} setClickedNode={setClickedNode} prevNode={prevNode} setPrevNode={setPrevNode}/>
       </div>
     );
   

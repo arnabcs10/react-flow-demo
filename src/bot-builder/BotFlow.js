@@ -98,11 +98,11 @@ const BotFlow = ({elements,setElements,addNewNode,setClickedNode}) => {
   const onConnect = (params) => setElements((els) => addEdge(params, els));
 
   const onElementClick = (event, element) => {
-    if(element.type === 'addIconNode'){
-      console.log(element);
-      addNewNode(getIncomers(element,elements)[0].id);
-    }
-    if(element.type === 'node' && event.target.className !==  "fas fa-times-circle"){
+    // if(element.type === 'addIconNode'){
+    //   console.log(element);
+    //   addNewNode(getIncomers(element,elements)[0].id);
+    // }
+    if(element.type !== 'startNode' && event.target.className !==  "fas fa-times-circle"){
      
       setClickedNode(element);
       openModal();

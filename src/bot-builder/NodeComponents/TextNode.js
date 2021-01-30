@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { Handle, removeElements } from 'react-flow-renderer';
 // import './style1.css'
 import './nodeStyles.css'
-export default memo(({id,data}) => {
+export default memo(({id,data,payload}) => {
   
   const deleteNode = () =>{
     data.setElements((els) => removeElements([els.find( e => e.id === id)], els));
@@ -55,7 +55,7 @@ export default memo(({id,data}) => {
         </div>
         <div className="td-cta-content-wrapper">
           <div className="td-cta-content">
-            <h3 className="fw6 f6">Text</h3>
+            <h3 className="fw6 f6">{data.payload.nodeName === undefined ? "Text" : data.payload.nodeName}</h3>
           </div>
         </div>
       </div>
