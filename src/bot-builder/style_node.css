@@ -159,3 +159,11 @@ input:checked ~ .tab-content {
   right: 20px;
   width: 100px;
 }
+.apps-grid-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.apps-grid label {
+  color: #58bbf0;
+  cursor: pointer;
+}
