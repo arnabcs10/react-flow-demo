@@ -20,7 +20,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
   // })
   return (
     //   <div class="sidebar-1">
-    <div style={{ height: "100vh" }}>
+    <div style={{ minHeight: "100vh" }}>
       <form onSubmit={handelSubmit}>
         <div class="search">
           <input
