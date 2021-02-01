@@ -48,7 +48,7 @@ input[type="checkbox"] {
 .tab-label {
   display: flex;
   justify-content: space-between;
-  color: #555555;
+  color: #444444;
   padding: 1em;
   background: #ffffff;
   font-weight: bold;
