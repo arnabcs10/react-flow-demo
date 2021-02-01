@@ -48,7 +48,7 @@ input[type="checkbox"] {
 .tab-label {
   display: flex;
   justify-content: space-between;
-  color: #555555;
+  color: #444444;
   padding: 1em;
   background: #ffffff;
   font-weight: bold;
@@ -174,8 +174,10 @@ input:checked ~ .tab-content {
 
 .tr-input {
   border-radius: 4px;
+  background-color: #ffffff;
 }
 .tr-input:focus {
+  background-color: #ffffff;
   border: 1px solid #58bbf0 !important;
 }
 

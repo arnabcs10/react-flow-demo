@@ -64,7 +64,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                         height="16"
                         viewBox="0 0 93.936 93.936"
                         enable-background="new 0 0 93.936 93.936;"
-                        fill="#555555"
+                        fill="#444444"
                       >
                         <g>
                           <path
@@ -107,7 +107,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                         height="16"
                         viewBox="0 0 93.936 93.936"
                         enable-background="new 0 0 93.936 93.936;"
-                        fill="#555555"
+                        fill="#444444"
                       >
                         <g>
                           <path
@@ -299,7 +299,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                         height="16"
                         viewBox="0 0 93.936 93.936"
                         enable-background="new 0 0 93.936 93.936;"
-                        fill="#555555"
+                        fill="#444444"
                       >
                         <g>
                           <path
