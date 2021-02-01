@@ -54,7 +54,7 @@ export default memo(({id,data}) => {
         </div>
         <div className="td-cta-content-wrapper">
           <div className="td-cta-content" style={{textAlign:"left"}}>
-            <h3 className="fw6 f6">Notification (in-app & push notification)</h3>
+            <h3 className="fw6 f6">{data.payload.nodeName === undefined ? "Notification (in-app & push notification)" : data.payload.nodeName}</h3>
           </div>
         </div>
       </div>

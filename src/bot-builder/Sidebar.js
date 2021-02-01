@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 // import Sidebar from "react-sidebar";
 import "./Sidebar.css";
 import SideBarOptions from "./SideBarOptions";
@@ -13,7 +13,7 @@ const SideBar = ({
   prevNode,
   setPrevNode,
 }) => {
-  const greyBg = document.getElementById("grey-screen");
+  // const greyBg = document.getElementById("grey-screen");
   const sideStyle = {
     position: "absolute",
     top: "0",
@@ -41,7 +41,7 @@ const SideBar = ({
     setClickedNode(null);
   };
 
-  const [interactionName, setInteractionName] = useState("");
+  // const [interactionName, setInteractionName] = useState("");
   const clickHandler = (nodeType) => {
     // e.preventDefault();
     // if prevNode then addnewnode(payload,prevnode)

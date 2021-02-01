@@ -5,7 +5,7 @@
 }
 .sidebar-1 {
   width: 700px;
-  height: 100%;
+  min-height: 100%;
   background-color: #f2f4f7;
   padding: 20px;
   margin-left: auto;
@@ -48,7 +48,7 @@ input[type="checkbox"] {
 .tab-label {
   display: flex;
   justify-content: space-between;
-  color: #343f44;
+  color: #555555;
   padding: 1em;
   background: #ffffff;
   font-weight: bold;
@@ -114,9 +114,10 @@ input[type="checkbox"] {
 .tab-content {
   max-height: 0;
   padding: 0 1em;
-  color: #2c3e50;
-  background: white;
+  color: #222222;
+  background: #f2f4f7;
   transition: all 0.35s;
+  text-align: left;
 }
 .tab-close {
   display: flex;
@@ -142,20 +143,61 @@ input:checked ~ .tab-content {
 }
 
 #save {
-  position: absolute;
+  position: relative;
   top: auto;
-  bottom: 10px;
+  bottom: -13px;
   padding: 5px 10px;
   left: auto;
-  right: 130px;
+  right: -170px;
   width: 100px;
 }
 #close {
-  position: absolute;
+  position: relative;
   top: auto;
-  bottom: 10px;
+  bottom: 20px;
   padding: 5px 10px;
   left: auto;
-  right: 20px;
+  right: -280px;
   width: 100px;
+}
+
+.apps-grid-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #9baeb8;
+}
+.tr-blognav-container {
+  background-color: #ffffff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 6px rgba(0, 0, 0, 0.03),
+    0 6px 10px -8px rgba(0, 0, 0, 0.1);
+}
+
+.tr-input {
+  border-radius: 4px;
+}
+.tr-input:focus {
+  border: 1px solid #58bbf0 !important;
+}
+
+.apps-grid {
+  background-color: #ffffff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 6px rgba(0, 0, 0, 0.03),
+    0 6px 10px -8px rgba(0, 0, 0, 0.1);
+}
+.apps-grid label {
+  color: #58bbf0;
+  font-size: 17.5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.custom-styles {
+  padding: 60px 0px;
+}
+input[type="file"] {
+  display: none;
+}
+.textarea {
+  height: auto;
+  min-height: 38px;
+  margin-bottom: 5px;
 }

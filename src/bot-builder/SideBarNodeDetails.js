@@ -1,35 +1,37 @@
-import React, { useEffect, useState } from 'react';
-import './main.css';
+import React, { useState } from "react";
+import "./main.css";
 import "./style_node.css";
-function SideBarNodeDetails({closeModal,clickedNode,submitHandler}){
-    document.getElementById("sidebar").style = "  position: absolute; top: 0; left: auto; right: 0;  background-color: #f2f4f7; transition: 0.5s; zIndex: 100000000; padding: 20px;";
+function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
+  // document.getElementById("sidebar").style =
+  //   "  position: absolute; top: 0; left: auto; right: 0;  background-color: #f2f4f7; transition: 0.5s; zIndex: 100000000; padding: 20px;";
 
-    const [payload,setPayLoad] = useState(clickedNode.data.payload);
+  const [payload, setPayLoad] = useState(clickedNode.data.payload);
 
-    const handelSubmit = (e)=>{
-      e.preventDefault();
-      submitHandler(payload);
-      // closeModal();
-    }
+  const handelSubmit = (e) => {
+    e.preventDefault();
+    submitHandler(payload);
+    // closeModal();
+  };
 
-    // useEffect(()=>{
-    //   return ()=>{
-    //     document.getElementById("sidebar").style = " width: 370px; position: absolute; top: 0; left: auto; right: 0;  background-color: #f2f4f7; transition: 0.5s; zIndex: 100000000; padding: 20px;";
-    //   }
-    // })
-    return(
-        
+  // useEffect(()=>{
+  //   return ()=>{
+  //     document.getElementById("sidebar").style = " width: 370px; position: absolute; top: 0; left: auto; right: 0;  background-color: #f2f4f7; transition: 0.5s; zIndex: 100000000; padding: 20px;";
+  //   }
+  // })
+  return (
     //   <div class="sidebar-1">
-    <div style={{height:"100vh"}}>
+    <div style={{ minHeight: "100vh" }}>
       <form onSubmit={handelSubmit}>
         <div class="search">
           <input
             class="tr-input"
-            style={{opacity: 1, zIndex: 1}}
+            style={{ opacity: 1, zIndex: 1 }}
             placeholder="Node Name"
             type="text"
             value={payload === undefined ? "" : payload.nodeName}
-            onChange={(e) => setPayLoad({...payload,nodeName: e.target.value})}
+            onChange={(e) =>
+              setPayLoad({ ...payload, nodeName: e.target.value })
+            }
           />
         </div>
         <br />
@@ -38,9 +40,9 @@ function SideBarNodeDetails({closeModal,clickedNode,submitHandler}){
             <div class="tabs">
               <div class="tab">
                 <input type="checkbox" id="chck1" />
-                <label class="tab-label f6" for="chck1"
-                  ><span>Contexts </span></label
-                >
+                <label class="tab-label f6" for="chck1">
+                  <span>Contexts </span>
+                </label>
                 <div class="tab-content">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
                   in!
@@ -48,11 +50,11 @@ function SideBarNodeDetails({closeModal,clickedNode,submitHandler}){
               </div>
               <div class="tab">
                 <input type="checkbox" id="chck2" />
-                <label class="tab-label f6" for="chck2"
-                  ><span
-                    >Conditions
-                    <span data-desc="Custom condition to manage block trigger"
-                      ><svg
+                <label class="tab-label f6" for="chck2">
+                  <span>
+                    Conditions
+                    <span data-desc="Custom condition to manage block trigger">
+                      <svg
                         version="1.1"
                         id="Capa_1"
                         xmlns="http://www.w3.org/2000/svg"
@@ -62,6 +64,7 @@ function SideBarNodeDetails({closeModal,clickedNode,submitHandler}){
                         height="16"
                         viewBox="0 0 93.936 93.936"
                         enable-background="new 0 0 93.936 93.936;"
+                        fill="#555555"
                       >
                         <g>
                           <path
@@ -75,9 +78,11 @@ function SideBarNodeDetails({closeModal,clickedNode,submitHandler}){
                     s-0.575-0.327-0.693-0.636l-2.42-6.354c-0.169-0.442-0.02-0.943,0.364-1.224c3.538-2.573,9.441-4.235,15.041-4.235
                     c12.36,0,17.894,7.975,17.894,15.877C63.652,33.765,59.785,38.919,54.73,44.921z"
                           />
-                        </g></svg
-                    ></span> </span
-                ></label>
+                        </g>
+                      </svg>
+                    </span>{" "}
+                  </span>
+                </label>
                 <div class="tab-content">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
                   in!
@@ -85,13 +90,14 @@ function SideBarNodeDetails({closeModal,clickedNode,submitHandler}){
               </div>
               <div class="tab">
                 <input type="checkbox" id="chck3" />
-                <label class="tab-label f6" for="chck3"
-                  ><span
-                    >User Says or Intents
+                <label class="tab-label f6" for="chck3">
+                  <span>
+                    User Says or Intents
                     <span
                       data-desc="Something that user says during conversation to tigger this block"
                       id="user-says"
-                      ><svg
+                    >
+                      <svg
                         version="1.1"
                         id="Capa_1"
                         xmlns="http://www.w3.org/2000/svg"
@@ -101,6 +107,7 @@ function SideBarNodeDetails({closeModal,clickedNode,submitHandler}){
                         height="16"
                         viewBox="0 0 93.936 93.936"
                         enable-background="new 0 0 93.936 93.936;"
+                        fill="#555555"
                       >
                         <g>
                           <path
@@ -114,22 +121,175 @@ function SideBarNodeDetails({closeModal,clickedNode,submitHandler}){
                     s-0.575-0.327-0.693-0.636l-2.42-6.354c-0.169-0.442-0.02-0.943,0.364-1.224c3.538-2.573,9.441-4.235,15.041-4.235
                     c12.36,0,17.894,7.975,17.894,15.877C63.652,33.765,59.785,38.919,54.73,44.921z"
                           />
-                        </g></svg
-                    ></span> </span
-                ></label>
+                        </g>
+                      </svg>
+                    </span>{" "}
+                  </span>
+                </label>
                 <div class="tab-content">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
-                  in!
+                  <div class="tr-blognav-container pa5 pt6 bg-grouped-table shadow-1 br3">
+                    <form
+                      id="settings-navigation"
+                      class="tr-blognav"
+                      novalidate="novalidate"
+                    >
+                      <div id="ember55" class="sortable-objects ember-view">
+                        <div
+                          draggable="false"
+                          id="ember56"
+                          class="js-draggableObject draggable-object ember-view"
+                        >
+                          <div
+                            id="ember57"
+                            class="tr-blognav-item tr-blognav-item--sortable ember-view"
+                          >
+                            <div class="tr-blognav-line">
+                              <span
+                                id="ember60"
+                                class="tr-blognav-url ember-view"
+                              >
+                                <input
+                                  id="ember61"
+                                  class="ember-text-field tr-input ember-view"
+                                  type="text"
+                                />
+                                <p class="response" hidden=""></p>
+                              </span>
+                            </div>
+
+                            <button
+                              class="tr-blognav-delete"
+                              type="button"
+                              data-ember-action=""
+                              data-ember-action-62="62"
+                            >
+                              <svg viewBox="0 0 32 32">
+                                <path d="M30.688 4H22V.687a.694.694 0 00-.688-.688H10.687a.694.694 0 00-.688.688V4H1.311c-.375 0-.625.313-.625.688s.25.625.625.625h3.375v26c0 .375.25.688.625.688h21.375c.375 0 .625-.313.625-.688v-26h3.375c.375 0 .625-.25.625-.625S31.061 4 30.686 4zM11.313 1.313h9.375v2.688h-9.375zM26 30.688H6V5.313h20zM10.688 9.313a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.625-.313.625-.688V10.001c0-.375-.25-.688-.625-.688zm5.312 0a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.688-.313.688-.688V10.001A.694.694 0 0016 9.313zm4.688.687v15.313c0 .375.25.688.625.688s.688-.313.688-.688V10c0-.375-.313-.688-.688-.688s-.625.313-.625.688z"></path>
+                              </svg>
+                              <span class="sr-only">Delete</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div
+                          draggable="false"
+                          id="ember63"
+                          class="js-draggableObject draggable-object ember-view"
+                        >
+                          <div
+                            id="ember64"
+                            class="tr-blognav-item tr-blognav-item--sortable ember-view"
+                          >
+                            <div class="tr-blognav-line">
+                              <span
+                                id="ember67"
+                                class="tr-blognav-url ember-view"
+                              >
+                                <input
+                                  id="ember68"
+                                  class="ember-text-field tr-input ember-view"
+                                  type="text"
+                                />
+                                <p class="response" hidden=""></p>
+                              </span>
+                            </div>
+
+                            <button
+                              class="tr-blognav-delete"
+                              type="button"
+                              data-ember-action=""
+                              data-ember-action-69="69"
+                            >
+                              <svg viewBox="0 0 32 32">
+                                <path d="M30.688 4H22V.687a.694.694 0 00-.688-.688H10.687a.694.694 0 00-.688.688V4H1.311c-.375 0-.625.313-.625.688s.25.625.625.625h3.375v26c0 .375.25.688.625.688h21.375c.375 0 .625-.313.625-.688v-26h3.375c.375 0 .625-.25.625-.625S31.061 4 30.686 4zM11.313 1.313h9.375v2.688h-9.375zM26 30.688H6V5.313h20zM10.688 9.313a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.625-.313.625-.688V10.001c0-.375-.25-.688-.625-.688zm5.312 0a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.688-.313.688-.688V10.001A.694.694 0 0016 9.313zm4.688.687v15.313c0 .375.25.688.625.688s.688-.313.688-.688V10c0-.375-.313-.688-.688-.688s-.625.313-.625.688z"></path>
+                              </svg>
+                              <span class="sr-only">Delete</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div
+                          draggable="false"
+                          id="ember70"
+                          class="js-draggableObject draggable-object ember-view"
+                        >
+                          <div
+                            id="ember71"
+                            class="tr-blognav-item tr-blognav-item--sortable ember-view"
+                          >
+                            <div class="tr-blognav-line">
+                              <span
+                                id="ember74"
+                                class="tr-blognav-url ember-view"
+                              >
+                                <input
+                                  id="ember75"
+                                  class="ember-text-field tr-input ember-view"
+                                  type="text"
+                                />
+                                <p class="response" hidden=""></p>
+                              </span>
+                            </div>
+
+                            <button
+                              class="tr-blognav-delete"
+                              type="button"
+                              data-ember-action=""
+                              data-ember-action-76="76"
+                            >
+                              <svg viewBox="0 0 32 32">
+                                <path d="M30.688 4H22V.687a.694.694 0 00-.688-.688H10.687a.694.694 0 00-.688.688V4H1.311c-.375 0-.625.313-.625.688s.25.625.625.625h3.375v26c0 .375.25.688.625.688h21.375c.375 0 .625-.313.625-.688v-26h3.375c.375 0 .625-.25.625-.625S31.061 4 30.686 4zM11.313 1.313h9.375v2.688h-9.375zM26 30.688H6V5.313h20zM10.688 9.313a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.625-.313.625-.688V10.001c0-.375-.25-.688-.625-.688zm5.312 0a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.688-.313.688-.688V10.001A.694.694 0 0016 9.313zm4.688.687v15.313c0 .375.25.688.625.688s.688-.313.688-.688V10c0-.375-.313-.688-.688-.688s-.625.313-.625.688z"></path>
+                              </svg>
+                              <span class="sr-only">Delete</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div
+                          draggable="false"
+                          id="ember77"
+                          class="js-draggableObject draggable-object ember-view"
+                        >
+                          <div
+                            id="ember78"
+                            class="tr-blognav-item tr-blognav-item--sortable ember-view"
+                          >
+                            <div class="tr-blognav-line">
+                              <span
+                                id="ember81"
+                                class="tr-blognav-url ember-view"
+                              >
+                                <input
+                                  id="ember82"
+                                  class="ember-text-field tr-input ember-view"
+                                  type="text"
+                                />
+                                <p class="response" hidden=""></p>
+                              </span>
+                            </div>
+
+                            <button
+                              class="tr-blognav-delete"
+                              type="button"
+                              data-ember-action=""
+                              data-ember-action-83="83"
+                            >
+                              <svg viewBox="0 0 32 32">
+                                <path d="M30.688 4H22V.687a.694.694 0 00-.688-.688H10.687a.694.694 0 00-.688.688V4H1.311c-.375 0-.625.313-.625.688s.25.625.625.625h3.375v26c0 .375.25.688.625.688h21.375c.375 0 .625-.313.625-.688v-26h3.375c.375 0 .625-.25.625-.625S31.061 4 30.686 4zM11.313 1.313h9.375v2.688h-9.375zM26 30.688H6V5.313h20zM10.688 9.313a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.625-.313.625-.688V10.001c0-.375-.25-.688-.625-.688zm5.312 0a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.688-.313.688-.688V10.001A.694.694 0 0016 9.313zm4.688.687v15.313c0 .375.25.688.625.688s.688-.313.688-.688V10c0-.375-.313-.688-.688-.688s-.625.313-.625.688z"></path>
+                              </svg>
+                              <span class="sr-only">Delete</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
               <div class="tab">
                 <input type="checkbox" id="chck4" />
-                <label class="tab-label f6" for="chck4"
-                  ><span
-                    >Bot Response
-                    <span
-                      data-desc="Customisable bot response to the user intents"
-                      ><svg
+                <label class="tab-label f6" for="chck4">
+                  <span>
+                    Bot Response
+                    <span data-desc="Customisable bot response to the user intents">
+                      <svg
                         version="1.1"
                         id="Capa_1"
                         xmlns="http://www.w3.org/2000/svg"
@@ -139,6 +299,7 @@ function SideBarNodeDetails({closeModal,clickedNode,submitHandler}){
                         height="16"
                         viewBox="0 0 93.936 93.936"
                         enable-background="new 0 0 93.936 93.936;"
+                        fill="#555555"
                       >
                         <g>
                           <path
@@ -152,23 +313,172 @@ function SideBarNodeDetails({closeModal,clickedNode,submitHandler}){
                     s-0.575-0.327-0.693-0.636l-2.42-6.354c-0.169-0.442-0.02-0.943,0.364-1.224c3.538-2.573,9.441-4.235,15.041-4.235
                     c12.36,0,17.894,7.975,17.894,15.877C63.652,33.765,59.785,38.919,54.73,44.921z"
                           />
-                        </g></svg
-                    ></span> </span
-                ></label>
+                        </g>
+                      </svg>
+                    </span>{" "}
+                  </span>
+                </label>
                 <div class="tab-content">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
-                  in!
+                  <h4 class="apps-grid-title">Text Response</h4>
+                  <div class="tr-blognav-container pa5 pt6 bg-grouped-table shadow-1 br3">
+                    <form
+                      id="settings-navigation"
+                      class="tr-blognav"
+                      novalidate="novalidate"
+                      autocomplete="off"
+                    >
+                      <div id="ember55" class="sortable-objects ember-view">
+                        <div
+                          draggable="false"
+                          id="ember56"
+                          class="js-draggableObject draggable-object ember-view"
+                        >
+                          <div
+                            id="ember57"
+                            class="tr-blognav-item tr-blognav-item--sortable ember-view"
+                          >
+                            <div class="tr-blognav-line">
+                              <span
+                                id="ember60"
+                                class="tr-blognav-url ember-view"
+                              >
+                                <h4 class="f6">Text Response 1</h4>
+                                <div
+                                  class="textarea tr-input"
+                                  contenteditable="true"
+                                ></div>
+                                <p class="response" hidden=""></p>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          draggable="false"
+                          id="ember63"
+                          class="js-draggableObject draggable-object ember-view"
+                        >
+                          <div
+                            id="ember64"
+                            class="tr-blognav-item tr-blognav-item--sortable ember-view"
+                          >
+                            <div class="tr-blognav-line">
+                              <span
+                                id="ember67"
+                                class="tr-blognav-url ember-view"
+                              >
+                                <h4 class="f6">Text Response 2</h4>
+                                <div
+                                  class="textarea tr-input"
+                                  contenteditable="true"
+                                ></div>
+                                <p class="response" hidden=""></p>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          draggable="false"
+                          id="ember70"
+                          class="js-draggableObject draggable-object ember-view"
+                        >
+                          <div
+                            id="ember71"
+                            class="tr-blognav-item tr-blognav-item--sortable ember-view"
+                          >
+                            <div class="tr-blognav-line">
+                              <span
+                                id="ember74"
+                                class="tr-blognav-url ember-view"
+                              >
+                                <h4 class="f6">Text Response 3</h4>
+                                <div
+                                  class="textarea tr-input"
+                                  contenteditable="true"
+                                ></div>
+                                <p class="response" hidden=""></p>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          draggable="false"
+                          id="ember77"
+                          class="js-draggableObject draggable-object ember-view"
+                        >
+                          <div
+                            id="ember78"
+                            class="tr-blognav-item tr-blognav-item--sortable ember-view"
+                          >
+                            <div class="tr-blognav-line">
+                              <span
+                                id="ember81"
+                                class="tr-blognav-url ember-view"
+                              >
+                                <h4 class="f6">Text Response 4</h4>
+                                <div
+                                  class="textarea tr-input"
+                                  contenteditable="true"
+                                ></div>
+                                <p class="response" hidden=""></p>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <br />
+                  <h4 class="apps-grid-title">Image/GIF Response</h4>
+                  <div class="apps-grid">
+                    <div class="flex flex-column justify-center items-center mih30 miw-100">
+                      <div class="flex flex-column items-center pa5 pt15 pb15 custom-styles">
+                        <label class="f5" for="upload-image-gif">
+                          + Upload a Image/GIF
+                        </label>
+                        <input
+                          type="file"
+                          id="upload-image-gif"
+                          name="img"
+                          accept="image/*,.gif"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <h4 class="apps-grid-title">Video Response</h4>
+                  <div class="apps-grid">
+                    <div class="flex flex-column justify-center items-center mih30 miw-100">
+                      <div class="flex flex-column items-center pa5 pt15 pb15 custom-styles">
+                        <label class="f5" for="upload-video">
+                          + Upload a Video
+                        </label>
+                        <input
+                          type="file"
+                          id="upload-video"
+                          name="video"
+                          accept="video/*"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <button class="tr-btn tr-btn-green" id="save">Save</button>
-        </form>
-        <button class="tr-btn tr-btn-grey" id="close" onClick={()=> closeModal()}>Close</button>
-      </div>
-
-    );
+        <button class="tr-btn tr-btn-green" id="save">
+          Save
+        </button>
+      </form>
+      <button
+        class="tr-btn tr-btn-grey"
+        id="close"
+        onClick={() => closeModal()}
+      >
+        Close
+      </button>
+    </div>
+  );
 }
 
 export default SideBarNodeDetails;

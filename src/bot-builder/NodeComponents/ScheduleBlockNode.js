@@ -56,7 +56,7 @@ export default memo(({id,data}) => {
         </div>
         <div className="td-cta-content-wrapper">
           <div className="td-cta-content">
-            <h3 className="fw6 f6">Automation/Schedule Block</h3>
+            <h3 className="fw6 f6">{data.payload.nodeName === undefined ? "Automation/Schedule Block" : data.payload.nodeName}</h3>
           </div>
         </div>
       </div>

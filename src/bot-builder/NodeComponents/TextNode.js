@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { Handle, removeElements } from 'react-flow-renderer';
 // import './style1.css'
 import './nodeStyles.css'
-export default memo(({id,data,payload}) => {
+export default memo(({id,data}) => {
   
   const deleteNode = () =>{
     data.setElements((els) => removeElements([els.find( e => e.id === id)], els));

@@ -76,7 +76,7 @@ export default memo(({id,data}) => {
         </div>
         <div className="td-cta-content-wrapper">
           <div className="td-cta-content">
-            <h3 className="fw6 f6">Image/GIF</h3>
+            <h3 className="fw6 f6">{data.payload.nodeName === undefined ? "Image/GIF" : data.payload.nodeName}</h3>
           </div>
         </div>
       </div>
