@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import "./main.css";
 import "./style_node.css";
 function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
@@ -64,6 +64,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                         height="16"
                         viewBox="0 0 93.936 93.936"
                         enable-background="new 0 0 93.936 93.936;"
+                        fill="#555555"
                       >
                         <g>
                           <path
@@ -106,6 +107,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                         height="16"
                         viewBox="0 0 93.936 93.936"
                         enable-background="new 0 0 93.936 93.936;"
+                        fill="#555555"
                       >
                         <g>
                           <path
@@ -297,6 +299,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                         height="16"
                         viewBox="0 0 93.936 93.936"
                         enable-background="new 0 0 93.936 93.936;"
+                        fill="#555555"
                       >
                         <g>
                           <path
@@ -339,12 +342,11 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                                 id="ember60"
                                 class="tr-blognav-url ember-view"
                               >
-                                <input
-                                  id="text-response-1"
-                                  class="ember-text-field tr-input ember-view"
-                                  type="text"
-                                  placeholder="Text Response 1"
-                                />
+                                <h4 class="f6">Text Response 1</h4>
+                                <div
+                                  class="textarea tr-input"
+                                  contenteditable="true"
+                                ></div>
                                 <p class="response" hidden=""></p>
                               </span>
                             </div>
@@ -364,12 +366,11 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                                 id="ember67"
                                 class="tr-blognav-url ember-view"
                               >
-                                <input
-                                  id="text-response-2"
-                                  class="ember-text-field tr-input ember-view"
-                                  type="text"
-                                  placeholder="Text Response 2"
-                                />
+                                <h4 class="f6">Text Response 2</h4>
+                                <div
+                                  class="textarea tr-input"
+                                  contenteditable="true"
+                                ></div>
                                 <p class="response" hidden=""></p>
                               </span>
                             </div>
@@ -389,12 +390,11 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                                 id="ember74"
                                 class="tr-blognav-url ember-view"
                               >
-                                <input
-                                  id="text-response-3"
-                                  class="ember-text-field tr-input ember-view"
-                                  type="text"
-                                  placeholder="Text Response 3"
-                                />
+                                <h4 class="f6">Text Response 3</h4>
+                                <div
+                                  class="textarea tr-input"
+                                  contenteditable="true"
+                                ></div>
                                 <p class="response" hidden=""></p>
                               </span>
                             </div>
@@ -414,12 +414,11 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                                 id="ember81"
                                 class="tr-blognav-url ember-view"
                               >
-                                <input
-                                  id="text-response-4"
-                                  class="ember-text-field tr-input ember-view"
-                                  type="text"
-                                  placeholder="Text Response 4"
-                                />
+                                <h4 class="f6">Text Response 4</h4>
+                                <div
+                                  class="textarea tr-input"
+                                  contenteditable="true"
+                                ></div>
                                 <p class="response" hidden=""></p>
                               </span>
                             </div>
@@ -432,7 +431,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                   <h4 class="apps-grid-title">Image/GIF Response</h4>
                   <div class="apps-grid">
                     <div class="flex flex-column justify-center items-center mih30 miw-100">
-                      <div class="flex flex-column items-center pa5 pt15 pb15">
+                      <div class="flex flex-column items-center pa5 pt15 pb15 custom-styles">
                         <label class="f5" for="upload-image-gif">
                           + Upload a Image/GIF
                         </label>
@@ -441,7 +440,6 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                           id="upload-image-gif"
                           name="img"
                           accept="image/*,.gif"
-                          style={{ display: "none" }}
                         />
                       </div>
                     </div>
@@ -450,7 +448,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                   <h4 class="apps-grid-title">Video Response</h4>
                   <div class="apps-grid">
                     <div class="flex flex-column justify-center items-center mih30 miw-100">
-                      <div class="flex flex-column items-center pa5 pt15 pb15">
+                      <div class="flex flex-column items-center pa5 pt15 pb15 custom-styles">
                         <label class="f5" for="upload-video">
                           + Upload a Video
                         </label>
@@ -459,7 +457,6 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                           id="upload-video"
                           name="video"
                           accept="video/*"
-                          style={{ display: "none" }}
                         />
                       </div>
                     </div>
