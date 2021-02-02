@@ -3,7 +3,7 @@ import React from 'react';
 // import ReactFlowApp2 from './react-flow-app2/ReactFlowApp'; //UNCOMMENT THIS TO CHECKOUT THIS COMPONENT
 // import ReactFlowApp3 from './react-flow-app3/ReactFlowApp';
 import BotBuilder from './bot-builder/BotBuilder';
-import LeftSidebar from './LeftSidebar';
+import LeftSidebar from './left-sidebar/LeftSidebar';
 import './App.css';
 
 
