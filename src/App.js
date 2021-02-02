@@ -4,6 +4,7 @@ import React from 'react';
 // import ReactFlowApp3 from './react-flow-app3/ReactFlowApp';
 import BotBuilder from './bot-builder/BotBuilder';
 import LeftSidebar from './left-sidebar/LeftSidebar';
+import {Route, Switch} from 'react-router-dom';
 import './App.css';
 
 
@@ -16,7 +17,10 @@ function App () {
         {/* <ReactFlowApp2/>    */}
         {/* <ReactFlowApp3/> */}
         <LeftSidebar />
-        <BotBuilder />
+        <Switch>
+        
+          <Route path='/' render={()=> <BotBuilder />} />
+        </Switch>
       </div>
     );
   
