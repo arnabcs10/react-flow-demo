@@ -28,8 +28,15 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
   return (
     //   <div class="sidebar-1">
     <div style={{ minHeight: "100vh" }}>
+      <button
+        class="tr-btn tr-btn-grey"
+        id="close"
+        onClick={() => closeModal()}
+      >
+        Close
+      </button>
       <form onSubmit={handelSubmit}>
-        <div class="search">
+        <div class="search" style={{ width: "450px" }}>
           <input
             class="tr-input"
             style={{ opacity: 1, zIndex: 1 }}
@@ -41,6 +48,9 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
             }
           />
         </div>
+        <button class="tr-btn tr-btn-green" id="save">
+          Save
+        </button>
         <br />
         <div class="row">
           <div class="col">
@@ -338,17 +348,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
             </div>
           </div>
         </div>
-        <button class="tr-btn tr-btn-green" id="save">
-          Save
-        </button>
       </form>
-      <button
-        class="tr-btn tr-btn-grey"
-        id="close"
-        onClick={() => closeModal()}
-      >
-        Close
-      </button>
     </div>
   );
 }

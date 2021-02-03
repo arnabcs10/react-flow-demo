@@ -145,20 +145,20 @@ input:checked ~ .tab-content {
 #save {
   position: relative;
   top: auto;
-  bottom: -13px;
+  bottom: 35px;
   padding: 5px 10px;
   left: auto;
-  right: -170px;
-  width: 100px;
+  right: -190px;
+  width: 80px;
 }
 #close {
   position: relative;
   top: auto;
-  bottom: 20px;
+  bottom: -35px;
   padding: 5px 10px;
   left: auto;
   right: -280px;
-  width: 100px;
+  width: 80px;
 }
 
 .apps-grid-title {

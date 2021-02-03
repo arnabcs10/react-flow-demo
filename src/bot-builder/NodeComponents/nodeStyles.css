@@ -1,6 +1,7 @@
 .Node {
   display: flex;
   align-items: center;
+  width: 250px;
 }
 .cross {
   height: fit-content;
