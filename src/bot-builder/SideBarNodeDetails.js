@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+import TextResponse from "./text-response";
+import ImageGIFResponse from "./image-gif-response";
+import VideoResponse from "./video-response";
+import QuickReply from "./quic-reply";
 import "./main.css";
 import "./style_node.css";
+
 function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
   // document.getElementById("sidebar").style =
   //   "  position: absolute; top: 0; left: auto; right: 0;  background-color: #f2f4f7; transition: 0.5s; zIndex: 100000000; padding: 20px;";
@@ -12,6 +17,8 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
     submitHandler(payload);
     // closeModal();
   };
+
+  let tr2;
 
   // useEffect(()=>{
   //   return ()=>{
@@ -319,148 +326,13 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                   </span>
                 </label>
                 <div class="tab-content">
-                  <h4 class="apps-grid-title">Text Response</h4>
-                  <div class="tr-blognav-container pa5 pt6 bg-grouped-table shadow-1 br3">
-                    <form
-                      id="settings-navigation"
-                      class="tr-blognav"
-                      novalidate="novalidate"
-                      autocomplete="off"
-                    >
-                      <div id="ember55" class="sortable-objects ember-view">
-                        <div
-                          draggable="false"
-                          id="ember56"
-                          class="js-draggableObject draggable-object ember-view"
-                        >
-                          <div
-                            id="ember57"
-                            class="tr-blognav-item tr-blognav-item--sortable ember-view"
-                          >
-                            <div class="tr-blognav-line">
-                              <span
-                                id="ember60"
-                                class="tr-blognav-url ember-view"
-                              >
-                                <h4 class="f6">Text Response 1</h4>
-                                <div
-                                  class="textarea tr-input"
-                                  contenteditable="true"
-                                ></div>
-                                <p class="response" hidden=""></p>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          draggable="false"
-                          id="ember63"
-                          class="js-draggableObject draggable-object ember-view"
-                        >
-                          <div
-                            id="ember64"
-                            class="tr-blognav-item tr-blognav-item--sortable ember-view"
-                          >
-                            <div class="tr-blognav-line">
-                              <span
-                                id="ember67"
-                                class="tr-blognav-url ember-view"
-                              >
-                                <h4 class="f6">Text Response 2</h4>
-                                <div
-                                  class="textarea tr-input"
-                                  contenteditable="true"
-                                ></div>
-                                <p class="response" hidden=""></p>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          draggable="false"
-                          id="ember70"
-                          class="js-draggableObject draggable-object ember-view"
-                        >
-                          <div
-                            id="ember71"
-                            class="tr-blognav-item tr-blognav-item--sortable ember-view"
-                          >
-                            <div class="tr-blognav-line">
-                              <span
-                                id="ember74"
-                                class="tr-blognav-url ember-view"
-                              >
-                                <h4 class="f6">Text Response 3</h4>
-                                <div
-                                  class="textarea tr-input"
-                                  contenteditable="true"
-                                ></div>
-                                <p class="response" hidden=""></p>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          draggable="false"
-                          id="ember77"
-                          class="js-draggableObject draggable-object ember-view"
-                        >
-                          <div
-                            id="ember78"
-                            class="tr-blognav-item tr-blognav-item--sortable ember-view"
-                          >
-                            <div class="tr-blognav-line">
-                              <span
-                                id="ember81"
-                                class="tr-blognav-url ember-view"
-                              >
-                                <h4 class="f6">Text Response 4</h4>
-                                <div
-                                  class="textarea tr-input"
-                                  contenteditable="true"
-                                ></div>
-                                <p class="response" hidden=""></p>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                  <TextResponse />
                   <br />
-                  <h4 class="apps-grid-title">Image/GIF Response</h4>
-                  <div class="apps-grid">
-                    <div class="flex flex-column justify-center items-center mih30 miw-100">
-                      <div class="flex flex-column items-center pa5 pt15 pb15 custom-styles">
-                        <label class="f5" for="upload-image-gif">
-                          + Upload a Image/GIF
-                        </label>
-                        <input
-                          type="file"
-                          id="upload-image-gif"
-                          name="img"
-                          accept="image/*,.gif"
-                        />
-                      </div>
-                    </div>
-                  </div>
+                  <ImageGIFResponse />
                   <br />
-                  <h4 class="apps-grid-title">Video Response</h4>
-                  <div class="apps-grid">
-                    <div class="flex flex-column justify-center items-center mih30 miw-100">
-                      <div class="flex flex-column items-center pa5 pt15 pb15 custom-styles">
-                        <label class="f5" for="upload-video">
-                          + Upload a Video
-                        </label>
-                        <input
-                          type="file"
-                          id="upload-video"
-                          name="video"
-                          accept="video/*"
-                        />
-                      </div>
-                    </div>
-                  </div>
+                  <VideoResponse />
+                  <br />
+                  <QuickReply />
                 </div>
               </div>
             </div>

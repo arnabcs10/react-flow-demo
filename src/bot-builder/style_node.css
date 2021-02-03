@@ -138,7 +138,7 @@ input:checked + .tab-label::after {
   transform: rotate(90deg);
 }
 input:checked ~ .tab-content {
-  max-height: 100vh;
+  max-height: 200vh;
   padding: 1em;
 }
 
@@ -202,4 +202,21 @@ input[type="file"] {
   height: auto;
   min-height: 38px;
   margin-bottom: 5px;
+}
+.hidden {
+  display: none;
+}
+.apps-card-app {
+  height: 100px !important;
+  justify-content: center;
+}
+.apps-card-meta {
+  padding-right: 0;
+}
+.tr-themes-uploadbtn {
+  margin-top: 10px;
+  color: #ffffff;
+}
+.tr-themes-uploadbtn input::placeholder {
+  color: #ffffff;
 }
