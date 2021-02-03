@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import {Link} from 'react-router-dom';
 import { Handle, removeElements } from 'react-flow-renderer';
 
 export default memo(({id,data}) => {
@@ -17,7 +18,8 @@ export default memo(({id,data}) => {
      
     
     <div>
-      NODE
+      <Link to={`/${data.storyNum}`}>NODE</Link>
+      
     </div>
 
       <Handle

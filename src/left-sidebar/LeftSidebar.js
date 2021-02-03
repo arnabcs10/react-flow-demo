@@ -80,7 +80,7 @@ const initialElements = [
   {
     id: '2',
     type:'refNode',
-    data: {  setPrevNode: setPrevNode },
+    data: {  setPrevNode: setPrevNode, storyNum:0 },
     position: { x: 85, y: 130 },
     style: { border: '1px solid #777', padding:"15px",
             borderRadius:"20px",
@@ -91,7 +91,7 @@ const initialElements = [
   {
     id: '3',
     type:'refNode',
-    data: {  setPrevNode: setPrevNode },
+    data: {  setPrevNode: setPrevNode, storyNum:1 },
     position: { x: 85, y: 320 },
     style: { border: '1px solid #777', padding:"15px",
             borderRadius:"20px",

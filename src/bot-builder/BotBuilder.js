@@ -4,12 +4,12 @@ import BotFlow from './BotFlow';
 import "./Sidebar.css";
 
 let i = 1;
-function BotBuilder () {
-    
+function BotBuilder (props) {
+   const { story,setStory,storyNum,prevNode, setPrevNode } = props;
     const [elements, setElements] = useState();
     
     const [clickedNode, setClickedNode] = useState();
-    const [prevNode, setPrevNode] = useState();
+    
 
     const updateNewNode = (node,payload) => {
       setElements(eles => eles.map(els => {
@@ -25,6 +25,7 @@ function BotBuilder () {
 
     const addNewNode = (parentNodeId,nodeType) =>{
         i=i+1;
+        console.log(parentNodeId);
         const newNode = {
             id:`${i}`,
             type:`${nodeType}`,
@@ -39,40 +40,20 @@ function BotBuilder () {
         
         setElements([...elements,newNode,newEdge]);
     }
-    const initialElements = [
-      
-      {
-        id: '1',
-        type:'startNode',
-        data: { setPrevNode: setPrevNode },
-        position: { x: 700, y: 50 },
-        style: { border: '1px solid #777', padding:"15px",
-                borderRadius:"20px",
-                background:"#445B75",
-                color:"#ffffff",
-                width:"auto" }
-      },
-      // {
-      //   id: 'add-1',
-      //   type:"addIconNode",
-      //   sourcePosition: 'right',
-      //   targetPosition: 'left',
-      //   // data: { label: <i className="fas fa-plus-circle"></i> },
-      //   position: { x: 250, y: 200 },
-        
-      //   style: {
-      //       padding: 0,
-      //       width: "1rem",
-      //       border:"none",
-      //     },
-      // },
-      // // {id:"e1-2", source:"1", target:"2"},
-      // {id:"1-add-1", source:"1", target:"add-1"}
-    ];
+ 
     useEffect(() => {
-      setElements(initialElements);
+      console.log("hr");
+      setElements(story);
       // eslint-disable-next-line
-    },[]);
+    },[storyNum]);
+
+    useEffect(() => {
+      setStory( story => {
+        story[storyNum]=elements;
+        return story;
+      });
+     
+    }, [elements]);
 
     return (
       <div className='ReactFlowApp'>      
