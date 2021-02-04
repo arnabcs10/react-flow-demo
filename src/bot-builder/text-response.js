@@ -4,10 +4,6 @@ const textResponse = () => {
   let tr1 = document.querySelectorAll("tr-input")[0];
   let tr2 = document.querySelectorAll("tr-input")[1];
 
-  const showTextarea = () => {
-    tr2.classList.remove("hidden");
-  };
-
   return (
     <div className="text-response">
       <h4 class="apps-grid-title">Text Response</h4>
@@ -29,10 +25,7 @@ const textResponse = () => {
                 </div>
               </div>
             </div>
-            <div
-              draggable="false"
-              class="js-draggableObject draggable-object hidden"
-            >
+            <div draggable="false" class="js-draggableObject draggable-object ">
               <div class="tr-blognav-item tr-blognav-item--sortable">
                 <div class="tr-blognav-line">
                   <span class="tr-blognav-url">
@@ -42,10 +35,7 @@ const textResponse = () => {
                 </div>
               </div>
             </div>
-            <div
-              draggable="false"
-              class="js-draggableObject draggable-object hidden"
-            >
+            <div draggable="false" class="js-draggableObject draggable-object ">
               <div class="tr-blognav-item tr-blognav-item--sortable">
                 <div class="tr-blognav-line">
                   <span class="tr-blognav-url">
@@ -55,16 +45,13 @@ const textResponse = () => {
                 </div>
               </div>
             </div>
-            <div
-              draggable="false"
-              class="js-draggableObject draggable-object hidden"
-            >
+            <div draggable="false" class="js-draggableObject draggable-object ">
               <div class="tr-blognav-item tr-blognav-item--sortable ">
                 <div class="tr-blognav-line">
                   <span class="tr-blognav-url ">
                     <div
                       class="textarea tr-input"
-                      onInput={showTextarea}
+                      // onInput={showTextarea}
                       contenteditable="true"
                     ></div>
                     <p class="response" hidden=""></p>

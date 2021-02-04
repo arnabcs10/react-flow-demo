@@ -15,19 +15,25 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
   const handelSubmit = (e) => {
     e.preventDefault();
     submitHandler(payload);
-    // closeModal();
   };
 
-  let tr2;
-
-  // useEffect(()=>{
-  //   return ()=>{
-  //     document.getElementById("sidebar").style = " width: 370px; position: absolute; top: 0; left: auto; right: 0;  background-color: #f2f4f7; transition: 0.5s; zIndex: 100000000; padding: 20px;";
-  //   }
-  // })
+  let nodeType;
+  const switchCase = () => {
+    switch (clickedNode.type) {
+      case "textNode":
+        return (nodeType = <TextResponse />);
+      case "imageNode":
+        return (nodeType = <ImageGIFResponse />);
+      case "videoNode":
+        return (nodeType = <VideoResponse />);
+      case "quickreplyNode":
+        return (nodeType = <QuickReply />);
+    }
+  };
+  switchCase();
   return (
     //   <div class="sidebar-1">
-    <div style={{ minHeight: "100vh" }}>
+    <div style={{ minHeight: "92.5vh" }}>
       <button
         class="tr-btn tr-btn-grey"
         id="close"
@@ -335,15 +341,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                     </span>{" "}
                   </span>
                 </label>
-                <div class="tab-content">
-                  <TextResponse />
-                  <br />
-                  <ImageGIFResponse />
-                  <br />
-                  <VideoResponse />
-                  <br />
-                  <QuickReply />
-                </div>
+                <div class="tab-content">{nodeType}</div>
               </div>
             </div>
           </div>
