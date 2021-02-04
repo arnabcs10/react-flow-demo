@@ -12,8 +12,10 @@ import './App.css';
 function App () {
   const [prevNode, setPrevNode] = useState();
   const initialStories = [
-    [
-      {
+    {
+      id:'start',
+      elements:[
+          {
             id: '1',
             type:'startNode',
             data: { setPrevNode: setPrevNode },
@@ -24,33 +26,38 @@ function App () {
                     color:"#ffffff",
                     width:"auto" }
           }
-    ],
-    [
-      {
-            id: '1',
-            type:'startNode',
-            data: { setPrevNode: setPrevNode },
-            position: { x: 700, y: 50 },
-            style: { border: '1px solid #777', padding:"15px",
-                    borderRadius:"20px",
-                    background:"#445B75",
-                    color:"#ffffff",
-                    width:"auto" }
-          }
-    ],
-  
+    ]
+  }
+    
   ];
+  const initialRefElements = [
+    {
+      id: 'start',
+      type:'refStartNode',
+      data: {  storyNum:0 },
+      position: { x: 20, y: 50 },
+      style: { border: '1px solid #777', padding:"15px",
+              borderRadius:"20px",
+              background:"#445B75",
+              color:"#ffffff",
+              width:"250px" }
+    },
+  ];
+
   const [story, setStory] = useState(initialStories);
+  const [refElements, setRefElements] = useState(initialRefElements);
 
   const getStory = (props) =>{
-    const storyNum = props.match.params.storyNum;
+    const storyId = props.match.params.storyId;
     // console.log(story[storyNum]);
+    const st = story.find(s => s.id === storyId);
     return <BotBuilder 
-              story={story[storyNum]} 
-              storyNum={storyNum} 
+              story={st} 
+              storyId={st.id} 
               setStory={setStory}
               prevNode={prevNode} 
               setPrevNode={setPrevNode}
+              setRefElements={setRefElements}
           />
   }
    
@@ -59,11 +66,11 @@ function App () {
         {/* <ReactFlowApp/> */}   {/*UNCOMMENT THIS TO CHECKOUT THIS COMPONENT*/}
         {/* <ReactFlowApp2/>    */}
         {/* <ReactFlowApp3/> */}
-        <LeftSidebar />
+        <LeftSidebar refElements={refElements}/>
         <Switch>
         
-          <Route path='/:storyNum' render={getStory} />
-          <Route path='/' render={()=> <BotBuilder story={story[0]} storyNum={0} setStory={setStory} prevNode={prevNode} setPrevNode={setPrevNode}/>} />
+          <Route path='/:storyId' render={getStory} />
+          <Route path='/' render={()=> <BotBuilder story={story[0]} storyId='start' setStory={setStory} prevNode={prevNode} setPrevNode={setPrevNode} setRefElements={setRefElements}/>} />
         </Switch>
       </div>
     );

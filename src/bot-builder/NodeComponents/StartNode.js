@@ -7,7 +7,7 @@ export default memo(({id,data}) => {
     <>
       
       <div>
-          START BOT FLOW
+          {data.flowName ? `  ${data.flowName}  `: "START BOT FLOW"}
       </div>
     
       <Handle

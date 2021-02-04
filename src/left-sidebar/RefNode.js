@@ -18,7 +18,7 @@ export default memo(({id,data}) => {
      
     
     <div>
-      <Link to={`/${data.storyNum}`}>NODE</Link>
+      <Link to={`/${id}`}>{data.refNodeName}</Link>
       
     </div>
 

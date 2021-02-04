@@ -1,5 +1,6 @@
 import React, { memo} from 'react';
 import { Handle } from 'react-flow-renderer';
+import {Link} from 'react-router-dom';
 
 export default memo(({id,data}) => {
   
@@ -7,7 +8,8 @@ export default memo(({id,data}) => {
     <>
       
       <div>
-          START BOT FLOW
+      <Link to='/start'>START</Link>
+          
       </div>
     
       <Handle
