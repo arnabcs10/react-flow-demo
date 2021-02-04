@@ -1,5 +1,6 @@
 import React, { memo} from 'react';
 import { Handle } from 'react-flow-renderer';
+import {Link} from 'react-router-dom';
 
 export default memo(({id,data}) => {
   
@@ -7,7 +8,8 @@ export default memo(({id,data}) => {
     <>
       
       <div>
-          {data.flowName ? `  ${data.flowName}  `: "START BOT FLOW"}
+      <Link to='/start'>START</Link>
+          
       </div>
     
       <Handle
@@ -19,7 +21,7 @@ export default memo(({id,data}) => {
             document.getElementById("sidebar").classList.add("side-bar-open");
             data.setPrevNode(id);
           }}
-        style={{ cursor:"pointer",height:"1rem", width:"1rem" }}
+        style={{ left:30 }}
       />
      
     </>
