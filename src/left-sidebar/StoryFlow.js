@@ -10,7 +10,7 @@ const nodeTypes = {
     refNode: RefNode
 }
 
-const StoryFlow = ({elements}) => {
+const StoryFlow = ({elements, setLeftSidebar}) => {
 //   const [elements, setElements] = useState(initialElements);
   // const onElementsRemove = (elementsToRemove) =>
   //   setElements((els) => removeElements(elementsToRemove, els));
@@ -35,6 +35,7 @@ const StoryFlow = ({elements}) => {
 
   return (
     <div style={{ height: "100vh" }}>
+      <button  onClick={()=> setLeftSidebar(false)}>Close</button>
         <ReactFlowProvider>
         <ReactFlow
             elements={elements}

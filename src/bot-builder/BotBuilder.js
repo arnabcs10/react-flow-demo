@@ -95,11 +95,12 @@ function BotBuilder (props) {
           }
         })
       );
-     
+     // eslint-disable-next-line
     }, [elements]);
 
     return (
-      <div className='ReactFlowApp'>      
+      <div className='ReactFlowApp'>    
+      
         <BotFlow elements={elements} setElements={setElements} addNewNode={addNewNode} setClickedNode={setClickedNode}/>
         <SideBar addNewNode={addNewNode} updateNewNode={updateNewNode} clickedNode={clickedNode} setClickedNode={setClickedNode} prevNode={prevNode} setPrevNode={setPrevNode}/>
       </div>

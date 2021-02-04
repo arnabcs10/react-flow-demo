@@ -10,6 +10,7 @@ import './App.css';
 
 
 function App () {
+  const [leftSidebar, setLeftSidebar] = useState(false);
   const [prevNode, setPrevNode] = useState();
   const initialStories = [
     {
@@ -58,6 +59,7 @@ function App () {
               prevNode={prevNode} 
               setPrevNode={setPrevNode}
               setRefElements={setRefElements}
+              
           />
   }
    
@@ -66,11 +68,12 @@ function App () {
         {/* <ReactFlowApp/> */}   {/*UNCOMMENT THIS TO CHECKOUT THIS COMPONENT*/}
         {/* <ReactFlowApp2/>    */}
         {/* <ReactFlowApp3/> */}
-        <LeftSidebar refElements={refElements}/>
+        <LeftSidebar refElements={refElements} leftSidebar={leftSidebar} setLeftSidebar={setLeftSidebar}/>
+        <button className='leftsidebar-btn' onClick={()=> setLeftSidebar(true)}></button>  
         <Switch>
         
           <Route path='/:storyId' render={getStory} />
-          <Route path='/' render={()=> <BotBuilder story={story[0]} storyId='start' setStory={setStory} prevNode={prevNode} setPrevNode={setPrevNode} setRefElements={setRefElements}/>} />
+          <Route path='/' render={()=> <BotBuilder story={story[0]} storyId='start' setStory={setStory} prevNode={prevNode} setPrevNode={setPrevNode} setRefElements={setRefElements} />} />
         </Switch>
       </div>
     );

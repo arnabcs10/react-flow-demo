@@ -5,3 +5,17 @@
   flex-direction: column; */
 }
 
+.leftsidebar-btn{
+  position: absolute;
+  z-index: 1000000;
+  left: 0;
+  top: 100px;
+}
+.leftsidebar-btn::after{
+  position: relative;
+  content: "❯";
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  transition: all 0.35s;
+}
