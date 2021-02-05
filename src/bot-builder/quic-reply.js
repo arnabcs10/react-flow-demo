@@ -15,11 +15,12 @@ const quckReply = () => {
     }
   };
   const deleteOption = () => {
-    document.querySelector(".delete-qr").style = "display:inline-block";
+    document.querySelectorAll(".delete-qr")[0].style = "display:inline-block";
   };
   const hideDelete = () => {
-    document.querySelector(".delete-qr").style = "display:none";
+    document.querySelectorAll(".delete-qr")[0].style = "display:none";
   };
+
   const deleteButton = () => {};
 
   return (
@@ -75,6 +76,39 @@ const quckReply = () => {
             <span>Add New +</span>
           </a>
         </div>
+      </div>
+      <div
+        style={{
+          width: "100%",
+          height: "3px",
+          borderTop: "1px solid lightgray",
+        }}
+      ></div>
+      <div id="ember59" class="first-form-group form-group ember-view">
+        <label for="button-name">Button Name</label>
+        <input
+          placeholder="Button Name"
+          autocorrect="off"
+          id="button-name"
+          class="user-name ember-text-field tr-input ember-view"
+          type="text"
+        ></input>
+        <br />
+        <label for="cars">Choose Action</label>
+        <select name="cars" className="tr-input" id="actions">
+          <option value="volvo" className="tr-input">
+            Volvo
+          </option>
+          <option value="saab" className="tr-input">
+            Saab
+          </option>
+          <option value="mercedes" className="tr-input">
+            Mercedes
+          </option>
+          <option value="audi" className="tr-input">
+            Audi
+          </option>
+        </select>
       </div>
     </div>
   );
