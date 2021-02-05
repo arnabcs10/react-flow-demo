@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TextResponse from "./text-response";
 import ImageGIFResponse from "./image-gif-response";
 import VideoResponse from "./video-response";
-import QuickReply from "./quic-reply";
+import QuickReply from "./QuickReply";
 import "./main.css";
 import "./style_node.css";
 
@@ -28,6 +28,8 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
         return (nodeType = <VideoResponse />);
       case "quickreplyNode":
         return (nodeType = <QuickReply />);
+      default:
+        return null;  
     }
   };
   switchCase();

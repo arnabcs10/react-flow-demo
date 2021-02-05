@@ -247,7 +247,9 @@ input[type="file"] {
 .qr-button {
   position: relative;
 }
-
+.qr-button:hover .delete-qr{
+  display: inline-block;
+}
 .tr-themes-uploadbtn input::placeholder {
   color: #ffffff;
 }
