@@ -19,7 +19,25 @@ const textResponse = () => {
               <div class="tr-blognav-item tr-blognav-item--sortable">
                 <div class="tr-blognav-line">
                   <span class="tr-blognav-url">
-                    <div class="textarea tr-input" contenteditable="true"></div>
+                    <div
+                      class="textarea tr-input"
+                      id="tr-1"
+                      contenteditable="true"
+                    ></div>
+                    <p class="response" hidden=""></p>
+                  </span>
+                </div>
+              </div>
+            </div>
+            {/* <div draggable="false" class="js-draggableObject draggable-object ">
+              <div class="tr-blognav-item tr-blognav-item--sortable">
+                <div class="tr-blognav-line">
+                  <span class="tr-blognav-url">
+                    <div
+                      class="textarea tr-input"
+                      id="tr-2"
+                      contenteditable="true"
+                    ></div>
                     <p class="response" hidden=""></p>
                   </span>
                 </div>
@@ -29,17 +47,11 @@ const textResponse = () => {
               <div class="tr-blognav-item tr-blognav-item--sortable">
                 <div class="tr-blognav-line">
                   <span class="tr-blognav-url">
-                    <div class="textarea tr-input" contenteditable="true"></div>
-                    <p class="response" hidden=""></p>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div draggable="false" class="js-draggableObject draggable-object ">
-              <div class="tr-blognav-item tr-blognav-item--sortable">
-                <div class="tr-blognav-line">
-                  <span class="tr-blognav-url">
-                    <div class="textarea tr-input" contenteditable="true"></div>
+                    <div
+                      class="textarea tr-input"
+                      id="tr-3"
+                      contenteditable="true"
+                    ></div>
                     <p class="response" hidden=""></p>
                   </span>
                 </div>
@@ -52,13 +64,14 @@ const textResponse = () => {
                     <div
                       class="textarea tr-input"
                       // onInput={showTextarea}
+                      id="tr-4"
                       contenteditable="true"
                     ></div>
                     <p class="response" hidden=""></p>
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </form>
       </div>

@@ -21,7 +21,12 @@ const quckReply = () => {
     document.querySelectorAll(".delete-qr")[0].style = "display:none";
   };
 
-  const deleteButton = () => {};
+  const checkLength = (e) => {
+    const length = document.getElementById("button-name").value.length;
+    if (length >= 40) {
+      window.alert("Button Name Cannot be more than 40 characters");
+    }
+  };
 
   return (
     <div classNameName="quick-reply">
@@ -86,13 +91,15 @@ const quckReply = () => {
       ></div>
       <div id="ember59" class="first-form-group form-group ember-view">
         <label for="button-name">Button Name</label>
-        <input
+        <textarea
           placeholder="Button Name"
           autocorrect="off"
           id="button-name"
           class="user-name ember-text-field tr-input ember-view"
           type="text"
-        ></input>
+          onChange={checkLength}
+          style={{ minHeight: "38px", overflow: "hidden" }}
+        ></textarea>
         <br />
         <label for="cars">Choose Action</label>
         <select name="cars" className="tr-input" id="actions">

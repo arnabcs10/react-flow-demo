@@ -28,3 +28,6 @@
   box-shadow: none;
   border: none;
 }
+.Node .td-cta-content-wrapper {
+  justify-content: center;
+}
