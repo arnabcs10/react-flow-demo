@@ -59,6 +59,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
         <button class="tr-btn tr-btn-green" id="save">
           Save
         </button>
+        </form>
         <br />
         <div class="row">
           <div class="col">
@@ -348,7 +349,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
             </div>
           </div>
         </div>
-      </form>
+     
     </div>
   );
 }
