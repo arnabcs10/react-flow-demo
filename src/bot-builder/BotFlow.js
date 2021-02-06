@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactFlow, { removeElements, addEdge, ReactFlowProvider, Background } from 'react-flow-renderer';
+import ReactFlow, { removeElements, addEdge, ReactFlowProvider, Background,isEdge } from 'react-flow-renderer';
 import InputNode from './InputNode';
 import Node from './Node';
 import AddIconNode from './AddIconNode';
@@ -102,7 +102,7 @@ const BotFlow = ({elements,setElements,addNewNode,setClickedNode}) => {
     //   console.log(element);
     //   addNewNode(getIncomers(element,elements)[0].id);
     // }
-    if(element.type !== 'startNode' && event.target.className !==  "fas fa-times-circle"){
+    if(element.type !== 'startNode' && !isEdge(element)  && event.target.className !==  "fas fa-times-circle"){
      
       setClickedNode(element);
       openModal();
