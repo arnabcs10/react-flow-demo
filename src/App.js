@@ -49,7 +49,7 @@ function App() {
   ];
 
   const openLeftSidebar = () => {
-    if (leftSidebar == false) {
+    if (leftSidebar === false) {
       setLeftSidebar(true);
       document.getElementById("left-btn").style =
         "transform:translateX(300px) rotate(180deg)";

@@ -117,6 +117,16 @@ const QuckReply = () => {
               Audi
             </option>
           </select>
+
+          <label for="button-name" style={{paddingTop:"10px"}}>Save Attributes</label>
+          <input
+            placeholder="Save Attributes"
+            autoCorrect="off"
+            id="button-name"
+            class="user-name ember-text-field tr-input ember-view"
+            type="text"
+          ></input>
+
         </div>)}
       </div>
     );

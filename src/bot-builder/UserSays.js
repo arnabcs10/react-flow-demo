@@ -4,12 +4,12 @@ const UserSays = () => {
     let textField = document.querySelector("#us-1").cloneNode(true);
     container.appendChild(textField);
   };
-  const deleteTextField = () => {};
+  // const deleteTextField = () => {};
 
   return (
-    <div class="tab">
+    <div className="tab">
       <input type="checkbox" id="chck3" />
-      <label class="tab-label f6" for="chck3">
+      <label className="tab-label f6" htmlFor="chck3">
         <span>
           User Says or Intents
           <span
@@ -25,7 +25,7 @@ const UserSays = () => {
               width="16"
               height="16"
               viewBox="0 0 93.936 93.936"
-              enable-background="new 0 0 93.936 93.936;"
+              enableBackground="new 0 0 93.936 93.936;"
               fill="#444444"
             >
               <g>
@@ -45,36 +45,36 @@ const UserSays = () => {
           </span>{" "}
         </span>
       </label>
-      <div class="tab-content">
-        <div class="tr-blognav-container pa5 pt6 bg-grouped-table shadow-1 br3">
+      <div className="tab-content">
+        <div className="tr-blognav-container pa5 pt6 bg-grouped-table shadow-1 br3">
           <form
             id="settings-navigation"
-            class="tr-blognav"
-            novalidate="novalidate"
+            className="tr-blognav"
+            noValidate="novalidate"
           >
-            <div id="ember55" class="sortable-objects ember-view">
+            <div id="ember55" className="sortable-objects ember-view">
               <div
                 draggable="false"
                 id="us-1"
-                class="js-draggableObject draggable-object ember-view"
+                className="js-draggableObject draggable-object ember-view"
               >
                 <div
                   id="ember57"
-                  class="tr-blognav-item tr-blognav-item--sortable ember-view"
+                  className="tr-blognav-item tr-blognav-item--sortable ember-view"
                 >
-                  <div class="tr-blognav-line">
-                    <span id="ember60" class="tr-blognav-url ember-view">
+                  <div className="tr-blognav-line">
+                    <span id="ember60" className="tr-blognav-url ember-view">
                       <input
                         id="ember61"
-                        class="ember-text-field tr-input ember-view"
+                        className="ember-text-field tr-input ember-view"
                         type="text"
                       />
-                      <p class="response" hidden=""></p>
+                      <p className="response" hidden=""></p>
                     </span>
                   </div>
 
                   <button
-                    class="tr-blognav-delete"
+                    className="tr-blognav-delete"
                     onClick={(e) => {
                       document
                         .querySelector(".tr-blognav-delete")
@@ -90,13 +90,13 @@ const UserSays = () => {
                     <svg viewBox="0 0 32 32">
                       <path d="M30.688 4H22V.687a.694.694 0 00-.688-.688H10.687a.694.694 0 00-.688.688V4H1.311c-.375 0-.625.313-.625.688s.25.625.625.625h3.375v26c0 .375.25.688.625.688h21.375c.375 0 .625-.313.625-.688v-26h3.375c.375 0 .625-.25.625-.625S31.061 4 30.686 4zM11.313 1.313h9.375v2.688h-9.375zM26 30.688H6V5.313h20zM10.688 9.313a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.625-.313.625-.688V10.001c0-.375-.25-.688-.625-.688zm5.312 0a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.688-.313.688-.688V10.001A.694.694 0 0016 9.313zm4.688.687v15.313c0 .375.25.688.625.688s.688-.313.688-.688V10c0-.375-.313-.688-.688-.688s-.625.313-.625.688z"></path>
                     </svg>
-                    <span class="sr-only">Delete</span>
+                    <span className="sr-only">Delete</span>
                   </button>
                 </div>
               </div>
             </div>
           </form>
-          <a
+          <button
             type="button"
             style={{
               color: "#58bbf0",
@@ -111,7 +111,7 @@ const UserSays = () => {
             onClick={addTextArea}
           >
             + Add Another
-          </a>
+          </button>
         </div>
       </div>
     </div>

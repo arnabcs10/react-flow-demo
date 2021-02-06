@@ -1,12 +1,12 @@
 import React, { memo } from 'react';
 import {Link} from 'react-router-dom';
-import { Handle, removeElements } from 'react-flow-renderer';
+import { Handle } from 'react-flow-renderer';
 
 export default memo(({id,data}) => {
   
-  const deleteNode = () =>{
-    data.setElements((els) => removeElements([els.find( e => e.id === id)], els));
-  }
+  // const deleteNode = () =>{
+  //   data.setElements((els) => removeElements([els.find( e => e.id === id)], els));
+  // }
   return (
     <>
       <Handle

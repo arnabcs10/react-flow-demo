@@ -1,8 +1,8 @@
 import React from "react";
 
 const textResponse = () => {
-  let tr1 = document.querySelectorAll("tr-input")[0];
-  let tr2 = document.querySelectorAll("tr-input")[1];
+  // let tr1 = document.querySelectorAll("tr-input")[0];
+  // let tr2 = document.querySelectorAll("tr-input")[1];
 
   return (
     <div className="text-response">

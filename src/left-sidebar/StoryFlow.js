@@ -1,7 +1,6 @@
 import React from "react";
 import ReactFlow, {
-  removeElements,
-  addEdge,
+  
   ReactFlowProvider,
 } from "react-flow-renderer";
 import RefStartNode from "./RefStartNode";
@@ -42,7 +41,7 @@ const StoryFlow = ({ elements, setLeftSidebar }) => {
       style={{
         height: "100vh",
         position: "relative",
-        transform: "translate(0%,-45%) scale(0.7)",
+        transform: "translate(0%,-25%) scale(0.7)",
       }}
     >
       <ReactFlowProvider>

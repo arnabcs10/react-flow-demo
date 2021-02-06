@@ -35,10 +35,10 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
   };
   switchCase();
   return (
-    //   <div class="sidebar-1">
+    //   <div className="sidebar-1">
     <div style={{ minHeight: "92.5vh" }}>
       <button
-        class="tr-btn"
+        className="tr-btn"
         style={{ background: "linear-gradient(#cccccc, #d3d3d3)" }}
         id="close"
         onClick={() => closeModal()}
@@ -46,9 +46,9 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
         Close
       </button>
       <form onSubmit={handelSubmit}>
-        <div class="search" style={{ width: "450px" }}>
+        <div className="search" style={{ width: "450px" }}>
           <input
-            class="tr-input"
+            className="tr-input"
             style={{ opacity: 1, zIndex: 1 }}
             placeholder="Node Name"
             type="text"
@@ -58,27 +58,27 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
             }
           />
         </div>
-        <button class="tr-btn tr-btn-green" id="save">
+        <button className="tr-btn tr-btn-green" id="save">
           Save
         </button>
         </form>
         <br />
-        <div class="row">
-          <div class="col">
-            <div class="tabs">
-              <div class="tab">
+        <div className="row">
+          <div className="col">
+            <div className="tabs">
+              <div className="tab">
                 <input type="checkbox" id="chck1" />
-                <label class="tab-label f6" for="chck1">
+                <label className="tab-label f6" htmlFor="chck1">
                   <span>Contexts </span>
                 </label>
-                <div class="tab-content">
+                <div className="tab-content">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
                   in!
                 </div>
               </div>
-              <div class="tab">
+              <div className="tab">
                 <input type="checkbox" id="chck2" />
-                <label class="tab-label f6" for="chck2">
+                <label className="tab-label f6" htmlFor="chck2">
                   <span>
                     Conditions
                     <span data-desc="Custom condition to manage block trigger">
@@ -91,7 +91,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                         width="16"
                         height="16"
                         viewBox="0 0 93.936 93.936"
-                        enable-background="new 0 0 93.936 93.936;"
+                        enableBackground="new 0 0 93.936 93.936;"
                         fill="#444444"
                       >
                         <g>
@@ -111,15 +111,15 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                     </span>{" "}
                   </span>
                 </label>
-                <div class="tab-content">
+                <div className="tab-content">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
                   in!
                 </div>
               </div>
               <UserSays />
-              <div class="tab">
+              <div className="tab">
                 <input type="checkbox" id="chck4" />
-                <label class="tab-label f6" for="chck4">
+                <label className="tab-label f6" htmlFor="chck4">
                   <span>
                     Bot Response
                     <span data-desc="Customisable bot response to the user intents">
@@ -132,7 +132,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                         width="16"
                         height="16"
                         viewBox="0 0 93.936 93.936"
-                        enable-background="new 0 0 93.936 93.936;"
+                        enableBackground="new 0 0 93.936 93.936;"
                         fill="#444444"
                       >
                         <g>
@@ -152,7 +152,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                     </span>{" "}
                   </span>
                 </label>
-                <div class="tab-content">{nodeType}</div>
+                <div className="tab-content">{nodeType}</div>
               </div>
             </div>
           </div>
