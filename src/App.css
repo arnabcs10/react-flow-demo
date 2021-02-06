@@ -1,17 +1,22 @@
 .App {
   text-align: center;
-  /* height: 100vh; */
+  height: 100vh;
   /* display: flex;
   flex-direction: column; */
 }
 
-.leftsidebar-btn{
+.leftsidebar-btn {
   position: absolute;
   z-index: 1000000;
-  left: 0;
-  top: 100px;
+  left: 2%;
+  top: 45%;
+  width: 40px;
+  height: 40px;
+  background-color: #f2f4f7;
+  border-radius: 50%;
+  transition: 0.5s;
 }
-.leftsidebar-btn::after{
+.leftsidebar-btn::after {
   position: relative;
   content: "❯";
   width: 2rem;
