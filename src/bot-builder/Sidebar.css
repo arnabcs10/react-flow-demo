@@ -22,3 +22,8 @@
   width: 700px;
 }
 
+.tr-textarea{
+  overflow: hidden;
+  width: 100%;
+  min-height: 6rem;
+}

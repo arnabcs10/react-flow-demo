@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TextResponse from "./text-response";
+import TextResponse from "./TextResponse";
 import ImageGIFResponse from "./image-gif-response";
 import VideoResponse from "./video-response";
 import QuickReply from "./QuickReply";

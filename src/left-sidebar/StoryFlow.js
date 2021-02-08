@@ -39,9 +39,9 @@ const StoryFlow = ({ elements, setLeftSidebar }) => {
   return (
     <div
       style={{
-        height: "100vh",
+        height: "900px",
         position: "relative",
-        transform: "translate(0%,-25%) ",
+        transform: "translate(0%,-35%) ",
       }}
     >
       <ReactFlowProvider>

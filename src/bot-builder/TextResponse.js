@@ -1,14 +1,54 @@
-import React from "react";
+import React, {useEffect,useState} from 'react';
+import TextResponseInput from './TextResponseInput';
+let count = 1;
 
-const textResponse = () => {
-  // let tr1 = document.querySelectorAll("tr-input")[0];
-  // let tr2 = document.querySelectorAll("tr-input")[1];
+const TextResponse = () => {
+  const [textResponses, setTextResponses] = useState([]);
+
+  const addAnotherInput = ()=>{
+    ++count;
+    const newInput = {
+        id: count,
+        content:""
+    }
+    setTextResponses(textResponses => [...textResponses,newInput]);
+}
+
+  useEffect(() => {
+    setTextResponses([
+        {
+            id:count,
+            content:""
+           
+        }
+    ])
+    // eslint-disable-next-line
+}, []);
+
 
   return (
     <div className="text-response">
       <h4 class="apps-grid-title">Text Response</h4>
       <div class="tr-blognav-container pa5 pt6 bg-grouped-table shadow-1 br3">
-        <form
+      {textResponses.map((response, i) => <TextResponseInput key={response.id} response={response} setTextResponses={setTextResponses}/>)}
+          
+          <button
+            type="button"
+            style={{
+              color: "#58bbf0",
+              border: "1px solid #58bbf0",
+              borderRadius: "20%/50%",
+              marginLeft: "20px",
+              fontSize: "1.2rem",
+              textAlign: "center",
+              padding: "5px",
+            }}
+            className="tr-btn"
+            onClick={addAnotherInput}
+          >
+            + Add Another
+          </button>
+        {/* <form
           id="settings-navigation"
           class="tr-blognav"
           novalidate="novalidate"
@@ -28,7 +68,7 @@ const textResponse = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* <div draggable="false" class="js-draggableObject draggable-object ">
               <div class="tr-blognav-item tr-blognav-item--sortable">
                 <div class="tr-blognav-line">
@@ -72,11 +112,11 @@ const textResponse = () => {
                 </div>
               </div>
             </div> */}
-          </div>
-        </form>
+          {/* </div>
+        </form> */}
       </div>
     </div>
   );
 };
 
-export default textResponse;
+export default TextResponse;
