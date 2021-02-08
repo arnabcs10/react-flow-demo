@@ -248,7 +248,7 @@ input[type="file"] {
 .qr-button {
   position: relative;
 }
-.qr-button:hover .delete-qr{
+.qr-button:hover .delete-qr {
   display: inline-block;
 }
 .tr-themes-uploadbtn input::placeholder {
@@ -271,4 +271,68 @@ input[type="file"] {
 }
 #actions::after {
   content: "asbs";
+}
+
+.emoji-picker {
+  position: absolute;
+  left: 57%;
+  top: 0px;
+  display: none;
+  z-index: 1000000 !important;
+}
+.react-tags {
+  position: relative;
+  padding: 6px 0 0 6px;
+  border: 1px solid #d6e3eb;
+  border-radius: 4px;
+  font-size: 1em;
+  height: 50px;
+  background-color: #ffffff;
+  cursor: text;
+}
+.react-tags__selected {
+  display: inline;
+}
+.react-tags__search {
+  display: inline-block;
+  padding: 7px 2px;
+  margin-bottom: 6px;
+  max-width: 100%;
+  background-color: #ffffff;
+}
+
+.react-tags__selected-tag {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0 6px 6px 0;
+  padding: 6px 8px;
+  border: 1px solid #d1d1d1;
+  border-radius: 2px;
+  background: #f1f1f1;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.react-tags__selected-tag:after {
+  content: "\2715";
+  color: #aaa;
+  margin-left: 8px;
+}
+
+.react-tags__selected-tag:hover,
+.react-tags__selected-tag:focus {
+  border-color: #b1b1b1;
+}
+
+.react-tags__search-input {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-size: inherit;
+  line-height: inherit;
+}
+.react-tags__search-input::placeholder {
+  color: white;
 }
