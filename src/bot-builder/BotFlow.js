@@ -130,8 +130,8 @@ const BotFlow = ({elements,setElements,addNewNode,setClickedNode}) => {
         >
           <Background
       variant="dots"
-      gap={12}
-      size={1}
+      gap={17}
+      size={0.8}
     />
     
       </ReactFlow>
