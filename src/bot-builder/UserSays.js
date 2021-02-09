@@ -66,7 +66,7 @@ const UserSays = () => {
       </label>
       <div className="tab-content">
         <div className="tr-blognav-container pa5 pt6 bg-grouped-table shadow-1 br3">
-          {userIntents.map((intent, i) => <UserInput key={intent.id} intent={intent} setUserIntents={setUserIntents}/>)}
+          {userIntents.map((intent, i) => <UserInput key={intent.id} intent={intent} userIntents={userIntents} setUserIntents={setUserIntents}/>)}
           
           <button
             type="button"
@@ -77,7 +77,7 @@ const UserSays = () => {
               marginLeft: "20px",
               fontSize: "1.2rem",
               textAlign: "center",
-              padding: "5px",
+              padding: "6px 12px",
             }}
             className="tr-btn"
             onClick={addAnotherInput}

@@ -30,7 +30,7 @@ const TextResponse = () => {
     <div className="text-response">
       <h4 class="apps-grid-title">Text Response</h4>
       <div class="tr-blognav-container pa5 pt6 bg-grouped-table shadow-1 br3">
-      {textResponses.map((response, i) => <TextResponseInput key={response.id} response={response} setTextResponses={setTextResponses}/>)}
+      {textResponses.map((response, i) => <TextResponseInput key={response.id} response={response} textResponses={textResponses} setTextResponses={setTextResponses}/>)}
           
           <button
             type="button"
@@ -41,7 +41,7 @@ const TextResponse = () => {
               marginLeft: "20px",
               fontSize: "1.2rem",
               textAlign: "center",
-              padding: "5px",
+              padding: "6px 12px",
             }}
             className="tr-btn"
             onClick={addAnotherInput}

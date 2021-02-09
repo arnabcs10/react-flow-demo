@@ -24,6 +24,6 @@
 
 .tr-textarea{
   overflow: hidden;
-  width: 100%;
-  min-height: 6rem;
+  max-width: none;
+  resize: none;
 }
