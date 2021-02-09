@@ -10,6 +10,7 @@ const QuckReply = () => {
   const [buttons, setButtons] = useState([]);
   const [clickedButton, setClickedButton] = useState();
 
+  //tags input
   const [tags, setTags] = useState([]);
   const [actions, setActions] = useState([]);
 
@@ -48,11 +49,12 @@ const QuckReply = () => {
     const actionss = [].concat(actions, action);
     setActions(actionss);
   };
-  //emoji-picker
+
   const [buttonInfo, setButtonInfo] = useState(
     clickedButton ? clickedButton.name : ""
   );
-  const [chosenEmoji, setChosenEmoji] = useState(null);
+  //emoji-picker
+  const [chosenEmoji, setChosenEmoji] = useState("");
 
   const onEmojiClick = (event, emojiObject) => {
     setChosenEmoji(emojiObject);
