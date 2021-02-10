@@ -24,7 +24,7 @@ const LeftSidebar = ({ refElements, leftSidebar, setLeftSidebar }) => {
         className="story-map"
         style={{
           position: "absolute",
-          top: "45%",
+          top: "37%",
           right: "-35px",
           transform: "rotate(-90deg)",
           fontSize: "2rem",

@@ -39,9 +39,9 @@ const StoryFlow = ({ elements, setLeftSidebar }) => {
   return (
     <div
       style={{
-        height: "100vh",
+        height: "900px",
         position: "relative",
-        transform: "translate(0%,-25%) scale(0.7)",
+        transform: "translate(0%,-35%) ",
       }}
     >
       <ReactFlowProvider>
@@ -55,6 +55,9 @@ const StoryFlow = ({ elements, setLeftSidebar }) => {
           paneMoveable={false}
           zoomOnScroll={false}
           nodeTypes={nodeTypes}
+          defaultZoom={0.85}
+          minZoom={0.85}
+          maxZoom={0.85}
         ></ReactFlow>
       </ReactFlowProvider>
       {/* <button
