@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Picker from "emoji-picker-react";
 import QRButton from "./QRButton";
 import AutoComplete from "react-tag-autocomplete";
+import GotoBlock from "./GotoBlock";
 
 let count = 0;
 
@@ -10,16 +11,25 @@ const QuckReply = () => {
   const [buttons, setButtons] = useState([]);
   const [clickedButton, setClickedButton] = useState();
 
+  //goto block
+
+  const options = {
+    maxWidth: "100vw",
+    width: "100%",
+    background: "white",
+    color: "#222222",
+  };
+
+  const blocks = [
+    { name: "USA" },
+    { name: "India" },
+    { name: "Argentina" },
+    { name: "Armenia" },
+  ];
+
   //tags input
   const [tags, setTags] = useState([]);
-  const [actions, setActions] = useState([]);
 
-  const actionSuggestion = [
-    { id: 1, name: "India" },
-    { id: 2, name: "America" },
-    { id: 3, name: "Australia" },
-    { id: 4, name: "Europe" },
-  ];
   const suggestions = [
     { id: 1, name: "Bananas" },
     { id: 2, name: "Mangos" },
@@ -27,7 +37,6 @@ const QuckReply = () => {
     { id: 4, name: "Apricots" },
   ];
   const reactTags = useRef(null);
-  const reactTags1 = useRef(null);
 
   const onDelete = (i) => {
     const tagss = tags.slice(0);
@@ -39,16 +48,6 @@ const QuckReply = () => {
     const tagss = [].concat(tags, tag);
     setTags(tagss);
   };
-  const onDelete1 = (i) => {
-    const actionss = actions.slice(0);
-    actionss.splice(i, 1);
-    setActions(actionss);
-  };
-
-  const onAddition1 = (action) => {
-    const actionss = [].concat(actions, action);
-    setActions(actionss);
-  };
 
   const [buttonInfo, setButtonInfo] = useState(
     clickedButton ? clickedButton.name : ""
@@ -58,7 +57,7 @@ const QuckReply = () => {
 
   const onEmojiClick = (event, emojiObject) => {
     setChosenEmoji(emojiObject);
-    nameBox.value = `${nameBox.value}${chosenEmoji.emoji}`;
+    nameBox.value = `${nameBox.value}${emojiObject.emoji}`;
     setButtonInfo(nameBox.value);
     nameBox.focus();
   };
@@ -170,13 +169,15 @@ const QuckReply = () => {
               placeholder="Button Name"
               value={buttonInfo}
               onChange={(e) => {
+                setButtonInfo(e.target.value);
+              }}
+              onInput={(e) => {
                 let x = e.target.value.length;
                 if (x > 40) {
                   window.alert("Button Name cannot be more than 40 characters");
                 }
-                setButtonInfo(e.target.value);
               }}
-              autoCorrect="off"
+              autoComplete="off"
               id="button-name"
               class="user-name ember-text-field tr-input ember-view"
               type="text"
@@ -206,25 +207,16 @@ const QuckReply = () => {
           </div>
 
           <br />
-          <label for="cars">Go to Block</label>
-          <AutoComplete
-            ref={reactTags1}
-            tags={actions}
-            suggestions={actionSuggestion}
-            onDelete={onDelete1}
-            onAddition={onAddition1}
-          />
+
+          <label>Go to Block</label>
+          {/* <input type="text" className="tr-input" id="goto-block" />
+          <div class="autocom-box"></div> */}
+          <GotoBlock />
 
           <label for="button-name" style={{ paddingTop: "10px" }}>
             Save Attributes
           </label>
-          {/* <input
-            placeholder="Save Attributes"
-            autoCorrect="off"
-            id="button-name"
-            class="user-name ember-text-field tr-input ember-view"
-            type="text"
-          ></input> */}
+
           <AutoComplete
             ref={reactTags}
             tags={tags}

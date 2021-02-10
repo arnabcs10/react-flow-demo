@@ -259,7 +259,6 @@ input[type="file"] {
   counter-reset: #333333;
   width: 400px;
   height: 38px;
-  font-size: 2rem;
 }
 #QR::placeholder {
   color: #bbbbbb;
@@ -355,4 +354,12 @@ input[type="file"] {
 }
 li {
   cursor: pointer;
+}
+.option {
+  background-color: #ffffff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.option:hover {
+  background-color: #d3d3d3;
 }
