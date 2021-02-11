@@ -28,11 +28,11 @@ function BotBuilder (props) {
             type:'refNode',
             data: { refNodeName:payload.nodeName },
             position: { x: 85, y: 130 },
-            style: { border: '1px solid #777', padding:"15px",
-                    borderRadius:"20px",
-                    background:"#ffffff",
-                    color:"black",
-                    width:"150px" }
+            // style: { border: '1px solid #777', padding:"15px",
+            //         borderRadius:"20px",
+            //         background:"#ffffff",
+            //         color:"black",
+            //         width:"150px" }
         }
         const newRefEdge = {id:`e${storyId}-${payload.nodeName}`, source:storyId, target:`${payload.nodeName}`,type: 'smoothstep'}
         setRefElements(els => [...els,newRefNode,newRefEdge]);
@@ -45,11 +45,11 @@ function BotBuilder (props) {
               type:'startNode',
               data: { setPrevNode: setPrevNode, flowName:`${payload.nodeName}` },
               position: { x: 700, y: 50 },
-              style: { border: '1px solid #777', padding:"15px 40px",
-                      borderRadius:"20px",
-                      background:"#445B75",
-                      color:"#ffffff",
-                      width:"auto" }
+              // style: { border: '1px solid #777', padding:"15px 40px",
+              //         borderRadius:"20px",
+              //         background:"#445B75",
+              //         color:"#ffffff",
+              //         width:"auto" }
             }
           ]
         }
@@ -66,8 +66,8 @@ function BotBuilder (props) {
             data: {   payload:{}, setPrevNode: setPrevNode, setElements:setElements },
             // payload:{},
             position: { x: 350, y: 150 },
-            style: {  padding:"5px",
-            width:"auto" }
+            // style: {  padding:"5px",
+            // width:"auto" }
            
         }
         const newEdge = {id:`e${parentNodeId}-${i}`, source:parentNodeId, target:`${i}`,type: 'smoothstep'};

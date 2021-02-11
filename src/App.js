@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import BotBuilder from "./bot-builder/BotBuilder";
 import LeftSidebar from "./left-sidebar/LeftSidebar";
 import { Route, Switch } from "react-router-dom";
+import useLocalStorageState from './bot-builder/hooks/useLocalStorageState';
 import "./App.css";
 
 function App() {
@@ -19,14 +20,14 @@ function App() {
           type: "startNode",
           data: { setPrevNode: setPrevNode },
           position: { x: 700, y: 50 },
-          style: {
-            border: "1px solid #777",
-            padding: "15px",
-            borderRadius: "20px",
-            background: "#445B75",
-            color: "#ffffff",
-            width: "auto",
-          },
+          // style: {
+          //   border: "1px solid #777",
+          //   padding: "15px",
+          //   borderRadius: "20px",
+          //   background: "#445B75",
+          //   color: "#ffffff",
+          //   width: "auto",
+          // },
         },
       ],
     },
@@ -37,14 +38,14 @@ function App() {
       type: "refStartNode",
       data: { storyNum: 0 },
       position: { x: 20, y: 50 },
-      style: {
-        border: "1px solid #777",
-        padding: "15px",
-        borderRadius: "20px",
-        background: "#445B75",
-        color: "#ffffff",
-        width: "250px",
-      },
+      // style: {
+      //   border: "1px solid #777",
+      //   padding: "15px",
+      //   borderRadius: "20px",
+      //   background: "#445B75",
+      //   color: "#ffffff",
+      //   width: "250px",
+      // },
     },
   ];
 
@@ -60,8 +61,8 @@ function App() {
     }
   };
 
-  const [story, setStory] = useState(initialStories);
-  const [refElements, setRefElements] = useState(initialRefElements);
+  const [story, setStory] = useLocalStorageState('story',initialStories);
+  const [refElements, setRefElements] = useLocalStorageState('refElements',initialRefElements);
 
   const getStory = (props) => {
     const storyId = props.match.params.storyId;

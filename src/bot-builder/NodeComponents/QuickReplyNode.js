@@ -8,8 +8,13 @@ export default memo(({ id, data }) => {
       removeElements([els.find((e) => e.id === id)], els)
     );
   };
+
+  const customStyles={  
+    padding:"5px",
+   width:"auto" 
+  }
   return (
-    <>
+    <div style={customStyles}>
       <Handle
         type="target"
         position="top"
@@ -121,6 +126,6 @@ export default memo(({ id, data }) => {
         style={{ cursor: "pointer", height: "1rem", width: "1rem" }}
         // style={{ top: 10, background: '#555' }}
       />
-    </>
+    </div >
   );
 });

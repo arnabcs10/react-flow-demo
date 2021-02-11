@@ -2,10 +2,18 @@ import React, { memo} from 'react';
 import { Handle } from 'react-flow-renderer';
 import {Link} from 'react-router-dom';
 
+const RefStartNodeStyles = {
+  border: "1px solid #777",
+  padding: "15px",
+  borderRadius: "20px",
+  background: "#445B75",
+  color: "#ffffff",
+  width: "250px",
+}
 export default memo(({id,data}) => {
   
   return (
-    <>
+    <div style={RefStartNodeStyles}>
       
       <div>
       <Link to='/start'>START</Link>
@@ -24,6 +32,6 @@ export default memo(({id,data}) => {
         style={{ left:30 }}
       />
      
-    </>
+    </div>
   );
 });
