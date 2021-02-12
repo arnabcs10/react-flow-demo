@@ -1,5 +1,6 @@
 import React, { memo} from 'react';
 import { Handle } from 'react-flow-renderer';
+import useSetPrevNode from '../hooks/useSetPrevNode'
 // import './nodeStyles.css';
 
 const StartNodeStyles = {
@@ -16,7 +17,8 @@ export default memo(({id,data}) => {
     <div style={StartNodeStyles}>
       
       <div>
-          {data.flowName ? `  ${data.flowName}  `: "START BOT FLOW"}
+          {/* {data.flowName ? `  ${data.flowName}  `: "START BOT FLOW"} */}
+          START BOT FLOW
       </div>
     
       <Handle

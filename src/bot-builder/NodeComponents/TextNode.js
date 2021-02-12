@@ -1,5 +1,6 @@
 import React, { memo } from "react";
 import { Handle, removeElements } from "react-flow-renderer";
+
 // import './style1.css'
 import "./nodeStyles.css";
 export default memo(({ id, data }) => {

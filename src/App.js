@@ -6,11 +6,14 @@ import BotBuilder from "./bot-builder/BotBuilder";
 import LeftSidebar from "./left-sidebar/LeftSidebar";
 import { Route, Switch } from "react-router-dom";
 import useLocalStorageState from './bot-builder/hooks/useLocalStorageState';
+import useSetPrevNode from './bot-builder/hooks/useSetPrevNode';
+import response from './bot-builder/utils/apiResponse';
+import convertJsonToFlow from './bot-builder/utils/convertJsonToFlow';
 import "./App.css";
 
 function App() {
   const [leftSidebar, setLeftSidebar] = useState(false);
-  const [prevNode, setPrevNode] = useState();
+  const [prevNode, setPrevNode] = useState(null);
   const initialStories = [
     {
       id: "start",
@@ -61,8 +64,13 @@ function App() {
     }
   };
 
-  const [story, setStory] = useLocalStorageState('story',initialStories);
-  const [refElements, setRefElements] = useLocalStorageState('refElements',initialRefElements);
+  // const [story, setStory] = useLocalStorageState('story',initialStories);
+  // const [refElements, setRefElements] = useLocalStorageState('refElements',initialRefElements);
+  const resStory = convertJsonToFlow(response);
+  console.log(response);
+  console.log(resStory);
+  const [story, setStory] = useState([resStory]);
+  const [refElements, setRefElements] = useState(initialRefElements);
 
   const getStory = (props) => {
     const storyId = props.match.params.storyId;
@@ -118,3 +126,4 @@ function App() {
 }
 
 export default App;
+
