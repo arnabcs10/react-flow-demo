@@ -7,7 +7,7 @@
   width: 700px;
   min-height: 100vh;
   background-color: #f2f4f7;
-  padding: 20px;
+  padding: 0px 20px;
   margin-left: auto;
   margin-right: 0;
 }
@@ -193,8 +193,10 @@ input:checked ~ .tab-content {
   font-weight: 500;
 }
 .custom-styles {
-  padding: 60px 0px;
+  min-height: 140px;
+  border-radius: 4px;
 }
+
 input[type="file"] {
   display: none;
 }
@@ -361,5 +363,11 @@ li {
   cursor: pointer;
 }
 .option:hover {
+  background-color: #d3d3d3;
+}
+textarea {
+  resize: none;
+}
+.card-img:hover {
   background-color: #d3d3d3;
 }

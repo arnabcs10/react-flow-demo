@@ -4,7 +4,6 @@ import "./Sidebar.css";
 import SideBarOptions from "./SideBarOptions";
 import SideBarNodeDetails from "./SideBarNodeDetails";
 
-
 const SideBar = ({
   addNewNode,
   clickedNode,
@@ -23,7 +22,7 @@ const SideBar = ({
     backgroundColor: "#f2f4f7",
     transition: "0.5s",
     zIndex: "100000000",
-    padding: "20px",
+    padding: "0px 20px",
   };
 
   // const openModal = () => {
@@ -51,7 +50,7 @@ const SideBar = ({
     // if clickedNode then updatenode(payload, clickedNode)
     // updateNewNode(clickedNode.id,interactionName);
     closeModal();
-    
+
     //setPayLoad(null);
     // console.log(data.nodeId);
     // console.log(interactionName);
@@ -61,14 +60,14 @@ const SideBar = ({
     // e.preventDefault();
     // if prevNode then addnewnode(payload,prevnode)
     if (clickedNode) {
-      updateNewNode(clickedNode,payload);
+      updateNewNode(clickedNode, payload);
       console.log(payload);
       console.log(clickedNode);
     }
     // if clickedNode then updatenode(payload, clickedNode)
     // updateNewNode(clickedNode.id,interactionName);
     closeModal();
-    
+
     //setPayLoad(null);
     // console.log(data.nodeId);
     // console.log(interactionName);
@@ -97,19 +96,21 @@ const SideBar = ({
             ) : <div style={{height:"100vh"}}></div>
             )
           } */}
-          {
-            prevNode ? (
-              <>
-                <button onClick={closeModal}>Close</button>
-                <SideBarOptions clickHandler={clickHandler}/>
-                <br />
-              </>
-            ) : (clickedNode ? (
-              <SideBarNodeDetails closeModal={closeModal} submitHandler={submitHandler} clickedNode={clickedNode}/>
-            ) : <div style={{height:"100vh"}}></div>
-            )
-          }
-          
+          {prevNode ? (
+            <>
+              <button onClick={closeModal}>Close</button>
+              <SideBarOptions clickHandler={clickHandler} />
+              <br />
+            </>
+          ) : clickedNode ? (
+            <SideBarNodeDetails
+              closeModal={closeModal}
+              submitHandler={submitHandler}
+              clickedNode={clickedNode}
+            />
+          ) : (
+            <div style={{ height: "100vh" }}></div>
+          )}
         </div>
       </div>
     </div>

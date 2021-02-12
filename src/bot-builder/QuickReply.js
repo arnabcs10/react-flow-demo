@@ -154,15 +154,18 @@ const QuckReply = () => {
           )}
         </div>
       </div>
-      <div
-        style={{
-          width: "100%",
-          height: "3px",
-          borderTop: "1px solid lightgray",
-        }}
-      ></div>
+
       {clickedButton && (
         <div id="ember59" class="first-form-group form-group ember-view">
+          <span
+            style={{ float: "right" }}
+            onClick={() => {
+              setClickedButton("");
+            }}
+          >
+            &#10006;
+          </span>
+
           <form onSubmit={handleSubmit}>
             <label for="button-name">Button Name</label>
             <input
@@ -209,21 +212,13 @@ const QuckReply = () => {
           <br />
 
           <label>Go to Block</label>
-          {/* <input type="text" className="tr-input" id="goto-block" />
-          <div class="autocom-box"></div> */}
+
           <GotoBlock />
+          <br />
 
-          <label for="button-name" style={{ paddingTop: "10px" }}>
-            Save Attributes
-          </label>
-
-          <AutoComplete
-            ref={reactTags}
-            tags={tags}
-            suggestions={suggestions}
-            onDelete={onDelete}
-            onAddition={onAddition}
-          />
+          <button className="tr-btn" style={{ color: "#58bbf0" }}>
+            Add Attribute
+          </button>
         </div>
       )}
     </div>

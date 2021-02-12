@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import TextResponse from "./TextResponse";
-import ImageGIFResponse from "./image-gif-response";
-import VideoResponse from "./video-response";
+import ImageGIFResponse from "./ImageResponse";
+import VideoResponse from "./VideoResponse";
 import QuickReply from "./QuickReply";
 import UserSays from "./UserSays";
+import CardRespone from "./CardResponse";
 import "./main.css";
 import "./style_node.css";
 
@@ -29,6 +30,8 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
         return (nodeType = <VideoResponse />);
       case "quickreplyNode":
         return (nodeType = <QuickReply />);
+      case "cardNode":
+        return (nodeType = <CardRespone />);
       default:
         return null;
     }
@@ -36,7 +39,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
   switchCase();
   return (
     //   <div className="sidebar-1">
-    <div style={{ minHeight: "92.5vh" }}>
+    <div style={{ minHeight: "97.8vh" }}>
       <button
         className="tr-btn"
         style={{ background: "linear-gradient(#cccccc, #d3d3d3)" }}
