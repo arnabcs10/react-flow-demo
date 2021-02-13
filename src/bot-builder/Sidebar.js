@@ -1,5 +1,4 @@
 import React from "react";
-// import Sidebar from "react-sidebar";
 import "./Sidebar.css";
 import SideBarOptions from "./SideBarOptions";
 import SideBarNodeDetails from "./SideBarNodeDetails";
@@ -12,7 +11,7 @@ const SideBar = ({
   prevNode,
   setPrevNode,
 }) => {
-  // const greyBg = document.getElementById("grey-screen");
+ 
   const sideStyle = {
     position: "absolute",
     top: "0",

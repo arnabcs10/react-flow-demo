@@ -6,8 +6,8 @@ import "./Sidebar.css";
 let i = 1;
 function BotBuilder (props) {
    const { story,setStory,storyId,prevNode, setPrevNode, setRefElements } = props;
+
     const [elements, setElements] = useState();
-    
     const [clickedNode, setClickedNode] = useState();
     
 
@@ -16,11 +16,11 @@ function BotBuilder (props) {
       setElements(eles => eles.map(els => {
         if(els.id === node.id){
             return {...els, data:{...els.data, payload:payload}}
-            
         }
           return els;
   
       }) );
+
       if(node.type === 'jumpToStoryNode'){
         
         const newRefNode = {
@@ -64,7 +64,6 @@ function BotBuilder (props) {
             id:`${i}`,
             type:`${nodeType}`,
             data: {   payload:{}, setPrevNode: setPrevNode, setElements:setElements },
-            // payload:{},
             position: { x: 350, y: 150 },
             style: {  padding:"5px",
             width:"auto" }
@@ -83,8 +82,6 @@ function BotBuilder (props) {
 
     useEffect(() => {
       setStory( story => 
-        // story[storyNum]=elements;
-        // return story;
         story.map(st =>{
           if(st.id === storyId ){
             st.elements = elements;

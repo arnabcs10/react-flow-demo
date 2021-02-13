@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-// import ReactFlowApp from './react-flow-app/ReactFlowApp'; //UNCOMMENT THIS TO CHECKOUT THIS COMPONENT
-// import ReactFlowApp2 from './react-flow-app2/ReactFlowApp'; //UNCOMMENT THIS TO CHECKOUT THIS COMPONENT
-// import ReactFlowApp3 from './react-flow-app3/ReactFlowApp';
 import BotBuilder from "./bot-builder/BotBuilder";
 import LeftSidebar from "./left-sidebar/LeftSidebar";
 import { Route, Switch } from "react-router-dom";
@@ -65,7 +62,7 @@ function App() {
 
   const getStory = (props) => {
     const storyId = props.match.params.storyId;
-    // console.log(story[storyNum]);
+  
     const st = story.find((s) => s.id === storyId);
     return (
       <BotBuilder
@@ -81,9 +78,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <ReactFlowApp/> */} {/*UNCOMMENT THIS TO CHECKOUT THIS COMPONENT*/}
-      {/* <ReactFlowApp2/>    */}
-      {/* <ReactFlowApp3/> */}
       <LeftSidebar
         refElements={refElements}
         leftSidebar={leftSidebar}

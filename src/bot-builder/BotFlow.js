@@ -92,21 +92,17 @@ const openModal = () => {
 };
 
 const BotFlow = ({elements,setElements,addNewNode,setClickedNode}) => {
-//   const [elements, setElements] = useState(initialElements);
+
   const onElementsRemove = (elementsToRemove) =>
     setElements((els) => removeElements(elementsToRemove, els));
   const onConnect = (params) => setElements((els) => addEdge(params, els));
 
   const onElementClick = (event, element) => {
-    // if(element.type === 'addIconNode'){
-    //   console.log(element);
-    //   addNewNode(getIncomers(element,elements)[0].id);
-    // }
+  
     if(element.type !== 'startNode' && !isEdge(element)  && event.target.className !==  "fas fa-times-circle"){
-     
+
       setClickedNode(element);
       openModal();
-      
     }
 
       // console.log(event);
@@ -129,10 +125,10 @@ const BotFlow = ({elements,setElements,addNewNode,setClickedNode}) => {
             nodeTypes={nodeTypes}
         >
           <Background
-      variant="dots"
-      gap={17}
-      size={0.8}
-    />
+            variant="dots"
+            gap={17}
+            size={0.8}
+          />
     
       </ReactFlow>
       </ReactFlowProvider>
