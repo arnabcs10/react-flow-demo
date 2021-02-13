@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import TextResponse from "./TextResponse";
-import ImageGIFResponse from "./ImageResponse";
-import VideoResponse from "./VideoResponse";
-import QuickReply from "./QuickReply";
+import TextResponse from "./Responses/TextResponse";
+import ImageGIFResponse from "./Responses/ImageResponse";
+import VideoResponse from "./Responses/VideoResponse";
+import QuickReply from "./Responses/QuickReply";
 import UserSays from "./UserSays";
-import CardRespone from "./CardResponse";
+import CardRespone from "./Responses/CardResponse";
 import "./main.css";
 import "./style_node.css";
 
 function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
-  // document.getElementById("sidebar").style =
-  //   "  position: absolute; top: 0; left: auto; right: 0;  background-color: #f2f4f7; transition: 0.5s; zIndex: 100000000; padding: 20px;";
-
   const [payload, setPayLoad] = useState(clickedNode.data.payload);
 
   const handelSubmit = (e) => {
@@ -38,7 +35,6 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
   };
   switchCase();
   return (
-    //   <div className="sidebar-1">
     <div style={{ minHeight: "97.8vh" }}>
       <button
         className="tr-btn"

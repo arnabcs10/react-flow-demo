@@ -158,7 +158,13 @@ const QuckReply = () => {
       {clickedButton && (
         <div id="ember59" class="first-form-group form-group ember-view">
           <span
-            style={{ float: "right" }}
+            style={{
+              float: "right",
+              cursor: "pointer",
+              position: "absolute",
+              right: "0",
+              top: "-10px",
+            }}
             onClick={() => {
               setClickedButton("");
             }}
@@ -191,20 +197,25 @@ const QuckReply = () => {
             onClick={showEmojis}
             style={{
               position: "relative",
-              top: "-25px",
+              top: "-30px",
               left: "95%",
               display: "inline-block",
               cursor: "pointer",
+              color: "red",
             }}
           >
             &#128512;
           </div>
-          <div className="emoji-picker" id="emoji-picker">
+          <div
+            className="emoji-picker"
+            id="emoji-picker"
+            style={{ position: "absolute" }}
+          >
             <span
-              style={{ float: "right", cursor: "pointer" }}
+              style={{ float: "right", cursor: "pointer", color: "red" }}
               onClick={hideEmojiPicker}
             >
-              X
+              &#10006;
             </span>
             <Picker onEmojiClick={onEmojiClick} />
           </div>
