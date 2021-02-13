@@ -109,8 +109,13 @@ const BotFlow = ({elements,setElements,addNewNode,setClickedNode}) => {
       
     }
 
-      // console.log(event);
-      // console.log(element);
+    if(event.target.className ===  "fas fa-times-circle"){
+      setElements((els) =>
+      removeElements([els.find((e) => e.id === element.id)], els)
+    );
+    }
+      console.log(event);
+      console.log(element);
       
   }
 

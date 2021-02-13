@@ -23,7 +23,7 @@ const res =
                 }
             },
             
-            position: {"x": 350, "y": 150},
+            position: {"x": 250, "y": 300},
             parent:"2"
         },
         {
@@ -47,7 +47,7 @@ const res =
                 }
             },
             
-            position: {"x": 350, "y": 150},
+            position: {"x": 920, "y": 160},
             parent:"1"
         },
         {
@@ -71,7 +71,7 @@ const res =
                 }
             },
             
-            position: {"x": 350, "y": 150},
+            position: {"x": 410, "y": 160},
             parent:"1"
         },
         {
@@ -87,4 +87,5 @@ const res =
 
 
 export default JSON.stringify(res);
+
 

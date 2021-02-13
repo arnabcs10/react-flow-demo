@@ -5,9 +5,9 @@ import { Handle, removeElements } from "react-flow-renderer";
 import "./nodeStyles.css";
 export default memo(({ id, data }) => {
   const deleteNode = () => {
-    data.setElements((els) =>
-      removeElements([els.find((e) => e.id === id)], els)
-    );
+    // data.setElements((els) =>
+    //   removeElements([els.find((e) => e.id === id)], els)
+    // );
   };
 
   const customStyles={  
@@ -78,11 +78,12 @@ export default memo(({ id, data }) => {
         </div>
       </div>
       <Handle
-        onClick={() => {
+        onClick={(e) => {
           console.log("clicked");
           document.getElementById("grey-screen").style = "width:100%";
           document.getElementById("sidebar").classList.add("side-bar-open");
-          data.setPrevNode(id);
+          // data.setPrevNode(id);
+          
         }}
         type="source"
         position="bottom"
