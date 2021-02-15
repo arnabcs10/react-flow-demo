@@ -3,6 +3,7 @@ import Picker from "emoji-picker-react";
 import QRButton from "./QRButton";
 import AutoComplete from "react-tag-autocomplete";
 import GotoBlock from "./GotoBlock";
+import Attributes from "./Atributes";
 
 let count = 0;
 
@@ -10,44 +11,12 @@ const QuckReply = () => {
   let nameBox = document.getElementById("button-name");
   const [buttons, setButtons] = useState([]);
   const [clickedButton, setClickedButton] = useState();
+  const [err, setErr] = useState(false);
 
   //goto block
 
-  const options = {
-    maxWidth: "100vw",
-    width: "100%",
-    background: "white",
-    color: "#222222",
-  };
-
-  const blocks = [
-    { name: "USA" },
-    { name: "India" },
-    { name: "Argentina" },
-    { name: "Armenia" },
-  ];
-
   //tags input
   const [tags, setTags] = useState([]);
-
-  const suggestions = [
-    { id: 1, name: "Bananas" },
-    { id: 2, name: "Mangos" },
-    { id: 3, name: "Lemons" },
-    { id: 4, name: "Apricots" },
-  ];
-  const reactTags = useRef(null);
-
-  const onDelete = (i) => {
-    const tagss = tags.slice(0);
-    tagss.splice(i, 1);
-    setTags(tagss);
-  };
-
-  const onAddition = (tag) => {
-    const tagss = [].concat(tags, tag);
-    setTags(tagss);
-  };
 
   const [buttonInfo, setButtonInfo] = useState(
     clickedButton ? clickedButton.name : ""
@@ -57,9 +26,14 @@ const QuckReply = () => {
 
   const onEmojiClick = (event, emojiObject) => {
     setChosenEmoji(emojiObject);
-    nameBox.value = `${nameBox.value}${emojiObject.emoji}`;
-    setButtonInfo(nameBox.value);
-    nameBox.focus();
+    if (nameBox.value.length >= 40) {
+      setErr(true);
+    } else {
+      nameBox.value = `${nameBox.value}${emojiObject.emoji}`;
+      setButtonInfo(nameBox.value);
+      nameBox.focus();
+      setErr(false);
+    }
   };
 
   const showEmojis = () => {
@@ -177,17 +151,19 @@ const QuckReply = () => {
             <input
               placeholder="Button Name"
               value={buttonInfo}
+              maxLength="40"
               onChange={(e) => {
                 setButtonInfo(e.target.value);
               }}
               onInput={(e) => {
-                let x = e.target.value.length;
-                if (x > 40) {
-                  window.alert("Button Name cannot be more than 40 characters");
+                if (e.target.value.length >= 40) {
+                  setErr(true);
+                } else {
+                  setErr(false);
                 }
               }}
               autoComplete="off"
-              id="button-name"
+              id={err ? "button-name" : ""}
               class="user-name ember-text-field tr-input ember-view"
               type="text"
             />
@@ -219,6 +195,15 @@ const QuckReply = () => {
             </span>
             <Picker onEmojiClick={onEmojiClick} />
           </div>
+          <small
+            style={
+              err
+                ? { color: "red", display: "inline-block" }
+                : { display: "none" }
+            }
+          >
+            <span>Name cannot be more than 40 characters.</span>
+          </small>
 
           <br />
 
@@ -226,7 +211,7 @@ const QuckReply = () => {
 
           <GotoBlock />
           <br />
-
+          <Attributes />
           <button className="tr-btn" style={{ color: "#58bbf0" }}>
             Add Attribute
           </button>

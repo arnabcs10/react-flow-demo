@@ -29,5 +29,7 @@
   border: none;
 }
 .Node .td-cta-content-wrapper {
-  justify-content: center;
+  justify-content: start;
+  text-align: left;
+  padding-left: 10px;
 }

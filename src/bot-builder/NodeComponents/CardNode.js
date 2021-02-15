@@ -61,7 +61,7 @@ export default memo(({ id, data }) => {
                   ? "Card"
                   : data.payload.nodeName}
               </h3>
-              <small>A Card</small>
+              <small>A Card Response</small>
             </div>
           </div>
         </div>
