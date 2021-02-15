@@ -3,13 +3,8 @@ import TextResponseInput from './TextResponseInput';
 let count = 1;
 
 const TextResponse = ({botReplys}) => {
-  const responses = botReplys.map((rep,i)=>{
-    return {
-      id:i,
-      content:rep
-    }
-  });
-  count = botReplys.length ;
+  
+  
   const [textResponses, setTextResponses] = useState([]);
 
   const addAnotherInput = ()=>{
@@ -29,7 +24,19 @@ const TextResponse = ({botReplys}) => {
          
       }
   ];
-    setTextResponses(botReplys ? responses : initialResponse);
+  let responses ;
+  if(botReplys){
+    count = botReplys.length ;
+    responses = botReplys.map((rep,i)=>{
+      return {
+        id:i,
+        content:rep
+      }
+    });
+  }else{
+    responses = initialResponse;
+  }
+    setTextResponses(responses);
     // eslint-disable-next-line
 }, []);
 

@@ -1,7 +1,6 @@
 import React, { memo} from 'react';
 import { Handle } from 'react-flow-renderer';
-import useSetPrevNode from '../hooks/useSetPrevNode'
-// import './nodeStyles.css';
+import AddIcon from '../AddIconNode';
 
 const StartNodeStyles = {
     border: "1px solid #777",
@@ -14,25 +13,19 @@ const StartNodeStyles = {
 export default memo(({id,data}) => {
   
   return (
-    <div style={StartNodeStyles}>
+    <div style={{height:"67px"}}>
       
-      <div>
+      <div style={StartNodeStyles}>
           {/* {data.flowName ? `  ${data.flowName}  `: "START BOT FLOW"} */}
           START BOT FLOW
       </div>
-    
+      <AddIcon>
       <Handle
         type="source"
         position="bottom"
-        onClick={() => {
-            console.log("clicked");
-            document.getElementById("grey-screen").style = "width:100%";
-            document.getElementById("sidebar").classList.add("side-bar-open");
-            data.setPrevNode(id);
-          }}
-        style={{ cursor:"pointer",height:"1rem", width:"1rem" }}
+        style={{ cursor:"pointer",height: "0.1rem", width: "0.1rem" }}
       />
-     
+     </AddIcon>
     </div>
   );
 });

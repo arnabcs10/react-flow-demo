@@ -3,13 +3,14 @@ import SideBar from "./Sidebar";
 import BotFlow from "./BotFlow";
 import "./Sidebar.css";
 
-let i = 1;
+let i = 100;
 function BotBuilder (props) {
-   const { story,setStory,storyId,prevNode, setPrevNode, setRefElements } = props;
+   const { story,setStory,storyId, setRefElements } = props;
     const [elements, setElements] = useState();
-    
+    const [prevNode, setPrevNode] = useState(null);
     const [clickedNode, setClickedNode] = useState();
     
+    // i = (story.length + 1)/2;
 
     const updateNewNode = (node,payload) => {
 
@@ -59,18 +60,15 @@ function BotBuilder (props) {
 
     const addNewNode = (parentNodeId,nodeType) =>{
         i=i+1;
-        console.log(parentNodeId);
+        console.log(typeof parentNodeId);
         const newNode = {
             id:`${i}`,
             type:`${nodeType}`,
-            data: {   payload:{}, setPrevNode: setPrevNode, setElements:setElements },
-            // payload:{},
+            data: {   payload:{} },
             position: { x: 350, y: 150 },
-            // style: {  padding:"5px",
-            // width:"auto" }
            
         }
-        const newEdge = {id:`e${parentNodeId}-${i}`, source:parentNodeId, target:`${i}`,type: 'smoothstep'};
+        const newEdge = {id:`e${parentNodeId}-${i}`, source:`${parentNodeId}`, target:`${i}`,type: 'smoothstep'};
         
         setElements([...elements,newNode,newEdge]);
     }
@@ -100,7 +98,7 @@ function BotBuilder (props) {
     return (
       <div className='ReactFlowApp'>    
       
-        <BotFlow elements={elements} setElements={setElements} addNewNode={addNewNode} setClickedNode={setClickedNode}/>
+        <BotFlow elements={elements} setElements={setElements} addNewNode={addNewNode} setClickedNode={setClickedNode} setPrevNode={setPrevNode}/>
         <SideBar addNewNode={addNewNode} updateNewNode={updateNewNode} clickedNode={clickedNode} setClickedNode={setClickedNode} prevNode={prevNode} setPrevNode={setPrevNode}/>
       </div>
     );
