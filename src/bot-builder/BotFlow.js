@@ -2,7 +2,7 @@ import React from 'react';
 import ReactFlow, { removeElements, addEdge, ReactFlowProvider, Background,isEdge } from 'react-flow-renderer';
 import InputNode from './InputNode';
 import Node from './Node';
-import AddIconNode from './AddIconNode';
+// import AddIconNode from './AddIconNode';
 import StartNode from './NodeComponents/StartNode';
 import TextNode from './NodeComponents/TextNode';
 import QuickReplyNode from './NodeComponents/QuickReplyNode';
@@ -45,7 +45,7 @@ const nodeTypes = {
   startNode: StartNode,
   newNode: InputNode,
   node: Node,
-  addIconNode:AddIconNode,
+  // addIconNode:AddIconNode,
   textNode: TextNode,
   quickreplyNode:QuickReplyNode,
   cardNode: CardNode,
@@ -91,22 +91,31 @@ const openModal = () => {
   document.getElementById("sidebar").classList.add("side-bar-open");
 };
 
-const BotFlow = ({elements,setElements,addNewNode,setClickedNode}) => {
+const BotFlow = ({elements,setElements,addNewNode,setClickedNode,setPrevNode}) => {
 
   const onElementsRemove = (elementsToRemove) =>
     setElements((els) => removeElements(elementsToRemove, els));
   const onConnect = (params) => setElements((els) => addEdge(params, els));
 
   const onElementClick = (event, element) => {
-  
-    if(element.type !== 'startNode' && !isEdge(element)  && event.target.className !==  "fas fa-times-circle"){
-
+    if(element.type !== 'startNode' && !isEdge(element)  && event.target.id !==  "delete-icon"){
+     
       setClickedNode(element);
       openModal();
     }
 
-      // console.log(event);
-      // console.log(element);
+    if(event.target.id ===  "delete-icon"){
+      setElements((els) =>
+      removeElements([els.find((e) => e.id === element.id)], els)
+    );
+    }
+    if(event.target.id ===  "add-icon"){
+      console.log(event);
+      setPrevNode(element.id);
+      openModal();
+    }
+      console.log(event);
+      console.log(element);
       
   }
 

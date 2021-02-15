@@ -1,17 +1,14 @@
-import React, { memo } from 'react';
-import { Handle } from 'react-flow-renderer';
+import React from 'react';
 
-export default memo(() => {
+
+const AddIcon = (props) => {
   
   return (
-    <>
-      <Handle
-        type="target"
-        position="top"
-        // style={{ background: '#555' }}
-        onConnect={(params) => console.log('handle onConnect', params)}
-      />
-     <i className="fas fa-plus-circle"></i>
-    </>
+    <div >
+      {props.children}
+     <i style={{cursor:"pointer"}} id="add-icon" className="fas fa-plus-circle"></i>
+    </div>
   );
-});
+}
+
+export default AddIcon;

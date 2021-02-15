@@ -1,0 +1,33 @@
+[
+    {
+        "id":123,
+        "type":"text",
+        "name":"nodename",
+        "userSays":[
+            "uttr1",
+            "uttr2",
+            "uttr3",
+            "uttr4"
+        ],
+        "botReplys":[
+            "repl1",
+            "repl2",
+            "repl3",
+            "repl4"
+        ],
+        "parent":1
+    },
+    {
+        "id":1,
+        "type":"text",
+        "name":"nodename",
+        
+        "botReplys":[
+            "repl1",
+            "repl2",
+            "repl3",
+            "repl4"
+        ],
+        "parent":"root"
+    }
+]

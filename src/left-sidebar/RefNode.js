@@ -2,13 +2,22 @@ import React, { memo } from 'react';
 import {Link} from 'react-router-dom';
 import { Handle } from 'react-flow-renderer';
 
+const customRefNodeStyle = { 
+  border: '1px solid #777', 
+  padding:"15px",
+  borderRadius:"20px",
+  background:"#ffffff",
+  color:"black",
+  width:"150px" 
+}
+
 export default memo(({id,data}) => {
   
   // const deleteNode = () =>{
   //   data.setElements((els) => removeElements([els.find( e => e.id === id)], els));
   // }
   return (
-    <>
+    <div style={customRefNodeStyle}>
       <Handle
         type="target"
         position="left"
@@ -35,6 +44,6 @@ export default memo(({id,data}) => {
         // style={{ top: 10, background: '#555' }}
       />
      
-    </>
+    </div>
   );
 });

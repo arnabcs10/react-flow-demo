@@ -2,7 +2,9 @@ import React, {useEffect,useState} from 'react';
 import TextResponseInput from './TextResponseInput';
 let count = 1;
 
-const TextResponse = () => {
+const TextResponse = ({botReplys}) => {
+  
+  
   const [textResponses, setTextResponses] = useState([]);
 
   const addAnotherInput = ()=>{
@@ -15,13 +17,26 @@ const TextResponse = () => {
 }
 
   useEffect(() => {
-    setTextResponses([
-        {
-            id:count,
-            content:""
-           
-        }
-    ])
+    const initialResponse = [
+      {
+          id:count,
+          content:""
+         
+      }
+  ];
+  let responses ;
+  if(botReplys){
+    count = botReplys.length ;
+    responses = botReplys.map((rep,i)=>{
+      return {
+        id:i,
+        content:rep
+      }
+    });
+  }else{
+    responses = initialResponse;
+  }
+    setTextResponses(responses);
     // eslint-disable-next-line
 }, []);
 

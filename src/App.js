@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import BotBuilder from "./bot-builder/BotBuilder";
 import LeftSidebar from "./left-sidebar/LeftSidebar";
 import { Route, Switch } from "react-router-dom";
+import useLocalStorageState from './bot-builder/hooks/useLocalStorageState';
+import useSetPrevNode from './bot-builder/hooks/useSetPrevNode';
+import response from './bot-builder/utils/apiResponse';
+import convertJsonToFlow from './bot-builder/utils/convertJsonToFlow';
 import "./App.css";
 
 function App() {
   const [leftSidebar, setLeftSidebar] = useState(false);
-  const [prevNode, setPrevNode] = useState();
   const initialStories = [
     {
       id: "start",
@@ -14,16 +17,8 @@ function App() {
         {
           id: "1",
           type: "startNode",
-          data: { setPrevNode: setPrevNode },
+          data: {  },
           position: { x: 700, y: 50 },
-          style: {
-            border: "1px solid #777",
-            padding: "15px",
-            borderRadius: "20px",
-            background: "#445B75",
-            color: "#ffffff",
-            width: "auto",
-          },
         },
       ],
     },
@@ -34,14 +29,6 @@ function App() {
       type: "refStartNode",
       data: { storyNum: 0 },
       position: { x: 20, y: 50 },
-      style: {
-        border: "1px solid #777",
-        padding: "15px",
-        borderRadius: "20px",
-        background: "#445B75",
-        color: "#ffffff",
-        width: "250px",
-      },
     },
   ];
 
@@ -57,7 +44,12 @@ function App() {
     }
   };
 
-  const [story, setStory] = useState(initialStories);
+  // const [story, setStory] = useLocalStorageState('story',initialStories);
+  // const [refElements, setRefElements] = useLocalStorageState('refElements',initialRefElements);
+  const resStory = convertJsonToFlow(response);
+  console.log(response);
+  console.log(resStory);
+  const [story, setStory] = useState([resStory]);
   const [refElements, setRefElements] = useState(initialRefElements);
 
   const getStory = (props) => {
@@ -69,8 +61,6 @@ function App() {
         story={st}
         storyId={st.id}
         setStory={setStory}
-        prevNode={prevNode}
-        setPrevNode={setPrevNode}
         setRefElements={setRefElements}
       />
     );
@@ -92,8 +82,6 @@ function App() {
               story={story[0]}
               storyId="start"
               setStory={setStory}
-              prevNode={prevNode}
-              setPrevNode={setPrevNode}
               setRefElements={setRefElements}
             />
           )}
@@ -111,3 +99,4 @@ function App() {
 }
 
 export default App;
+

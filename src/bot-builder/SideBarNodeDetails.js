@@ -20,7 +20,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
   const switchCase = () => {
     switch (clickedNode.type) {
       case "textNode":
-        return (nodeType = <TextResponse />);
+        return (nodeType = <TextResponse botReplys={payload.botReplys}/>);
       case "imageNode":
         return (nodeType = <ImageGIFResponse />);
       case "videoNode":
