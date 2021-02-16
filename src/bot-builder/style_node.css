@@ -180,6 +180,9 @@ input:checked ~ .tab-content {
   background-color: #ffffff;
   border: 1px solid #58bbf0 !important;
 }
+#button-name:focus {
+  border: 1px solid red !important;
+}
 
 .apps-grid {
   background-color: #ffffff;
