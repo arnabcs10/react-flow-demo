@@ -15,7 +15,7 @@ const TextResponseInput = ({response,textResponses,setTextResponses}) => {
     }
 
     useEffect(() => {
-        console.log(response.id);
+        // console.log(response.id);
         setTextResponses(textResponses => textResponses.map(res => {
             if(res.id === response.id){
                 return {...res,content:content}
@@ -43,7 +43,7 @@ const TextResponseInput = ({response,textResponses,setTextResponses}) => {
                   <div className="tr-blognav-line">
                     <span id="ember60" className="tr-blognav-url ember-view">
                       <textarea
-                        id="ember61"
+                        // id="ember61"
                         className="ember-text-field tr-input tr-textarea ember-view"
                         type="text"
                         cols="6"

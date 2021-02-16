@@ -26,7 +26,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
       case "videoNode":
         return (nodeType = <VideoResponse />);
       case "quickreplyNode":
-        return (nodeType = <QuickReply />);
+        return (nodeType = <QuickReply botReplys={payload.botReplys}/>);
       case "cardNode":
         return (nodeType = <CardRespone />);
       default:
@@ -113,7 +113,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
               </div>
             </div>
-            <UserSays />
+            <UserSays userSays={payload.userSays}/>
             <div className="tab">
               <input type="checkbox" id="chck4" />
               <label className="tab-label f6" htmlFor="chck4">

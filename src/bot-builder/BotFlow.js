@@ -114,8 +114,8 @@ const BotFlow = ({elements,setElements,addNewNode,setClickedNode,setPrevNode}) =
       setPrevNode(element.id);
       openModal();
     }
-      console.log(event);
-      console.log(element);
+      // console.log(event);
+      console.log("clicked element->",element);
       
   }
 

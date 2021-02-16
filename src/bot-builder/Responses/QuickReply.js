@@ -6,7 +6,8 @@ import GotoBlock from "./GotoBlock";
 
 let count = 0;
 
-const QuckReply = () => {
+const QuckReply = ({botReplys}) => {
+  console.log(botReplys);
   let nameBox = document.getElementById("button-name");
   const [buttons, setButtons] = useState([]);
   const [clickedButton, setClickedButton] = useState();

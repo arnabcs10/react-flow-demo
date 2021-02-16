@@ -7,18 +7,18 @@ const res =
             type:"quickreplyNode",
             data:{
                 payload:{
-                    nodeName:"Reply Quick",
+                    nodeName:"Quick",
                     userSays:[
-                        "uttr1",
-                        "uttr2",
-                        "uttr3",
-                        "uttr4"
+                        "uttr1q",
+                        "uttr2q",
+                        "uttr3q",
+                        "uttr4q"
                     ],
                     botReplys:[
-                        "repl1",
-                        "repl2",
-                        "repl3",
-                        "repl4"
+                        "repl1q",
+                        "repl2q",
+                        "repl3q",
+                        "repl4q"
                     ]
                 }
             },
@@ -33,16 +33,16 @@ const res =
                 payload:{
                     nodeName:"Reply Quick",
                     userSays:[
-                        "uttr1",
-                        "uttr2",
-                        "uttr3",
-                        "uttr4"
+                        "uttr1rq",
+                        "uttr2rq",
+                        "uttr3rq",
+                        "uttr4rq"
                     ],
                     botReplys:[
-                        "repl1",
-                        "repl2",
-                        "repl3",
-                        "repl4"
+                        "repl1rq",
+                        "repl2rq",
+                        "repl3rq",
+                        "repl4rq"
                     ]
                 }
             },

@@ -19,6 +19,7 @@ function App() {
           type: "startNode",
           data: {  },
           position: { x: 700, y: 50 },
+          parent:"root"
         },
       ],
     },

@@ -66,7 +66,7 @@ function BotBuilder (props) {
             type:`${nodeType}`,
             data: {   payload:{} },
             position: { x: 350, y: 150 },
-           
+            parent:parentNodeId
         }
         const newEdge = {id:`e${parentNodeId}-${i}`, source:`${parentNodeId}`, target:`${i}`,type: 'smoothstep'};
         

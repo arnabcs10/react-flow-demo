@@ -15,7 +15,7 @@ const UserInput = ({intent,userIntents,setUserIntents}) => {
     }
 
     useEffect(() => {
-        console.log(intent.id);
+        // console.log(intent.id);
         setUserIntents(userIntents => userIntents.map(int => {
             if(int.id === intent.id){
                 return {...int,content:content}

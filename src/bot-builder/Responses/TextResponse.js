@@ -43,8 +43,8 @@ const TextResponse = ({botReplys}) => {
 
   return (
     <div className="text-response">
-      <h4 class="apps-grid-title">Text Response</h4>
-      <div class="tr-blognav-container pa5 pt6 bg-grouped-table shadow-1 br3">
+      <h4 className="apps-grid-title">Text Response</h4>
+      <div className="tr-blognav-container pa5 pt6 bg-grouped-table shadow-1 br3">
       {textResponses.map((response, i) => <TextResponseInput key={response.id} response={response} textResponses={textResponses} setTextResponses={setTextResponses}/>)}
           
           <button
