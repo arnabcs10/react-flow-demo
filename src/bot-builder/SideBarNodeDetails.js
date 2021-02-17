@@ -35,7 +35,7 @@ function SideBarNodeDetails({ closeModal, clickedNode, submitHandler }) {
   };
   switchCase();
   return (
-    <div style={{ minHeight: "97.8vh" }}>
+    <div style={{ minHeight: "100vh",overflow:"hidden" }}>
       <button
         className="tr-btn"
         style={{ background: "linear-gradient(#cccccc, #d3d3d3)" }}

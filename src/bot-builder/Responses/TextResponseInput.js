@@ -62,7 +62,7 @@ const TextResponseInput = ({ response, textResponses, setTextResponses }) => {
             <div className="tr-blognav-line">
               <span id="ember60" className="tr-blognav-url ember-view">
                 <textarea
-                  id="ember61"
+                  // id="ember61"
                   className="ember-text-field tr-input tr-textarea ember-view"
                   type="text"
                   cols="6"
@@ -118,7 +118,7 @@ const TextResponseInput = ({ response, textResponses, setTextResponses }) => {
         >
           &#10006;
         </span>
-        <Picker onEmojiClick={changeContent} />
+        <Picker onEmojiClick={changeContent} key={0}/>
       </div>
     </form>
   );
