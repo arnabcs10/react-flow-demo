@@ -2,9 +2,17 @@ import React, { useState } from "react";
 
 const VideoResponse = () => {
   const [videoLink, setVideolink] = useState("");
-
+  const [link, setLink] = useState("");
+  let regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
   const changeVideoLink = (e) => {
     setVideolink(e.target.value);
+
+    let match = videoLink.match(regExp);
+    if (match && match[2].length == 11) {
+      setLink(`https://www.youtube.com/embed/${match[2]}`);
+      return;
+    } else {
+    }
   };
   return (
     <div className="video-response">
@@ -13,7 +21,7 @@ const VideoResponse = () => {
         <div class="flex flex-column justify-center items-center mih30 miw-100">
           <iframe
             className="flex flex-column items-center custom-styles"
-            src={videoLink}
+            src={link}
             width="100%"
             height="300"
             frameborder="0"
@@ -30,7 +38,7 @@ const VideoResponse = () => {
         onChange={changeVideoLink}
       />
       <br />
-      <input type="text" className="tr-input" placeholder="Image Title" />
+      <input type="text" className="tr-input" placeholder="Video Title" />
       <br />
       <input
         type="text"
