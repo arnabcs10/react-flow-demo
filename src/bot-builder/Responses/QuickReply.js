@@ -231,7 +231,7 @@ const QuckReply = ({botReplys}) => {
 
           <GotoBlock />
           <br />
-          {attributes.map(attribute => <Attributes key={attribute.id} attribute={attribute} setAttributes={setAttributes}/> )}
+          {attributes.map(attribute => <Attributes key={attribute.id} attributesCount={attributes.length} attribute={attribute} setAttributes={setAttributes}/> )}
           
           {attributes.length < 3 && (<button className="tr-btn" style={{ color: "#58bbf0" }} onClick={addAnotherAttribute}>
             Add Attribute
