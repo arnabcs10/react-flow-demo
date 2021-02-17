@@ -5,12 +5,14 @@ import AutoComplete from "react-tag-autocomplete";
 import GotoBlock from "./GotoBlock";
 import Attributes from "./Atributes";
 
+//temporary id counter
 let count = 0;
-
+let attrCount = 0;
 const QuckReply = ({botReplys}) => {
   console.log(botReplys);
   let nameBox = document.getElementById("button-name");
   const [buttons, setButtons] = useState([]);
+  const [attributes, setAttributes] = useState([]);
   const [clickedButton, setClickedButton] = useState();
   const [err, setErr] = useState(false);
 
@@ -51,6 +53,16 @@ const QuckReply = ({botReplys}) => {
     setClickedButton(newButton);
   };
 
+  const addAnotherAttribute = ()=>{
+    ++attrCount;
+    const newAttribute = {
+        id: attrCount,
+        attrKey:"",
+        attrValue:""
+    }
+    setAttributes(attributes => [...attributes,newAttribute]);
+}
+
   const hideEmojiPicker = () => {
     console.log("Hide");
     document.getElementById("emoji-picker").style = "display:none";
@@ -62,6 +74,13 @@ const QuckReply = ({botReplys}) => {
         id: count,
         name: "Click",
       },
+    ]);
+    setAttributes([
+      {
+        id:attrCount,
+        attrKey:"",
+        attrValue:""
+      }
     ]);
   }, []);
 
@@ -212,10 +231,11 @@ const QuckReply = ({botReplys}) => {
 
           <GotoBlock />
           <br />
-          <Attributes />
-          <button className="tr-btn" style={{ color: "#58bbf0" }}>
+          {attributes.map(attribute => <Attributes key={attribute.id} attribute={attribute} setAttributes={setAttributes}/> )}
+          
+          {attributes.length < 3 && (<button className="tr-btn" style={{ color: "#58bbf0" }} onClick={addAnotherAttribute}>
             Add Attribute
-          </button>
+          </button>)}
         </div>
       )}
     </div>
