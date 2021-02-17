@@ -5,7 +5,7 @@ const QRButton = ({ btn, setButtons, setClickedButton, setButtonInfo }) => {
     <span
       className="qr-button"
       onClick={(e) => {
-        if (e.target.innerHTML !== "X") {
+        if (e.target.innerHTML !== "✖") {
           setClickedButton(btn);
           setButtonInfo(btn.name);
         }
@@ -19,9 +19,11 @@ const QRButton = ({ btn, setButtons, setClickedButton, setButtonInfo }) => {
       </button>
       <span
         className="delete-qr"
+        name="cross"
         id={btn.id}
         onClick={(e) =>
-          setButtons((buttons) =>
+
+            setButtons((buttons) =>
             buttons.filter((bt) => bt.id !== Number(e.target.id))
           )
         }

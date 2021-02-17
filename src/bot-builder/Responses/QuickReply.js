@@ -29,12 +29,10 @@ const QuckReply = ({botReplys}) => {
 
   const onEmojiClick = (event, emojiObject) => {
     setChosenEmoji(emojiObject);
-    if (nameBox.value.length >= 40) {
+    if (buttonInfo.length >= 40) {
       setErr(true);
     } else {
-      nameBox.value = `${nameBox.value}${emojiObject.emoji}`;
-      setButtonInfo(nameBox.value);
-      nameBox.focus();
+      setButtonInfo(buttonInfo => `${buttonInfo}${emojiObject.emoji}`);
       setErr(false);
     }
   };
@@ -233,9 +231,23 @@ const QuckReply = ({botReplys}) => {
           <br />
           {attributes.map(attribute => <Attributes key={attribute.id} attributesCount={attributes.length} attribute={attribute} setAttributes={setAttributes}/> )}
           
-          {attributes.length < 3 && (<button className="tr-btn" style={{ color: "#58bbf0" }} onClick={addAnotherAttribute}>
+          {attributes.length < 3 && (
+          <button 
+            className="tr-btn" 
+            style={{
+              color: "#58bbf0",
+              border: "1px solid #58bbf0",
+              borderRadius: "20%/50%",
+              marginTop: "10px",
+              fontSize: "1.2rem",
+              textAlign: "center",
+              padding: "6px 12px",
+            }}
+            onClick={addAnotherAttribute}
+          >
             Add Attribute
-          </button>)}
+          </button>
+          )}
         </div>
       )}
     </div>
