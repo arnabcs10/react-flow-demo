@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Picker from "emoji-picker-react";
 
-const TextResponseInput = ({ response, textResponses, setTextResponses }) => {
+const TextResponseInput = ({ response, textResponses, setTextResponses,activeInput,setActiveInput }) => {
   const [content, setContent] = useState(response.content);
-
+  const [displayStyle, setDisplayStyle] = useState({display:"none"});
   const showEmojis = () => {
-    document.getElementById("emoji-picker").style = "display:inline-block";
+    if(response.id === activeInput)
+    setDisplayStyle({display:"inline-block"});
   };
 
   const changeContent = (event, emojiObject) => {
-    let textContent = `${content}${emojiObject.emoji}`;
-    setContent(textContent);
+    setContent(content => `${content}${emojiObject.emoji}`);
   };
 
   const hideEmojiPicker = () => {
-    console.log("Hide");
-    document.getElementById("emoji-picker").style = "display:none";
+    setDisplayStyle({display:"none"});
   };
 
   const handleSubmit = (e) => {
@@ -32,7 +31,7 @@ const TextResponseInput = ({ response, textResponses, setTextResponses }) => {
   };
 
   useEffect(() => {
-    console.log(response.id);
+    
     setTextResponses((textResponses) =>
       textResponses.map((res) => {
         if (res.id === response.id) {
@@ -71,6 +70,7 @@ const TextResponseInput = ({ response, textResponses, setTextResponses }) => {
                   onChange={(e) => {
                     setContent(e.target.value);
                   }}
+                onFocus={()=> setActiveInput(response.id)}
                 />
                 <p className="response" hidden=""></p>
               </span>
@@ -111,15 +111,17 @@ const TextResponseInput = ({ response, textResponses, setTextResponses }) => {
       >
         &#128512;
       </div>
-      <div className="emoji-picker" style={{ top: "40%" }} id="emoji-picker">
+      {response.id === activeInput &&(
+      <div className="emoji-picker" style={displayStyle} id="emoji-picker">
         <span
           style={{ float: "right", cursor: "pointer", color: "red" }}
           onClick={hideEmojiPicker}
         >
           &#10006;
         </span>
-        <Picker onEmojiClick={changeContent} key={0}/>
+        <Picker onEmojiClick={changeContent} />
       </div>
+      )}
     </form>
   );
 };

@@ -1,4 +1,5 @@
 import React, {useEffect,useState} from 'react';
+import { useStoreState } from 'react-flow-renderer';
 import TextResponseInput from './TextResponseInput';
 let count = 1;
 
@@ -6,6 +7,7 @@ const TextResponse = ({botReplys}) => {
   
   
   const [textResponses, setTextResponses] = useState([]);
+  const [activeInput, setActiveInput] = useState(0);
 
   const addAnotherInput = ()=>{
     ++count;
@@ -45,7 +47,7 @@ const TextResponse = ({botReplys}) => {
     <div className="text-response">
       <h4 className="apps-grid-title">Text Response</h4>
       <div className="tr-blognav-container pa5 pt6 bg-grouped-table shadow-1 br3">
-      {textResponses.map((response, i) => <TextResponseInput key={response.id} response={response} textResponses={textResponses} setTextResponses={setTextResponses}/>)}
+      {textResponses.map((response, i) => <TextResponseInput key={response.id} response={response} textResponses={textResponses} setTextResponses={setTextResponses} activeInput={activeInput} setActiveInput={setActiveInput}/>)}
           
           <button
             type="button"
