@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import React from 'react';
 
 const Attributes = ({attribute,setAttributes,attributesCount}) => {
   //const [content, setContent] = useState({});
@@ -47,7 +47,7 @@ const Attributes = ({attribute,setAttributes,attributesCount}) => {
         value={attribute.attrValue}
         onChange={handleChange}
       />
-      {attributesCount >1 && ( 
+     
               <button
                 className="tr-blognav-delete"
                 onClick={(e) =>
@@ -65,7 +65,7 @@ const Attributes = ({attribute,setAttributes,attributesCount}) => {
                 </svg>
                 <span className="sr-only">Delete</span>
               </button>
-            )}
+            
     </div>
   );
 };

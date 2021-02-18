@@ -6,7 +6,7 @@ const VideoResponse = () => {
   const getVideoId = (vidlink) =>{
     let regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
     let match = vidlink.match(regExp);
-    if (match && match[2].length == 11){
+    if (match && match[2].length === 11){
       return `https://www.youtube.com/embed/${match[2]}`;
     }
   }
@@ -32,6 +32,7 @@ const VideoResponse = () => {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            title="video thumbnail"
           ></iframe>
         </div>
       </div>

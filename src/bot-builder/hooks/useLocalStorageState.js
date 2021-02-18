@@ -12,7 +12,8 @@ function useLocalStorageState(key,defaultVal){
     });
 
     useEffect(() => {
-        window.localStorage.setItem(key,JSON.stringify(state))
+        window.localStorage.setItem(key,JSON.stringify(state));
+        // eslint-disable-next-line
     }, [state]);
     return [state,setState];
 }

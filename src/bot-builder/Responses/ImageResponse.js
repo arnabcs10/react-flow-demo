@@ -18,6 +18,7 @@ const ImageGIFResponse = () => {
             width="100%"
             id="image-upload"
             style={{ textAlign: "center" }}
+            alt=""
           />
         </div>
       </div>

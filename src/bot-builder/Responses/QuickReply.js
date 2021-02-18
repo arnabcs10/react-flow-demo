@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Picker from "emoji-picker-react";
 import QRButton from "./QRButton";
-import AutoComplete from "react-tag-autocomplete";
+// import AutoComplete from "react-tag-autocomplete";
 import GotoBlock from "./GotoBlock";
 import Attributes from "./Atributes";
 
@@ -10,7 +10,7 @@ let count = 0;
 let attrCount = 0;
 const QuckReply = ({botReplys}) => {
   console.log(botReplys);
-  let nameBox = document.getElementById("button-name");
+  // let nameBox = document.getElementById("button-name");
   const [buttons, setButtons] = useState([]);
   const [attributes, setAttributes] = useState([]);
   const [clickedButton, setClickedButton] = useState();
@@ -19,7 +19,7 @@ const QuckReply = ({botReplys}) => {
   //goto block
 
   //tags input
-  const [tags, setTags] = useState([]);
+  // const [tags, setTags] = useState([]);
 
   const [buttonInfo, setButtonInfo] = useState(
     clickedButton ? clickedButton.name : ""
