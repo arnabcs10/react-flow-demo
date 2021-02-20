@@ -397,3 +397,24 @@ textarea {
   border-radius: 4px;
   cursor: pointer;
 }
+.delete-card-btn{
+  position: absolute;
+  color: rgb(204, 34, 85);
+  z-index: 1000;
+  display: none;
+  cursor: pointer;
+  font-weight: 900;
+}
+.card-button:hover .delete-card-btn{
+  display: inline-block;
+}
+.card-delete{
+  display: none;
+  position: absolute;
+  right: 0px;
+  background-color: white;
+  padding: 4px;
+}
+.card:hover .card-delete{
+  display:inline-block;
+}

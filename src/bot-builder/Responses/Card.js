@@ -1,8 +1,32 @@
-import React,{useState} from "react";
-
-const Card = ({card,setCards}) => {
+import React,{useState,useEffect} from "react";
+import CardButton from './CardButton';
+let count = 0;
+const Card = ({card,setCards,cardCount}) => {
   const [titleLimit, setTitleLimit] = useState(false);
   const [descriptionLimit, setDescriptionLimit] = useState(false);
+  //====
+  const [buttons, setButtons] = useState([]);
+  const [clickedButton, setClickedButton] = useState();
+
+  const addAnotherButton = () => {
+    ++count;
+    const newButton = {
+      id: count,
+      name: "Click",
+    };
+    setButtons((buttons) => [...buttons, newButton]);
+    setClickedButton(newButton);
+  };
+  useEffect(() => {
+    setButtons([
+      {
+        id: count,
+        name: "Click",
+      },
+    ]);
+  }, []);
+  //====
+
   const handleChange = (evt)=>{
    
     setCards((cards) =>
@@ -49,6 +73,24 @@ const Card = ({card,setCards}) => {
                 alt=""
               />
             </div>
+            
+            {cardCount > 1 &&(<button
+              className="tr-blognav-delete card-delete"
+              onClick={(e) =>
+                setCards((cards) =>
+                  cards.filter((crd) => crd.id !== card.id)
+                )
+              }
+              type="button"
+              data-ember-action=""
+              data-ember-action-62="62"      
+            >
+              <svg viewBox="0 0 32 32">
+                <path d="M30.688 4H22V.687a.694.694 0 00-.688-.688H10.687a.694.694 0 00-.688.688V4H1.311c-.375 0-.625.313-.625.688s.25.625.625.625h3.375v26c0 .375.25.688.625.688h21.375c.375 0 .625-.313.625-.688v-26h3.375c.375 0 .625-.25.625-.625S31.061 4 30.686 4zM11.313 1.313h9.375v2.688h-9.375zM26 30.688H6V5.313h20zM10.688 9.313a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.625-.313.625-.688V10.001c0-.375-.25-.688-.625-.688zm5.312 0a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.688-.313.688-.688V10.001A.694.694 0 0016 9.313zm4.688.687v15.313c0 .375.25.688.625.688s.688-.313.688-.688V10c0-.375-.313-.688-.688-.688s-.625.313-.625.688z"></path>
+              </svg>
+              <span className="sr-only">Delete</span>
+            </button>)}
+
           </div>
         <input
         type="text"
@@ -93,7 +135,7 @@ const Card = ({card,setCards}) => {
                 : { display: "none" }
             }
           >
-            <span>Name cannot be more than 80 characters.</span>
+            <span>Title cannot be more than 80 characters.</span>
           </small>
 
           
@@ -133,20 +175,33 @@ const Card = ({card,setCards}) => {
                 : { display: "none" }
             }
           >
-            <span>Name cannot be more than 160 characters.</span>
+            <span>Description cannot be more than 160 characters.</span>
           </small>
         </div>
-        <div className="card-button">
-          <button
-            className="tr-btn tr-btn-blue"
+        <div className="cardbutton">
+          
+          {buttons.map((bt) => (
+            <CardButton
+              key={bt.id}
+              btn={bt}
+              btnCount={buttons.length}
+              setButtons={setButtons}
+              clickedButton={clickedButton}
+              setClickedButton={setClickedButton}
+            />
+          ))}
+          {buttons.length <3 &&(<button
+            className="tr-btn "
             style={{
               width: "100%",
               height: "32px",
               borderRadius: "0px 0px 4px 4px",
+              color: "#58BBF0"
             }}
+            onClick={addAnotherButton}
           >
-            Button
-          </button>
+            +Add Button
+          </button>)}
         </div>
       </div>
       // {/* <div

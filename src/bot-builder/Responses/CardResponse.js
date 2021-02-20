@@ -41,7 +41,7 @@ const CardResponse = () => {
       textAlign:"center"
     }}>
       <Slider {...settings}>
-      { cards.map(card => <Card key={card.id} card={card} setCards={setCards}/> )}
+      { cards.map(card => <Card key={card.id} card={card} setCards={setCards} cardCount={cards.length}/> )}
       {cards.length <10 &&(<AddCard addAnotherCard={addAnotherCard}/>)}
       
       </Slider>
