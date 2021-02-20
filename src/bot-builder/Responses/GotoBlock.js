@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useRef } from "react";
 
-const GotoBlock = () => {
+const GotoBlock = ({initialBlock,selectBlock}) => {
   const [display, setDisplay] = useState(false);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(initialBlock ? initialBlock : "");
   const wrapperRef = useRef(null);
   const options = [
-    { name: "USA" },
-    { name: "India" },
-    { name: "Argentina" },
-    { name: "Armenia" },
+    { name: "Text" },
+    { name: "Quick Reply" },
+    { name: "Image" },
+    { name: "Video" },
   ];
 
   useEffect(() => {
@@ -17,6 +17,12 @@ const GotoBlock = () => {
       window.removeEventListener("mousedown", handleClickOutside);
     };
   });
+
+  useEffect(() => {
+    
+    selectBlock(search);
+    
+  }, [search]);
 
   const handleClickOutside = (event) => {
     const { current: wrap } = wrapperRef;
