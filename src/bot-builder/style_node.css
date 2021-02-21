@@ -418,3 +418,14 @@ textarea {
 .card:hover .card-delete{
   display:inline-block;
 }
+.card-shift-arrow{
+  position: absolute;
+  top:56px;
+  color:white;
+  background-color: rgba(256,256,256,0.5);
+  padding: 4px;
+  display:none;
+}
+.card:hover .card-shift-arrow{
+  display:inline-block;
+}
