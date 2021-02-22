@@ -1,10 +1,11 @@
-import React, {useState,useEffect} from "react";
+import React, {useState,useEffect,useRef} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Card from "./Card";
 import AddCard from "./AddCard";
 let count = 1;
+
 const settings = {
   dots: true,
   infinite: true,
@@ -15,6 +16,7 @@ const settings = {
 };
 const CardResponse = () => {
   const [cards, setCards] = useState([]);
+  let slider = useRef();
 
   const shiftLeft = (id)=>{
     let currentIndex, prevIndex;
@@ -78,6 +80,8 @@ const CardResponse = () => {
         ]
     }
     setCards(cards => [...cards,newCard]);
+    if(cards.length < 9)
+    slider.slickNext();
 }
 
   useEffect(() => {
@@ -99,7 +103,7 @@ const CardResponse = () => {
       margin:"10px",
       textAlign:"center"
     }}>
-      <Slider {...settings}>
+      <Slider {...settings} ref={c => (slider = c)}>
       { cards.map(card => <Card key={card.id} card={card} setCards={setCards} shiftLeft={shiftLeft} shiftRight={shiftRight} cardCount={cards.length}/> )}
       {cards.length <10 &&(<AddCard addAnotherCard={addAnotherCard}/>)}
       </Slider>
