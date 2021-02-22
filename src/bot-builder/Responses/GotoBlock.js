@@ -21,7 +21,7 @@ const GotoBlock = ({initialBlock,selectBlock}) => {
   useEffect(() => {
     
     selectBlock(search);
-    
+    // eslint-disable-next-line
   }, [search]);
 
   const handleClickOutside = (event) => {

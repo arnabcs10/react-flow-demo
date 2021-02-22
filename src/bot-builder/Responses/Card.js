@@ -1,11 +1,10 @@
-import React,{useState,useEffect} from "react";
+import React,{useState} from "react";
 import CardButton from './CardButton';
 let count = 0;
 const Card = ({card,setCards,shiftLeft,shiftRight,cardCount}) => {
   const [titleLimit, setTitleLimit] = useState(false);
   const [descriptionLimit, setDescriptionLimit] = useState(false);
   //====
-  const [buttons, setButtons] = useState([...card.buttons]);
   const [clickedButton, setClickedButton] = useState();
 
   const addAnotherButton = () => {
@@ -14,27 +13,16 @@ const Card = ({card,setCards,shiftLeft,shiftRight,cardCount}) => {
       id: count,
       name: "Click",
     };
-    setButtons((buttons) => [...buttons, newButton]);
-    setClickedButton(newButton);
-  };
-  useEffect(() => {
-    let initialButtons = card.buttons ? card.buttons : [
-      {
-        id: count,
-        name: "Click",
-      },
-    ];
-    setButtons(initialButtons);
-  }, []);
-  useEffect(() => {
-    setCards((cards) =>
-    cards.map((crd) => {
-      if (crd.id === card.id) {
-        return { ...crd, buttons: buttons };//
+    
+    setCards(cards => cards.map(crd => {
+      if(card.id===crd.id){
+        return {...crd,buttons:[...crd.buttons,newButton]}
       }
       return crd;
-    }))
-  }, [buttons]);
+    }));
+    setClickedButton(newButton);
+  };
+ 
   //====
 
   const handleChange = (evt)=>{
@@ -59,19 +47,6 @@ const Card = ({card,setCards,shiftLeft,shiftRight,cardCount}) => {
             " 0 2px 5px 0 rgba(0,0,0,.08),0 2px 10px 0 rgba(0,0,0,.08)",
         }}
       >
-        {/* <div
-          className="card-img"
-          style={{
-            height: "150px",
-            backgroundColor: "#eeeeee",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <label htmlFor="img">Add Image</label>
-          <input type="file" id="img" />
-        </div> */}
          <div className="apps-grid">
             <div className="flex flex-column justify-center items-center mih30 miw-100">
               <img
@@ -215,18 +190,19 @@ const Card = ({card,setCards,shiftLeft,shiftRight,cardCount}) => {
           </small>
         </div>
         <div className="cardbutton">
-          
-          {buttons.map((bt) => (
+          {card.buttons.map((bt) => (
             <CardButton
               key={bt.id}
               btn={bt}
-              btnCount={buttons.length}
-              setButtons={setButtons}
+              btnCount={card.buttons.length}
+              cardId={card.id}
+              setCards={setCards}
+              // setButtons={setButtons}
               clickedButton={clickedButton}
               setClickedButton={setClickedButton}
             />
           ))}
-          {buttons.length <3 &&(<button
+          {card.buttons.length <3 &&(<button
             className="tr-btn "
             style={{
               width: "100%",
@@ -239,49 +215,7 @@ const Card = ({card,setCards,shiftLeft,shiftRight,cardCount}) => {
             +Add Button
           </button>)}
         </div>
-      </div>
-      // {/* <div
-      //   className="add-card"
-      //   style={{ display: "inline-block", position: "absolute", top: "40%" }}
-      // >
-      //   <div
-      //     style={{
-      //       width: "30px",
-      //       borderTop: "1px dashed grey",
-      //       display: "inline-block",
-      //     }}
-      //   ></div>
-      //   <button
-      //     className="tr-btn"
-      //     style={{
-      //       color: "#58BBF0",
-      //       fontSize: "small",
-      //       padding: "5px 3px",
-      //     }}
-      //   >
-      //     Add Card
-      //   </button>
-      // </div> */}
-    //   {/* <div className="add-btn" style={{ marginLeft: "18%" }}>
-    //     <div
-    //       style={{
-    //         height: "30px",
-    //         borderLeft: "1px dashed grey",
-    //       }}
-    //     ></div>
-    //     <button
-    //       className="tr-btn"
-    //       style={{
-    //         color: "#58BBF0",
-    //         fontSize: "small",
-    //         padding: "5px 3px",
-    //         marginLeft: "-25px",
-    //       }}
-    //     >
-    //       Add Button
-    //     </button>
-    //   </div> */}
-    // {/* </div> */}
+      </div>    
   );
 };
 

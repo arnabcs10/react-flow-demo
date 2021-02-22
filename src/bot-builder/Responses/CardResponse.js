@@ -70,7 +70,12 @@ const CardResponse = () => {
         src:"",
         title:"",
         description:"",
-        buttons:[]
+        buttons:[
+          {
+            id: 0,
+            name: "Click",
+          }
+        ]
     }
     setCards(cards => [...cards,newCard]);
 }
@@ -81,7 +86,12 @@ const CardResponse = () => {
       src:"",
       title:"",
       description:"",
-      buttons:[]
+      buttons:[
+        {
+          id: 0,
+          name: "Click",
+        }
+      ]
     }])
   }, [])
   return (
@@ -92,7 +102,6 @@ const CardResponse = () => {
       <Slider {...settings}>
       { cards.map(card => <Card key={card.id} card={card} setCards={setCards} shiftLeft={shiftLeft} shiftRight={shiftRight} cardCount={cards.length}/> )}
       {cards.length <10 &&(<AddCard addAnotherCard={addAnotherCard}/>)}
-      
       </Slider>
     </div>
   );

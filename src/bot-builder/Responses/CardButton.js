@@ -1,6 +1,6 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import GotoBlock from './GotoBlock';
-const CardButton = ({ btn, setButtons,btnCount, clickedButton,setClickedButton }) => {
+const CardButton = ({ btn,cardId,setCards,btnCount, clickedButton,setClickedButton }) => {
     const [buttonInfo, setButtonInfo] = useState({});
     const [buttonType, setButtonType] = useState("url");
 
@@ -22,16 +22,26 @@ const CardButton = ({ btn, setButtons,btnCount, clickedButton,setClickedButton }
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        setButtons((buttons) =>
-        buttons.map((bt) => {
-            if (bt.id === btn.id) {
-            return { ...bt, ...buttonInfo };//#
+        setCards(cards => cards.map(crd => {
+          if(cardId===crd.id){
+            return {
+              ...crd,
+              buttons:crd.buttons.map((bt) => {
+                    if (bt.id === btn.id) {
+                    return { ...bt, ...buttonInfo };//#
+                    }
+                    return bt;
+                })
             }
-            return bt;
-        })
-        );
+          }
+          return crd;
+        }));
         setClickedButton(null);
     }
+    useEffect(() => {
+      setButtonInfo(btn);
+      setButtonType(btn.type? btn.type:"url");
+    }, [btn]);
   return (
     (clickedButton && clickedButton.id===btn.id) ?
     
@@ -55,7 +65,11 @@ const CardButton = ({ btn, setButtons,btnCount, clickedButton,setClickedButton }
             <div style={{display:"inherit"}}>
               <input 
               type="radio" 
-              id="url" 
+              // id="url" 
+              style={{
+                marginTop:"3px",
+                marginRight:"3px"
+              }}
               name="url" 
               value={buttonType}
               checked={buttonType==='url'}
@@ -65,7 +79,7 @@ const CardButton = ({ btn, setButtons,btnCount, clickedButton,setClickedButton }
                   ...buttonInfo,
                   type:'url',
                   goto:""
-                }));
+                })); 
               }}
               />
             <label htmlFor="url">URL</label>
@@ -73,7 +87,11 @@ const CardButton = ({ btn, setButtons,btnCount, clickedButton,setClickedButton }
           <div style={{display:"inherit"}}>
           <input 
             type="radio" 
-            id="block" 
+            // id="block" 
+            style={{
+              marginTop:"3px",
+              marginRight:"3px"
+            }}
             name="block" 
             value={buttonType}
             checked={buttonType==='block'}
@@ -141,10 +159,16 @@ const CardButton = ({ btn, setButtons,btnCount, clickedButton,setClickedButton }
         name="cross"
         id={btn.id}
         onClick={(e) =>
+          setCards(cards => cards.map(crd => {
+            if(cardId===crd.id){
+              return {
+                ...crd,
+                buttons:crd.buttons.filter((bt) => bt.id !== Number(e.target.id))
+              }
+            }
+            return crd;
+          }))
 
-            setButtons((buttons) =>
-            buttons.filter((bt) => bt.id !== Number(e.target.id))
-          )
         }
       >
         &#10006;
