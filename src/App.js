@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import BotBuilder from "./bot-builder/BotBuilder";
 import LeftSidebar from "./left-sidebar/LeftSidebar";
+import Faqs from './faqs/Faqs';
 import { Route, Switch } from "react-router-dom";
 // import useLocalStorageState from './bot-builder/hooks/useLocalStorageState';
 // import useSetPrevNode from './bot-builder/hooks/useSetPrevNode';
@@ -75,7 +76,8 @@ function App() {
         setLeftSidebar={setLeftSidebar}
       />
       <Switch>
-        <Route path="/:storyId" render={getStory} />
+        <Route path="/intents" exact render={()=> <Faqs/> } />
+        <Route path="/:storyId" exact render={getStory} />
         <Route
           path="/"
           render={() => (
