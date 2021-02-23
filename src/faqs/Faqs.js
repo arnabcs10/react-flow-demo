@@ -35,7 +35,7 @@ const Faqs = () => {
    }
     return (
         <>
-        <section className='tr-canvas' style={{padding:"0 7%", background:"#eeeeee", minHeight:"100vh"}}>
+        <section className='tr-canvas' style={{padding:"0 7%", background:"#f2f4f7", minHeight:"100vh"}}>
             <header className='tr-canvas-header' style={{position:"relative",zIndex:"70"}}>
                 <h2 className='tr-canvas-title'>FAQs</h2>
                 <button className='tr-btn tr-btn-blue'>

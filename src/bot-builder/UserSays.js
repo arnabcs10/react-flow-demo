@@ -2,7 +2,7 @@ import React, {useEffect,useState} from 'react';
 import UserInput from './UserInput';
 let count = 1;
 const UserSays = ({userSays}) => {
-  console.log("Inside user says->",userSays);
+  // console.log("Inside user says->",userSays);
   const [userIntents, setUserIntents] = useState([]);
 
   const addAnotherInput = ()=>{
