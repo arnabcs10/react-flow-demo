@@ -1,8 +1,5 @@
 import React from 'react';
 import ReactFlow, { removeElements, addEdge, ReactFlowProvider, Background,isEdge } from 'react-flow-renderer';
-import InputNode from './InputNode';
-import Node from './Node';
-// import AddIconNode from './AddIconNode';
 import StartNode from './NodeComponents/StartNode';
 import TextNode from './NodeComponents/TextNode';
 import QuickReplyNode from './NodeComponents/QuickReplyNode';
@@ -43,9 +40,6 @@ const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
 
 const nodeTypes = {
   startNode: StartNode,
-  newNode: InputNode,
-  node: Node,
-  // addIconNode:AddIconNode,
   textNode: TextNode,
   quickreplyNode:QuickReplyNode,
   cardNode: CardNode,
