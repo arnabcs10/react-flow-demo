@@ -1,0 +1,35 @@
+.Node {
+  display: flex;
+  align-items: center;
+  width: 250px;
+}
+.cross {
+  height: fit-content;
+  padding-left: 10px;
+}
+
+.cross button {
+  border: none;
+  background: none;
+  font-size: 1.2em;
+  visibility: hidden;
+}
+.Node:hover button {
+  visibility: visible;
+}
+.cross button:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.cross button:active {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+.Node .td-cta-content-wrapper {
+  justify-content: start;
+  text-align: left;
+  padding-left: 10px;
+}

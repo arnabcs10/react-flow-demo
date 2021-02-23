@@ -1,0 +1,60 @@
+.custom-modal {
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.sidebar {
+  width: 370px;
+  background-color: #f2f4f7;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: 0;
+  min-height: 100vh;
+}
+.tr-setting {
+  padding: 10px 20px;
+  color: gray;
+}
+.td-cta-box {
+  width: 300px;
+  margin: 10px 0px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  background-color: white;
+}
+.td-cta-icon {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+.td-cta-content {
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+}
+
+.message {
+  border-left: 5px solid #3eb0ef;
+}
+.message .td-cta-icon {
+  background-color: #3eb0ef;
+}
+.user-details {
+  border-left: 5px solid #ad26b4;
+}
+.user-details .td-cta-icon {
+  background-color: #ad26b4;
+}
+.bot-properties {
+  border-left: 5px solid #86ac28;
+}
+.bot-properties .td-cta-icon {
+  background-color: #86ac28;
+}
+.communication {
+  border-left: 5px solid #c25;
+}
+.communication .td-cta-icon {
+  background-color: #c25;
+}
