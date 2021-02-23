@@ -17,7 +17,9 @@ const QuckReply = ({botReplys}) => {
   const [err, setErr] = useState(false);
 
   //goto block
-
+  const selectBlock = (block)=>{
+    console.log(block); //temporary
+  }
   //tags input
   // const [tags, setTags] = useState([]);
 
@@ -227,7 +229,7 @@ const QuckReply = ({botReplys}) => {
 
           <label>Go to Block</label>
 
-          <GotoBlock />
+          <GotoBlock selectBlock={selectBlock}/>
           <br />
           {attributes.map(attribute => <Attributes key={attribute.id} attributesCount={attributes.length} attribute={attribute} setAttributes={setAttributes}/> )}
           
