@@ -4,8 +4,8 @@ const FaqElement = ({faq,setFaqs,setClickedFaq}) => {
 
     const openModal = () => {
         console.log("clicked");
-        document.getElementById("grey-screen").style = "width:100%";
-        document.getElementById("sidebar").classList.add("side-bar-open");
+        document.getElementById("grey-screen-faq").style = "width:100%";
+        document.getElementById("sidebar-faq").classList.add("side-bar-open-faq");
         setClickedFaq(faq);
       };
 

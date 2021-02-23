@@ -1,10 +1,10 @@
-.custom-modal {
+.custom-modal-faq {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
-.grey-screen {
+.grey-screen-faq {
   position: absolute;
   top: 0;
   left: 0;
@@ -14,10 +14,10 @@
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.side-bar {
+.side-bar-faq {
   transform: translateX(450px);
 }
-.side-bar-open {
+.side-bar-open-faq {
   transform: translateX(0px);
   width: 700px;
 }

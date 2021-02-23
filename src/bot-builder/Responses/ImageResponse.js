@@ -32,9 +32,9 @@ const ImageGIFResponse = () => {
       <br />
       <input type="text" className="tr-input" placeholder="Image Title" />
       <br />
-      <input
+      <textarea
         type="text"
-        className="tr-input"
+        className="tr-input tr-textarea"
         placeholder="Descripton"
         style={{ height: "60px" }}
       />

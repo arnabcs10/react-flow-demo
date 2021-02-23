@@ -20,8 +20,8 @@ const Faqs = () => {
         desc:"Hi",
     }
     setFaqs(faqs => [...faqs,newFaq]);
-    document.getElementById("grey-screen").style = "width:100%";
-    document.getElementById("sidebar").classList.add("side-bar-open");
+    document.getElementById("grey-screen-faq").style = "width:100%";
+    document.getElementById("sidebar-faq").classList.add("side-bar-open-faq");
     setClickedFaq(newFaq);
    }
    //updates only title

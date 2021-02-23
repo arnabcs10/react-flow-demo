@@ -150,7 +150,7 @@ const QuckReply = ({botReplys}) => {
       </div>
 
       {clickedButton && (
-        <div id="ember59" class="first-form-group form-group ember-view">
+        <div id="ember59" className="first-form-group form-group ember-view">
           <span
             style={{
               float: "right",
@@ -167,7 +167,7 @@ const QuckReply = ({botReplys}) => {
           </span>
 
           <form onSubmit={handleSubmit}>
-            <label for="button-name">Button Name</label>
+            <label htmlFor="button-name">Button Name</label>
             <input
               placeholder="Button Name"
               value={buttonInfo}
@@ -184,7 +184,7 @@ const QuckReply = ({botReplys}) => {
               }}
               autoComplete="off"
               id={err ? "button-name" : ""}
-              class="user-name ember-text-field tr-input ember-view"
+              className="user-name ember-text-field tr-input ember-view"
               type="text"
             />
           </form>

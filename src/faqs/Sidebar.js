@@ -1,17 +1,11 @@
 import React from "react";
-import "./Sidebar.css";
+import "./sidebar.css";
 import SideBarNodeDetails from "./SideBarNodeDetails";
 
 const SideBar = ({
   clickedFaq,
   setClickedFaq,
   updateFaq
-  // addNewNode,
-  // clickedNode,
-  // setClickedNode,
-  // updateNewNode,
-  // prevNode,
-  // setPrevNode,
 }) => {
  
   const sideStyle = {
@@ -26,9 +20,9 @@ const SideBar = ({
   };
 
   const closeModal = () => {
-    document.getElementById("sidebar").classList.remove("side-bar-open");
+    document.getElementById("sidebar-faq").classList.remove("side-bar-open-faq");
     setTimeout(() => {
-      document.getElementById("grey-screen").style = "width:0";
+      document.getElementById("grey-screen-faq").style = "width:0";
     }, 400);
     setClickedFaq(null);
     // setClickedNode(null);
@@ -53,9 +47,9 @@ const SideBar = ({
   };
 
   return (
-    <div className="custom-modal" id="modal">
-      <div className="grey-screen" id="grey-screen">
-        <div className="side-bar" id="sidebar" style={sideStyle}>
+    <div className="custom-modal-faq" id="modal-faq">
+      <div className="grey-screen" id="grey-screen-faq">
+        <div className="side-bar-faq" id="sidebar-faq" style={sideStyle}>
           { clickedFaq ? (
             <SideBarNodeDetails
               closeModal={closeModal}
