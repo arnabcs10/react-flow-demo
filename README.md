@@ -1,5 +1,5 @@
 
-### UNCOMMENT ReactFlowApp, ReactFlowApp2 COMPONENTS TO CHECKOUT IN App.js file. 
+### Incase of any compilation error related to Sidebar.css please rename Sidebar.css in react-flow-demo/src/faqs to sidebar.css
 
 # Getting Started with Create React App
 
